@@ -1,25 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');/*style titre font-family: 'Press Start 2P', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Zilla+Slab+Highlight:wght@700&display=swap');
+/* style chapitre font-family: 'Zilla Slab Highlight', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Elite&family=Zilla+Slab+Highlight:wght@700&display=swap');/* style texte font-family: 'Special Elite', cursive;*/
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    color:rgb(27, 255, 128, 0.75);
+    background:black;    
+}
+
 .mainBody
 {
     display: flex;
     align-items: flex;
     flex-direction: column;
+    background-color:black;
+    width: 100%;
+    
 }
 .card
 {
     width: 80%;
     align-self: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    background-color: rgb(255, 182, 65, 0.8);
+    font-family: 'Special Elite', cursive;
+    /* opacity: 80%; */
+    
+
 }
 .list-group
 {
     width: 80%;
     align-self: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    font-family: 'Special Elite', cursive;
 }
-h1
-{
-    align-self: center;
-}
+
 div
 {
     display: flex;
