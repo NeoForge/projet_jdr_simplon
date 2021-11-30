@@ -16,3 +16,11 @@
     align-self: center;
     margin-bottom: 20px;
 }
+h1
+{
+    align-self: center;
+}
+div
+{
+    display: flex;
+}
