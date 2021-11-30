@@ -1,0 +1,18 @@
+.mainBody
+{
+    display: flex;
+    align-items: flex;
+    flex-direction: column;
+}
+.card
+{
+    width: 80%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+.list-group
+{
+    width: 80%;
+    align-self: center;
+    margin-bottom: 20px;
+}
