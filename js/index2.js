@@ -9,18 +9,21 @@ let q1;
 let q2;
 let q3;
 
-
-
-
-
-
-
-function test()
-{
- 
+let Post;
+function test() {
+  let requestURL = "https://raw.githubusercontent.com/kevinverdonck/projet_jdr_simplon/JS-V2/js/posts.json?token=AFMFFBRDQTBTGZDJDLG7CW3BU5BHC";
+  let request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+  request.onload = function () {
+    Post = request.response;
+    console.log(Post);
+  }
 }
 
 function newStory() {
+  Story=Post["storyid"][1].body;
   let templateStory =
     `
 <div class="card-body">
@@ -68,11 +71,11 @@ function Start() {
 function choice(int) {
   switch (int) {
     case 1:
-      { console.log("1");break; }
+      { console.log("1"); break; }
     case 2:
-      { console.log("2");break; }
+      { console.log("2"); break; }
     case 3:
-      { console.log("3");break; }
+      { console.log("3"); break; }
   }
 }
 
