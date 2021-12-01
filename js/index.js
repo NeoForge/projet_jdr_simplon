@@ -15,8 +15,21 @@ let c1c = "I help the kid in order to heal him";
 let r1a = "You take the kid to the bar. It limps along next to you, and you carry it over your shoulder like a sack of potatoes. You enter the rundown building and find a ransacked bar."
 let r1b = "You pick the kid up with one arm and stab it in the chest with your knife. The kid dies in your arms and you take it's body, slinging it over your shoulders and continuing your search for food. "
 let r1c =  "You find a rusty old first aid kit and a big medical needle. You use the needle to remove a sliver of metal from the mutant's foot."
+let c2a = "Je lui propose de monter sur la table et de boire une bouteille cul sec";
+let c2b = "Je dépose l'enfant et décide de le bouffer";
+let c2c = "Vous décider d'emmener l'enfant avec vous";
+let r2a = "vous etes tous les deux explosé mais continuez votre chemin"
+let r2b = "Au moment ou vous commencez à le croquer l'enfant se réveille et vous saute à la gorge"
+let r2c =  "L'enfant vous propose de vous aider à trouver de la nourriture"
+let c3a = "Vous décidez de boire un dernier verre";
+let c3b = "Vous êtes mort";
+let c3c = "L'enfant vous amène un scorpion";
+let r3a = "You take the kid to the bar. It limps along next to you, and you carry it over your shoulder like a sack of potatoes. You enter the rundown building and find a ransacked bar."
+let r3b = "You pick the kid up with one arm and stab it in the chest with your knife. The kid dies in your arms and you take it's body, slinging it over your shoulders and continuing your search for food. "
+let r3c =  "You find a rusty old first aid kit and a big medical needle. You use the needle to remove a sliver of metal from the mutant's foot."
 let mainBody = document.getElementById("Main");
-
+let compteur = 1;
+let answer = "";
 function dotheThing(response)
 {
     let newDiv = document.createElement("div");
@@ -24,26 +37,16 @@ function dotheThing(response)
     mainBody.append(newDiv);
 }
 
-function history(histoire) {
+function history(txt) {
   let newDiv = document.createElement("div");
-  newDiv.innerHTML= histoire;
+  newDiv.innerHTML= txt;
   mainBody.append(newDiv);
 }
 
 function question(length, a, b, c, ra, rb, rc) {
-  history(templatestory)
   let newbutton1 = document.createElement("button");
   let newbutton2 = document.createElement("button");
   let newbutton3 = document.createElement("button");
-  newbutton1.addEventListener('click', ()=> {
-    dotheThing(ra)
-  })
-  newbutton2.addEventListener('click', ()=> {
-    dotheThing(rb)
-  })
-  newbutton3.addEventListener('click', ()=> {
-    dotheThing(rc)
-  })
   newbutton1.innerHTML = a;
   newbutton2.innerHTML = b;
   newbutton3.innerHTML = c;
@@ -55,5 +58,33 @@ function question(length, a, b, c, ra, rb, rc) {
     mainBody.append(newbutton2);
     mainBody.append(newbutton3);
   }
+  newbutton1.addEventListener('click', ()=> {
+    dotheThing(ra);
+    for(let i = 1; i <= length; i++){
+      eval('newbutton'+ i ).remove();
+    }
+    compteur++;
+    question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
+  })
+  newbutton2.addEventListener('click', ()=> {
+    dotheThing(rb);
+    for(let i = 1; i <= length; i++){
+      eval('newbutton'+ i ).remove();
+    } 
+    compteur++;
+    question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
+  })
+  newbutton3.addEventListener('click', ()=> {
+    dotheThing(rc);
+    for(let i = 1; i <= length; i++){
+      eval('newbutton'+ i ).remove();
+    } 
+    compteur++;
+    question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));  
+  })
+}
 
+function start() {
+    history(templatestory)
+    question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));
 }
