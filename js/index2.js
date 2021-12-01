@@ -1,3 +1,4 @@
+
 let mainBody = document.querySelector("#Main")
 let Title;
 let Story;
@@ -8,6 +9,16 @@ let q1;
 let q2;
 let q3;
 
+
+
+
+
+
+
+function test()
+{
+ 
+}
 
 function newStory() {
   let templateStory =
@@ -64,3 +75,5 @@ function choice(int) {
       { console.log("3");break; }
   }
 }
+
+
