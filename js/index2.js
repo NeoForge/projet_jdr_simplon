@@ -8,22 +8,20 @@ let storyString = "";
 let q1;
 let q2;
 let q3;
-
-let Post;
-function test() {
-  let requestURL = "https://raw.githubusercontent.com/kevinverdonck/projet_jdr_simplon/JS-V2/js/posts.json?token=AFMFFBRDQTBTGZDJDLG7CW3BU5BHC";
-  let request = new XMLHttpRequest();
-  request.open('GET', requestURL);
-  request.responseType = 'json';
-  request.send();
-  request.onload = function () {
-    Post = request.response;
-    console.log(Post);
-  }
+let Datajson;
+function testFetch()
+{
+  fetch('../js/posts.json')
+  .then(response => response.json())
+  .then(data => Datajson = data)
+  .then(Datajson => newStory())
+  .catch(error => console.log(error));
 }
 
+
 function newStory() {
-  Story=Post["storyid"][1].body;
+  console.log(Datajson);
+  Story=Datajson[0].body;
   let templateStory =
     `
 <div class="card-body">
