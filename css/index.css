@@ -1,25 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');/*style titre font-family: 'Press Start 2P', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Zilla+Slab+Highlight:wght@700&display=swap');
+/* style chapitre font-family: 'Zilla Slab Highlight', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Special+Elite&family=Zilla+Slab+Highlight:wght@700&display=swap');/* style texte font-family: 'Special Elite', cursive;*/
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+h1
+{
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    justify-content: center;
+    color:#1bff80bf;
+    background:black;    
+}
+
 .mainBody
 {
     display: flex;
     align-items: flex;
     flex-direction: column;
+    background-color:black;
+    /* width: 100%; */
+    height: 100vh;
+    /* margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px; */
+    border-color: black;
+    background-image: url("../assets/background_bar.png");
+        
 }
-.card
+.card_context
 {
-    width: 80%;
+    width: 60%;
     align-self: center;
     margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: rgb(255, 182, 65, 0.8);
+    font-family: 'Special Elite', cursive;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+}
+.card_question
+{
+    width: 40%;
+    align-self: left;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 200px;
+    background-color: rgb(255, 182, 65, 0.8);
+    font-family: 'Special Elite', cursive;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+}
+.card_choice
+{
+    width: 40%;
+    align-self: right;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 200px;
+    margin-right: 20%;
+    background-color: rgb(255, 182, 65, 0.8);
+    font-family: 'Special Elite', cursive;
+    display: flex;
+    justify-content: flex-end;
+    align-items:flex-end;
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
 }
 .list-group
 {
     width: 80%;
     align-self: center;
     margin-bottom: 20px;
+    font-family: 'Special Elite', cursive;
+    width:60%;
+
 }
-h1
-{
-    align-self: center;
-}
+
 div
 {
     display: flex;
