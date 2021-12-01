@@ -1,0 +1,182 @@
+[
+  {
+    "storyid": 0,
+    "choiceid": 1,
+    "body": "choix 01",
+    "resultat":"resultat 01"
+  },
+  {
+    "storyid": 0,
+    "choiceid": 2,
+    "body": "choix 02",
+    "resultat":"resultat 02"
+  },
+  {
+    "storyid": 0,
+    "choiceid": 3,
+    "body": "choix 03",
+    "resultat":"resultat 03"
+  },
+  {
+    "storyid": 1,
+    "choiceid": 1,
+    "body": "choix 11",
+    "resultat":"resultat 11"
+  },
+  {
+    "storyid": 1,
+    "choiceid": 2,
+    "body": "choix 12",
+    "resultat":"resultat 12"
+  },
+  {
+    "storyid": 1,
+    "choiceid": 3,
+    "body": "choix 13",
+    "resultat":"resultat 13"
+  },
+  {
+    "storyid": 2,
+    "choiceid": 1,
+    "body": "choix 21",
+    "resultat":"resultat 21"
+  },
+  {
+    "storyid": 2,
+    "choiceid": 2,
+    "body": "choix 22",
+    "resultat":"resultat 22"
+  },
+  {
+    "storyid": 2,
+    "choiceid": 3,
+    "body": "choix 23",
+    "resultat":"resultat 23"
+  },
+  {
+    "storyid": 3,
+    "choiceid": 1,
+    "body": "choix 31",
+    "resultat":"resultat 31"
+  },
+  {
+    "storyid": 3,
+    "choiceid": 2,
+    "body": "choix 32",
+    "resultat":"resultat 32"
+  },
+  {
+    "storyid": 3,
+    "choiceid": 3,
+    "body": "choix 33",
+    "resultat":"resultat 33"
+  },
+  {
+    "storyid": 4,
+    "choiceid": 1,
+    "body": "choix 41",
+    "resultat":"resultat 41"
+  },
+  {
+    "storyid": 4,
+    "choiceid": 2,
+    "body": "choix 42",
+    "resultat":"resultat 42"
+  },
+  {
+    "storyid": 4,
+    "choiceid": 3,
+    "body": "choix 43",
+    "resultat":"resultat 43"
+  },
+  {
+    "storyid": 5,
+    "choiceid": 1,
+    "body": "choix 51",
+    "resultat":"resultat 51"
+  },
+  {
+    "storyid": 5,
+    "choiceid": 2,
+    "body": "choix 52 ",
+    "resultat":"resultat 52 "
+  },
+  {
+    "storyid": 5,
+    "choiceid": 3,
+    "body": "choix 53 ",
+    "resultat":"resultat 53 "
+  },
+  {
+    "storyid": 6,
+    "choiceid": 1,
+    "body": "choix 61",
+    "resultat":"resultat 61"
+  },
+  {
+    "storyid": 6,
+    "choiceid": 2,
+    "body": "choix 62",
+    "resultat":"resultat 62"
+  },
+  {
+    "storyid": 6,
+    "choiceid": 3,
+    "body": "choix 63",
+    "resultat":"resultat 63"
+  },
+  {
+    "storyid": 7,
+    "choiceid": 1,
+    "body": "choix 71",
+    "resultat":"resultat 71"
+  },
+  {
+    "storyid": 7,
+    "choiceid": 2,
+    "body": "choix 72",
+    "resultat":"resultat 72"
+  },
+  {
+    "storyid": 7,
+    "choiceid": 3,
+    "body": "choix 73",
+    "resultat":"resultat 73"
+  },
+  {
+    "storyid": 8,
+    "choiceid": 1,
+    "body": "choix 81",
+    "resultat":"resultat 81"
+  },
+  {
+    "storyid": 8,
+    "choiceid": 2,
+    "body": "choix 82",
+    "resultat":"resultat 82"
+  },
+  {
+    "storyid": 8,
+    "choiceid": 3,
+    "body": "choix 83",
+    "resultat":"resultat 83"
+  },
+  {
+    "storyid": 9,
+    "choiceid": 1,
+    "body": "choix 91",
+    "resultat":"resultat 91"
+  },
+  {
+    "storyid": 9,
+    "choiceid": 2,
+    "body": "choix 92",
+    "resultat":"resultat 92"
+  },
+  {
+    "storyid": 9,
+    "choiceid": 3,
+    "body": "choix 93",
+    "resultat":"resultat 93"
+  }
+]
