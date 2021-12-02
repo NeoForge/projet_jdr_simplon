@@ -8,6 +8,7 @@ const choice2 = document.querySelector(".ChoiceTwo");
 const choice3 = document.querySelector(".ChoiceThree");
 const mainBody = document.querySelector("#Main");
 const box = document.querySelector(".box")
+const body = document.body;
 
 let storyId = 0;
 let answer, c1, c2, c3;
@@ -15,7 +16,6 @@ let game;
 fetchInfo();
 buttonstart()
 async function fetchInfo() {
-  waiting = true;
   fetch('../js/story.json')
     .then(response => response.json())
     .then(data => DataStoryJson = data)
@@ -87,7 +87,14 @@ function clickButton(choice) {
   }
   start();
 }
+setInterval(rain, 10);
 
+function rain() {
+  const waterDrop = document.createElement('i');
+  waterDrop.classList.add('bi');
+  waterDrop.classList.add('bi-droplet-fill');
+  waterDrop.style.fontSize = Math.random()* 7 + 'px';
+}
 
 // function dotheThing(response)
 // {
