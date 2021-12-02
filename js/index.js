@@ -1,16 +1,18 @@
 let DataStoryJson;
 let DataQuestionJson;
 const storyTitle = document.querySelector("h5");
-const storyTexte = document.querySelector("#StoryContent");
-const question = document.querySelector("#question");
-const choice1 = document.querySelector("#ChoiceOne");
-const choice2 = document.querySelector("#ChoiceTwo");
-const choice3 = document.querySelector("#ChoiceThree");
+const storyTexte = document.getElementById("StoryContent");
+const question = document.getElementById("question");
+const choice1 = document.getElementById("ChoiceOne");
+const choice2 = document.getElementById("ChoiceTwo");
+const choice3 = document.getElementById("ChoiceThree");
+const mainBody = document.getElementById("Main");
 
 let storyId = 0;
 let answer, c1, c2, c3;
+let game;
 fetchInfo();
-
+buttonstart()
 async function fetchInfo() {
   waiting = true;
   fetch('../js/story.json')
@@ -23,6 +25,16 @@ async function fetchInfo() {
     .catch(error => console.log(error));
 }
 
+function buttonstart(){
+  let buttonStart = document.createElement("button");
+  game = mainBody.innerHTML;
+  buttonStart.innerHTML = "START";
+  mainBody.append(buttonStart);
+  buttonStart.addEventListener('click',() => {
+    start();
+    buttonStart.hidden = true;
+  })
+}
 
 
 function start() {
@@ -73,6 +85,7 @@ function clickButton(choice) {
   }
   start();
 }
+
 
 // function dotheThing(response)
 // {
