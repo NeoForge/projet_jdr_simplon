@@ -83,7 +83,6 @@ function Start() {
 }
 
 function clickButton(int) {
-  console.log("Ping " + int);
   switch (int) {
     case 1:
       {
