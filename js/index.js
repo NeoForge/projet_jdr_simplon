@@ -40,6 +40,7 @@ function buttonstart(){
 }
 
 
+
 function start() {
   let story;
   if(DataStoryJson[storyId].meteo == "rain"){
