@@ -72,15 +72,16 @@ h1
 
 .corps-txt
 {
+    display: flex;
     flex-direction: column;
+    width:80%;
 }
 
 .card_question
 {
     width: 80%;
-    margin-bottom: 20px;
-    margin-top: 10px;
-    margin-right: 10%;
+    margin-bottom: 5px;
+    margin-top: 5px;
     background-color: rgb(255, 182, 65, 0.8);
     border: 5px ridge #1bff80bf;
     border-radius: 20px;
@@ -92,7 +93,6 @@ h1
     width: 80%;
     margin-bottom: 5px;
     margin-top: 5px;
-    margin-left: 10%;
     background-color: rgb(255, 182, 65, 0.8);
     border: 5px ridge #1bff80bf;
     border-radius: 20px;
@@ -106,12 +106,20 @@ h1
 
 }
 
-#pnj_asset {
-    width: 10%;
+#pnj {
+    width:  30%;
     height: auto;
+    margin-left: 10px ;
 }
-#hero_asset {
-    width: 10%;
+#hero {
+    width: 30%;
     height: auto;
+    margin-left: 10px ;
+}
+
+.asset{
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+    background-color: black;
 }
 
