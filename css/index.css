@@ -122,4 +122,23 @@ h1
     border-radius: 20px;
     background-color: black;
 }
-
+ /* ------------ Button start ----------------- */
+button {
+    display: block;
+    margin: auto;
+    top: 200px;
+    width: 300px;
+    height: 100px;
+    font-family: 'Press Start 2P';
+    font-size: 40px;
+    background-color: rgb(255, 182, 65, 0.8);
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+    color: black;
+    position: relative;
+}
+ button:hover {
+ 
+    border-radius: 20px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;    
+ }

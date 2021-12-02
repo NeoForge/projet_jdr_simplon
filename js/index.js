@@ -1,12 +1,13 @@
 let DataStoryJson;
 let DataQuestionJson;
-const storyTitle = document.querySelector("h5");
-const storyTexte = document.getElementById("StoryContent");
-const question = document.getElementById("question");
-const choice1 = document.getElementById("ChoiceOne");
-const choice2 = document.getElementById("ChoiceTwo");
-const choice3 = document.getElementById("ChoiceThree");
-const mainBody = document.getElementById("Main");
+const storyTitle = document.querySelector(".card-header");
+const storyTexte = document.querySelector(".StoryContent");
+const question = document.querySelector(".questionContent");
+const choice1 = document.querySelector(".ChoiceOne");
+const choice2 = document.querySelector(".ChoiceTwo");
+const choice3 = document.querySelector(".ChoiceThree");
+const mainBody = document.querySelector("#Main");
+const box = document.querySelector(".box")
 
 let storyId = 0;
 let answer, c1, c2, c3;
@@ -27,11 +28,12 @@ async function fetchInfo() {
 
 function buttonstart(){
   let buttonStart = document.createElement("button");
-  game = mainBody.innerHTML;
+  box.hidden = true;
   buttonStart.innerHTML = "START";
   mainBody.append(buttonStart);
   buttonStart.addEventListener('click',() => {
     start();
+    box.hidden = false;
     buttonStart.hidden = true;
   })
 }
