@@ -7,11 +7,11 @@ let DataQuestionJson;
 let LastQuestionId;
 
 let TitleCard = document.querySelector(".card-header");
-let StoryCard = document.querySelector("#StoryContent");
-let QuestionCard = document.querySelector("#questionContent")
-let ChoiceOne = document.querySelector("#ChoiceOne");
-let ChoiceTwo = document.querySelector("#ChoiceTwo");
-let ChoiceThree = document.querySelector("#ChoiceThree");
+let StoryCard = document.querySelector(".StoryContent");
+let QuestionCard = document.querySelector(".questionContent")
+let ChoiceOne = document.querySelector(".ChoiceOne");
+let ChoiceTwo = document.querySelector(".ChoiceTwo");
+let ChoiceThree = document.querySelector(".ChoiceThree");
 
 let LastChoiceOne;
 let LastChoiceTwo;
@@ -20,13 +20,7 @@ let waiting = true;
 
 let choiceArray = [];
 
-
-
-
-
 fetchInfo().then(WaitForStart());
-
-
 
 async function fetchInfo() {
   fetch('../js/story.json')
@@ -44,9 +38,7 @@ function WaitForStart() {
 }
 
 function Start() {
-
   let FinalString;
-
   if (indexStory == Object.keys(DataStoryJson).length) {
     ChoiceOne.parentElement.classList.add("disabled");
     ChoiceTwo.parentElement.classList.add("disabled");
