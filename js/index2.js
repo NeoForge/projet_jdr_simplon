@@ -63,6 +63,8 @@ function Speak(what)
     }
     msg = new SpeechSynthesisUtterance(finalSpeech);
     msg.voice = voiceArray[37];
+    //Voix canada 37
+    //Voix RUsse 67
     window.speechSynthesis.speak(msg);
 }
 function StopSpeak()
