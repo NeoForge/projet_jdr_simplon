@@ -12,6 +12,7 @@ let QuestionCard = document.querySelector(".questionContent")
 let ChoiceOne = document.querySelector(".ChoiceOne");
 let ChoiceTwo = document.querySelector(".ChoiceTwo");
 let ChoiceThree = document.querySelector(".ChoiceThree");
+const box = document.querySelector(".box")
 
 let LastChoiceOne;
 let LastChoiceTwo;
@@ -24,6 +25,17 @@ let msg;
 
 fetchInfo()
 
+function buttonstart(){
+  let buttonStart = document.createElement("button");
+  box.hidden = true;
+  buttonStart.innerHTML = "START";
+  mainBody.append(buttonStart);
+  buttonStart.addEventListener('click',() => {
+    Start();
+    box.hidden = false;
+    buttonStart.hidden = true;
+  })
+}
 
 function Speak(what)
 {
@@ -89,7 +101,7 @@ async function fetchInfo() {
     .then(data => DataQuestionJson = data)
     .catch(error => console.log(error));
 
-  setTimeout(() => { Start() }, 150);
+  setTimeout(() => { buttonstart() }, 150);
 }
 
 
