@@ -31,7 +31,7 @@ async function fetchInfo() {
     .then(response => response.json())
     .then(data => DataQuestionJson = data)
     .catch(error => console.log(error));
-  setTimeout(() => { Start() }, 50);
+  setTimeout(() => { Start() }, 150);
 }
 
 
