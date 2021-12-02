@@ -1,90 +1,134 @@
-let emplacementHistoire = "Dans le QG des Scorpion Buster";
-let TitreHistoire ="Début de l'aventure";
-let TexteHistoire ="Les Scorpion Buster sont actuellement entrain de manger des croissant et des pain au chocolat offert par leur dernier client .Un peu plus tard dans la journée il reçoivent un appel d'un potentiel client , apparement une infastion de scorpion est apparue dans sont garage . Les scorpion Buster se prépare a y aller , mais comment vont-ils se rendre sur place ? :";
-let templatestory = `
-<div class="card">
-<h5 class="card-header">${TitreHistoire}</h5>
-<div class="card-body">
-  <h5 class="card-title">${emplacementHistoire}</h5>
-  <p class="card-text">${TexteHistoire}</p>
-</div>
-</div>`;
-let c1a = "Je lui propose d'aller dans un bar";
-let c1b = "Kill the kid";
-let c1c = "I help the kid in order to heal him";
-let r1a = "You take the kid to the bar. It limps along next to you, and you carry it over your shoulder like a sack of potatoes. You enter the rundown building and find a ransacked bar."
-let r1b = "You pick the kid up with one arm and stab it in the chest with your knife. The kid dies in your arms and you take it's body, slinging it over your shoulders and continuing your search for food. "
-let r1c =  "You find a rusty old first aid kit and a big medical needle. You use the needle to remove a sliver of metal from the mutant's foot."
-let c2a = "Je lui propose de monter sur la table et de boire une bouteille cul sec";
-let c2b = "Je dépose l'enfant et décide de le bouffer";
-let c2c = "Vous décider d'emmener l'enfant avec vous";
-let r2a = "vous etes tous les deux explosé mais continuez votre chemin"
-let r2b = "Au moment ou vous commencez à le croquer l'enfant se réveille et vous saute à la gorge"
-let r2c =  "L'enfant vous propose de vous aider à trouver de la nourriture"
-let c3a = "Vous décidez de boire un dernier verre";
-let c3b = "Vous êtes mort";
-let c3c = "L'enfant vous amène un scorpion";
-let r3a = "You take the kid to the bar. It limps along next to you, and you carry it over your shoulder like a sack of potatoes. You enter the rundown building and find a ransacked bar."
-let r3b = "You pick the kid up with one arm and stab it in the chest with your knife. The kid dies in your arms and you take it's body, slinging it over your shoulders and continuing your search for food. "
-let r3c =  "You find a rusty old first aid kit and a big medical needle. You use the needle to remove a sliver of metal from the mutant's foot."
-let mainBody = document.getElementById("Main");
-let compteur = 1;
-let answer = "";
-function dotheThing(response)
-{
-    let newDiv = document.createElement("div");
-    newDiv.innerHTML=response;
-    mainBody.append(newDiv);
+let DataStoryJson;
+let DataQuestionJson;
+const storyTitle = document.querySelector("h5");
+const storyTexte = document.querySelector("#StoryContent");
+const question = document.querySelector("#question");
+const choice1 = document.querySelector("#ChoiceOne");
+const choice2 = document.querySelector("#ChoiceTwo");
+const choice3 = document.querySelector("#ChoiceThree");
+
+let storyId = 0;
+let answer, c1, c2, c3;
+fetchInfo();
+
+async function fetchInfo() {
+  waiting = true;
+  fetch('../js/story.json')
+    .then(response => response.json())
+    .then(data => DataStoryJson = data)
+    .catch(error => console.log(error));
+  fetch('../js/question.json')
+    .then(response => response.json())
+    .then(data => DataQuestionJson = data)
+    .catch(error => console.log(error));
 }
 
-function history(txt) {
-  let newDiv = document.createElement("div");
-  newDiv.innerHTML= txt;
-  mainBody.append(newDiv);
-}
 
-function question(length, a, b, c, ra, rb, rc) {
-  let newbutton1 = document.createElement("button");
-  let newbutton2 = document.createElement("button");
-  let newbutton3 = document.createElement("button");
-  newbutton1.innerHTML = a;
-  newbutton2.innerHTML = b;
-  newbutton3.innerHTML = c;
-  if (length == 2){
-    mainBody.append(newbutton1);
-    mainBody.append(newbutton2);
-  } else if (length == 3) {
-    mainBody.append(newbutton1);
-    mainBody.append(newbutton2);
-    mainBody.append(newbutton3);
-  }
-  newbutton1.addEventListener('click', ()=> {
-    dotheThing(ra);
-    for(let i = 1; i <= length; i++){
-      eval('newbutton'+ i ).remove();
-    }
-    compteur++;
-    question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
-  })
-  newbutton2.addEventListener('click', ()=> {
-    dotheThing(rb);
-    for(let i = 1; i <= length; i++){
-      eval('newbutton'+ i ).remove();
-    } 
-    compteur++;
-    question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
-  })
-  newbutton3.addEventListener('click', ()=> {
-    dotheThing(rc);
-    for(let i = 1; i <= length; i++){
-      eval('newbutton'+ i ).remove();
-    } 
-    compteur++;
-    question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));  
-  })
-}
 
 function start() {
-    history(templatestory)
-    question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));
+  let story;
+  if (storyId < Object.keys(DataStoryJson).length) {
+    if (storyId > 0) {
+      story = DataQuestionJson[answer].body
+    } else {
+      story = DataStoryJson[storyId].body
+    }
+    storyTitle.innerHTML = DataStoryJson[storyId].title;
+    storyTexte.innerHTML = story;
+    question.innerHTML = DataStoryJson[storyId].question;
+    for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+      if (DataQuestionJson[i].storyid == storyId) {
+        if (DataQuestionJson[i].choiceid == '1') {
+          choice1.innerHTML = DataQuestionJson[i].body;
+         c1 = i;
+        }
+        if (DataQuestionJson[i].choiceid == '2') {
+          choice2.innerHTML = DataQuestionJson[i].body;
+          c2 = i;
+        }
+        if (DataQuestionJson[i].choiceid == '3') {
+          choice3.innerHTML = DataQuestionJson[i].body;
+          c3 = i;
+        }
+      }
+    }
+  } else {
+    alert("Finish")
+  }
 }
+
+function clickButton(choice) {
+  if (choice == 1) {
+    answer = c1;
+    storyId++;
+    console.log('choix 1 click btn', answer)
+  } else if (choice == 2) {
+    answer = c2;
+    storyId++;
+    console.log('choix 2 click btn', answer)
+  } else if (choice == 3) {
+    answer = c3;
+    storyId++;
+    console.log('choix 3 click btn', answer)
+  }
+  start();
+}
+
+// function dotheThing(response)
+// {
+//     let newDiv = document.createElement("div");
+//     newDiv.innerHTML=response;
+//     mainBody.append(newDiv);
+// }
+
+// function history(txt) {
+//   let newDiv = document.createElement("div");
+//   newDiv.innerHTML= txt;
+//   mainBody.append(newDiv);
+// }
+
+// function question(length, a, b, c, ra, rb, rc) {
+//   let newbutton1 = document.createElement("button");
+//   let newbutton2 = document.createElement("button");
+//   let newbutton3 = document.createElement("button");
+//   newbutton1.innerHTML = a;
+//   newbutton2.innerHTML = b;
+//   newbutton3.innerHTML = c;
+//   if (length == 2){
+//     mainBody.append(newbutton1);
+//     mainBody.append(newbutton2);
+//   } else if (length == 3) {
+//     mainBody.append(newbutton1);
+//     mainBody.append(newbutton2);
+//     mainBody.append(newbutton3);
+//   }
+//   newbutton1.addEventListener('click', ()=> {
+//     dotheThing(ra);
+//     for(let i = 1; i <= length; i++){
+//       eval('newbutton'+ i ).remove();
+//     }
+//     compteur++;
+//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
+//   })
+//   newbutton2.addEventListener('click', ()=> {
+//     dotheThing(rb);
+//     for(let i = 1; i <= length; i++){
+//       eval('newbutton'+ i ).remove();
+//     } 
+//     compteur++;
+//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
+//   })
+//   newbutton3.addEventListener('click', ()=> {
+//     dotheThing(rc);
+//     for(let i = 1; i <= length; i++){
+//       eval('newbutton'+ i ).remove();
+//     } 
+//     compteur++;
+//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));  
+//   })
+// }
+
+// function start() {
+//     history(templatestory)
+//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));
+// }
