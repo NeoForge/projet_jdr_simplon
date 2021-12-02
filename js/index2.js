@@ -20,7 +20,7 @@ let waiting = true;
 
 let choiceArray = [];
 
-fetchInfo().then(WaitForStart());
+fetchInfo()
 
 async function fetchInfo() {
   fetch('../js/story.json')
@@ -31,11 +31,9 @@ async function fetchInfo() {
     .then(response => response.json())
     .then(data => DataQuestionJson = data)
     .catch(error => console.log(error));
+  setTimeout(() => { Start() }, 50);
 }
 
-function WaitForStart() {
-  setTimeout(() => { Start() }, 150);
-}
 
 function Start() {
   let FinalString;
