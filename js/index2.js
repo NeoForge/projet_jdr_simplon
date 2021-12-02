@@ -7,26 +7,20 @@ let DataQuestionJson;
 let LastQuestionId;
 
 let TitleCard = document.querySelector(".card-header");
-let StoryCard = document.querySelector("#StoryContent");
-let QuestionCard = document.querySelector("#questionContent")
-let ChoiceOne = document.querySelector("#ChoiceOne");
-let ChoiceTwo = document.querySelector("#ChoiceTwo");
-let ChoiceThree = document.querySelector("#ChoiceThree");
+let StoryCard = document.querySelector(".StoryContent");
+let QuestionCard = document.querySelector(".questionContent")
+let ChoiceOne = document.querySelector(".ChoiceOne");
+let ChoiceTwo = document.querySelector(".ChoiceTwo");
+let ChoiceThree = document.querySelector(".ChoiceThree");
 
 let LastChoiceOne;
 let LastChoiceTwo;
 let LastChoiceThree;
 let waiting = true;
 
-let choiceArray = [] ;
-
-
-
-
+let choiceArray = [];
 
 fetchInfo().then(WaitForStart());
-
-
 
 async function fetchInfo() {
   fetch('../js/story.json')
@@ -44,9 +38,7 @@ function WaitForStart() {
 }
 
 function Start() {
-
   let FinalString;
-
   if (indexStory == Object.keys(DataStoryJson).length) {
     ChoiceOne.parentElement.classList.add("disabled");
     ChoiceTwo.parentElement.classList.add("disabled");
@@ -89,22 +81,50 @@ function Start() {
   }
 }
 
-function EndGame()
-{
-  let EndDiv = document.createElement("div");
-  EndDiv.innerHTML = DataStoryJson[0].body;
-  for(let i =0;i<choiceArray.length;i++)
-  {
-    let tempHtml = EndDiv.innerHTML;
-    EndDiv.innerHTML = EndDiv.innerHTML +" "+DataQuestionJson[choiceArray[i]].resultat+" "+DataStoryJson[i].body
+function EndGame() {
+  let endContext = document.createElement("div");
+  endContext.classList += "card_context";
+  endContext.id += "context";
+  let FinalString = "<br>" + DataStoryJson[0].title + "<br>" + DataStoryJson[0].body + " ";
+  for (let i = 1; i < choiceArray.length; i++) {
+    FinalString += "<br>" + DataStoryJson[i].title + "<br> " + DataQuestionJson[choiceArray[i]].resultat + " " + DataStoryJson[i].body
   }
+  endContext.innerHTML = `
+  <h5 class="card-header">Résumé des Actions</h5>
+  <div class="card-body">
+      <p class="card-text" id="StoryContent">${FinalString}</p>
+  </div>`;
   mainBody.innerHTML = "";
-  mainBody.appendChild(EndDiv);
+  mainBody.appendChild(endContext);
 }
+// function EndGame() {
+
+//   let FinalString;
+//   mainBody.innerHTML = "";
+//   for (let i = 0; i < choiceArray.length; i++) {
+//     let endContext = document.createElement("div");
+//     endContext.classList += "card_context";
+//     endContext.id += "context";
+//     if (i == 0) {
+//       FinalString = DataStoryJson[0].body + " ";
+//     }
+//     else {
+//       FinalString = " " + DataQuestionJson[choiceArray[i]].resultat + " " + DataStoryJson[i].body
+//     }
+//     endContext.innerHTML = `
+//     <h5 class="card-header">Résumé des Actions</h5>
+//     <div class="card-body">
+//         <p class="card-text" id="StoryContent">${FinalString}</p>
+//     </div>`
+//     mainBody.appendChild(endContext);
+//   }
+// }
+
+
 
 
 function clickButton(int) {
-  if (ChoiceOne.parentElement.classList.contains("disabled")) { EndGame();}
+  if (ChoiceOne.parentElement.classList.contains("disabled")) { EndGame(); }
   else {
     switch (int) {
       case 1:
