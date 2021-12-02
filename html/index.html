@@ -18,9 +18,9 @@
     <div class="mainBody" id="Main">
         <div class="box">
             <div class="card_context" id="context">
-                <h5 class="card-header">${TitreHistoire}</h5>
+                <h5 class="card-header" onmouseenter="Speak(0)" onmouseleave="StopSpeak()">${TitreHistoire}</h5>
                 <div class="card-body">
-                    <p class="card-text StoryContent">${TexteHistoire}</p>
+                    <p class="card-text StoryContent" onmouseenter="Speak(1)" onmouseleave="StopSpeak()">${TexteHistoire}</p>
                 </div>
             </div>
             <div class="middle_box" id="corps"> 
@@ -31,22 +31,22 @@
 
                 <div class="corps-txt">                
                     <div class="card_question" id="question">
-                        <div class="card-body">
+                        <div class="card-body" onmouseenter="Speak(2)" onmouseleave="StopSpeak()">
                             <p class="card-text questionContent">${TexteHistoire}</p>
                         </div>
                     </div>
                     <div class="card_choice" id="choice1">
-                        <div class="card-body" onclick="clickButton(1)">
+                        <div class="card-body" onclick="clickButton(1)" onmouseenter="Speak(3)" onmouseleave="StopSpeak()">
                             <p class="card-text ChoiceOne" >${TexteHistoire}</p>
                         </div>
                     </div>
                     <div class="card_choice" id="choice2">
-                        <div class="card-body" onclick="clickButton(2)">
+                        <div class="card-body" onclick="clickButton(2)" onmouseenter="Speak(4)" onmouseleave="StopSpeak()">
                             <p class="card-text ChoiceTwo" >${TexteHistoire}</p>
                         </div>
                     </div>
                     <div class="card_choice" id="choice3">
-                        <div class="card-body" onclick="clickButton(3)">
+                        <div class="card-body" onclick="clickButton(3)" onmouseenter="Speak(5)" onmouseleave="StopSpeak()">
                             <p class="card-text ChoiceThree" >${TexteHistoire}</p>
                         </div>
                     </div> 
@@ -63,7 +63,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="../js/index.js"></script>
+    <script src="../js/index2.js"></script>
 
 </body>
 

@@ -19,8 +19,63 @@ let LastChoiceThree;
 let waiting = true;
 
 let choiceArray = [];
+let voiceArray;
+let msg;
 
 fetchInfo()
+
+
+function Speak(what)
+{
+  let finalSpeech;
+    switch(what)
+    {
+      case 0:
+        {
+          finalSpeech = TitleCard.innerHTML;
+          break;
+        }
+        case 1:
+        {
+          finalSpeech = StoryCard.innerHTML;
+          break;
+        }
+        case 2:
+        {
+          finalSpeech = QuestionCard.innerHTML;
+          break;
+        }
+        case 3:
+        {
+          finalSpeech = ChoiceOne.innerHTML;
+          break;
+        }
+        case 4:
+        {
+          finalSpeech = ChoiceTwo.innerHTML;
+          break;
+        }
+        case 5:
+        {
+          finalSpeech = ChoiceThree.innerHTML;
+          break;
+        }
+    }
+    msg = new SpeechSynthesisUtterance(finalSpeech);
+    msg.voice = voiceArray[37];
+    window.speechSynthesis.speak(msg);
+}
+function StopSpeak()
+{
+  window.speechSynthesis.cancel()
+}
+let timer = setInterval(function() {
+  voiceArray = speechSynthesis.getVoices();
+  console.log(voiceArray);
+  if (voiceArray.length !== 0) {
+    clearInterval(timer);
+  }
+}, 200);
 
 async function fetchInfo() {
   fetch('../js/story.json')
@@ -31,6 +86,7 @@ async function fetchInfo() {
     .then(response => response.json())
     .then(data => DataQuestionJson = data)
     .catch(error => console.log(error));
+
   setTimeout(() => { Start() }, 150);
 }
 
@@ -126,7 +182,7 @@ function clickButton(int) {
   else {
     switch (int) {
       case 1:
-        {
+        {    
           LastQuestionId = LastChoiceOne;
           break;
         }

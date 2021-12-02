@@ -38,6 +38,11 @@ function buttonstart(){
   })
 }
 
+function test()
+{
+  console.log("Hello");
+}
+
 
 function start() {
   let story;
