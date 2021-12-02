@@ -52,7 +52,7 @@ function start() {
   }
   if (storyId < Object.keys(DataStoryJson).length) {
     if (storyId > 0) {
-      story = DataQuestionJson[answer].body
+      story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body
     } else {
       story = DataStoryJson[storyId].body
     }
@@ -76,10 +76,28 @@ function start() {
       }
     }
   } else {
-    alert("Finish")
-  }
-}
+    // Début de ajout de Kevin pour End Box
+      box.innerHTML = " ";
+    restart();
+    }
 
+
+    // Fin de ajout de Kevin pour End Box
+  }
+
+function restart (){
+  let buttonRestart = document.createElement("button");
+  box.hidden = true;
+  buttonRestart.innerHTML = "Restart";
+  mainBody.append(buttonRestart);
+  buttonRestart.addEventListener('click',() => {
+    reload()
+  });
+}
+function reload()
+{
+  window.location.reload()
+}
 function clickButton(choice) {
   if (choice == 1) {
     answer = c1;
