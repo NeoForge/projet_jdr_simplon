@@ -41,6 +41,11 @@ function buttonstart(){
 
 function start() {
   let story;
+  if(DataStoryJson[storyId].meteo == "rain"){
+    setInterval(rain, 10);
+  } else if (DataStoryJson[storyId].meteo == "snow"){
+    setInterval(snow, 10);
+  }
   if (storyId < Object.keys(DataStoryJson).length) {
     if (storyId > 0) {
       story = DataQuestionJson[answer].body
@@ -87,13 +92,35 @@ function clickButton(choice) {
   }
   start();
 }
-setInterval(rain, 10);
+//setInterval(rain, 10);
+//setInterval(snow, 100);
 
 function rain() {
   const waterDrop = document.createElement('i');
-  waterDrop.classList.add('bi');
-  waterDrop.classList.add('bi-droplet-fill');
-  waterDrop.style.fontSize = Math.random()* 7 + 'px';
+  waterDrop.classList.add('fas');
+  waterDrop.classList.add('fa-tint');
+  waterDrop.style.fontSize = Math.random()* 10 + 'px';
+  waterDrop.style.animationDuration = Math.random() * 7 + 's';
+  waterDrop.opacity = Math.random();
+  waterDrop.style.left = Math.random() * window.innerWidth + 'px';
+  body.appendChild(waterDrop);
+  setTimeout(() => {
+    waterDrop.remove();
+  }, 6000)
+}
+
+function snow() {
+  const waterDrop = document.createElement('i');
+  waterDrop.classList.add('far');
+  waterDrop.classList.add('fa-snowflake');
+  waterDrop.style.fontSize = Math.random()* 8 + 'px';
+  waterDrop.style.animationDuration = Math.random() * 9 + 's';
+  waterDrop.opacity = Math.random() + 0.3;
+  waterDrop.style.left = Math.random() * window.innerWidth + 'px';
+  body.appendChild(waterDrop);
+  setTimeout(() => {
+    waterDrop.remove();
+  }, 10000)
 }
 
 // function dotheThing(response)

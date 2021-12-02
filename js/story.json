@@ -15,7 +15,8 @@
     "storyid": 2,
     "title": "Titre 2",
     "body": "Histoire 2",
-    "question":"Question 2"
+    "question":"Question 2",
+    "meteo": "rain"
   },
   {
     "storyid": 3,
@@ -27,7 +28,8 @@
     "storyid": 4,
     "title": "Titre 4",
     "body": "Histoire 4",
-    "question":"Question 4"
+    "question":"Question 4",
+    "meteo": "snow"
   },
   {
     "storyid": 5,
