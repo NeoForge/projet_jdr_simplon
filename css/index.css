@@ -59,7 +59,6 @@ h1
 }
 .middle_box
 {
-    
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -75,24 +74,7 @@ h1
     width:60%;
     margin: 0 2% 2% 2%;
 }
-/* ------Button Mute -------- */
-.btn-mute{
-    display: flex;
-    flex-direction: row;
-    
-}
-.muteVoice {
-    position: relative;
-    flex-direction: row;
-    font-size: 10px;
-    width: 100px;
-    height: 50px;
-}
-.mute {
-    position: relative;
-    font-size: 10px;
-    width: 100px;
-    height: 50px;
+
 
 }
 
@@ -109,6 +91,18 @@ h1
     align-self: flex-start;
 }
 
+.card_ending {
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    align-self: center;
+    background-color: rgb(255, 182, 65, 0.8);
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+    text-align: center; 
+    font-family: 'Press Start 2P';
+    justify-content: space-around;
+    }
 .card_choice
 {
     width: 70%;
@@ -218,8 +212,8 @@ button {
     border: 5px ridge #1bff80bf;
     border-radius: 20px;
     color: black;
-
 }
+
  button:hover {
  
     border-radius: 20px;
@@ -227,9 +221,6 @@ button {
  }
  /* ----------Goute d'eau----------- */
 
- .card_ending{
-     display: none;
- }
 
  /* Goute d'eau */
 
@@ -259,4 +250,27 @@ button {
     top: -20px;
     left: 50%;
     animation: fall linear forwards;
+}
+
+
+
+/* ------Button Mute -------- */
+.btn-mute{
+    display: flex;
+    flex-direction: row;
+    
+}
+.muteVoice {
+    position: relative;
+    flex-direction: row;
+    font-size: 10px;
+    width: 100px;
+    height: 50px;
+}
+.mute {
+    position: relative;
+    font-size: 10px;
+    width: 100px;
+    height: 50px;
+
 }

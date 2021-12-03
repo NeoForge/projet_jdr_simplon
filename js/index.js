@@ -12,6 +12,8 @@ const audio = document.querySelector("audio");
 const voice = document.querySelector(".muteVoice")
 const muteSong = document.querySelector(".mute")
 const body = document.body;
+const body = document.body;
+const ending = document.querySelector(".card_ending");
 let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
@@ -19,7 +21,7 @@ let game, raining, snowing;
 let voiceArray;
 let muteVoice = false;
 let msg;
-
+let choiceArray = []
 function Speak(what) {
   let finalSpeech;
   switch (what) {
@@ -198,12 +200,25 @@ function start() {
     console.log("Hello this is the end");
     // Début de ajout de Kevin pour End Box
     box.innerHTML = " ";
-    restart();
+    box.hidden = true;
+    console.log("Resume des choix "+choiceArray);
+    endBox();
+    restart(); 
   }
-
-
-  // Fin de ajout de Kevin pour End Box
 }
+
+function endBox() { // ending = varialble js / card_ending = HTML
+  ending.style.display = "flex";
+  let storyRank=0
+choiceArray.forEach(element => {
+    ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
+    storyRank++;
+    });
+}
+   
+//  Fin de  de ajout de Kevin pour End Box
 
 function restart() {
   let buttonRestart = document.createElement("button");
@@ -220,12 +235,18 @@ function reload() {
 function clickButton(choice) {
   if (choice == 1) {
     answer = c1;
+    choiceArray[storyId] = answer;
+    console.log("choice: "+answer);
     storyId++;
   } else if (choice == 2) {
     answer = c2;
+    choiceArray[storyId] = answer;
+    console.log("choice: "+answer);
     storyId++;
   } else if (choice == 3) {
     answer = c3;
+    choiceArray[storyId] = answer;
+    console.log("choice: "+answer);
     storyId++;
   }
   start();
