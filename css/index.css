@@ -177,6 +177,12 @@ button {
  }
  /* ----------Goute d'eau----------- */
 
+ .card_ending{
+     display: none;
+ }
+
+ /* Goute d'eau */
+
  .fa-tint{
      color: rgb(71, 0, 0);
      position: absolute;
