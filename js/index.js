@@ -13,60 +13,6 @@ const body = document.body;
 let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
-let voiceArray;
-let msg;
-
-function Speak(what) {
-  let finalSpeech;
-  switch (what) {
-    case 0:
-      {
-        finalSpeech = storyTitle.innerHTML;
-        break;
-      }
-    case 1:
-      {
-        finalSpeech = storyTexte.innerHTML;
-        break;
-      }
-    case 2:
-      {
-        finalSpeech = question.innerHTML;
-        break;
-      }
-    case 3:
-      {
-        finalSpeech = choice1.innerHTML;
-        break;
-      }
-    case 4:
-      {
-        finalSpeech = choice2.innerHTML;
-        break;
-      }
-    case 5:
-      {
-        finalSpeech = choice3.innerHTML;
-        break;
-      }
-  }
-  msg = new SpeechSynthesisUtterance(finalSpeech);
-  msg.voice = voiceArray[37];
-  //Voix canada 37
-  //Voix RUsse 67
-  window.speechSynthesis.speak(msg);
-}
-function StopSpeak() {
-  window.speechSynthesis.cancel()
-}
-let timer = setInterval(function () {
-  voiceArray = speechSynthesis.getVoices();
-  console.log(voiceArray);
-  if (voiceArray.length !== 0) {
-    clearInterval(timer);
-  }
-}, 200);
-
 
 let voiceArray;
 let msg;
