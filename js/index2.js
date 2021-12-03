@@ -37,6 +37,9 @@ function buttonstart(){
   })
 }
 
+let voiceArray;
+let msg;
+
 function Speak(what)
 {
   let finalSpeech;
