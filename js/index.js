@@ -12,7 +12,6 @@ const audio = document.querySelector("audio");
 const voice = document.querySelector(".muteVoice")
 const muteSong = document.querySelector(".mute")
 const body = document.body;
-const body = document.body;
 const ending = document.querySelector(".card_ending");
 let storyId = 0;
 let answer, c1, c2, c3;
