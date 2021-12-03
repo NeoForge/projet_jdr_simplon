@@ -25,12 +25,12 @@ let msg;
 
 fetchInfo()
 
-function buttonstart(){
+function buttonstart() {
   let buttonStart = document.createElement("button");
   box.hidden = true;
   buttonStart.innerHTML = "START";
   mainBody.append(buttonStart);
-  buttonStart.addEventListener('click',() => {
+  buttonStart.addEventListener('click', () => {
     Start();
     box.hidden = false;
     buttonStart.hidden = true;
@@ -40,53 +40,71 @@ function buttonstart(){
 let voiceArray;
 let msg;
 
-function Speak(what)
-{
+function Speak(what) {
   let finalSpeech;
-    switch(what)
-    {
-      case 0:
-        {
-          finalSpeech = TitleCard.innerHTML;
-          break;
+  switch (what) {
+    case 0:
+      {
+        finalSpeech = DataStoryJson[indexStory].title;
+        break;
+      }
+    case 1:
+      {
+        finalSpeech = DataStoryJson[indexStory].body;
+        break;
+      }
+    case 2:
+      {
+        finalSpeech = DataStoryJson[indexStory].question;
+        break;
+      }
+    case 3:
+      {
+        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+          if (DataQuestionJson[i].storyid == indexStory) {
+            if (DataQuestionJson[i].choiceid == 1) {
+              finalSpeech = DataQuestionJson[i].body;
+              break;
+            }
+          }
         }
-        case 1:
-        {
-          finalSpeech = StoryCard.innerHTML;
-          break;
+        break;
+      }
+    case 4:
+      {
+        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+          if (DataQuestionJson[i].storyid == indexStory) {
+            if (DataQuestionJson[i].choiceid == 2) {
+              finalSpeech = DataQuestionJson[i].body;
+              break;
+            }
+          }
         }
-        case 2:
-        {
-          finalSpeech = QuestionCard.innerHTML;
-          break;
+        break;
+      }
+    case 5:
+      {
+        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+          if (DataQuestionJson[i].storyid == indexStory) {
+            if (DataQuestionJson[i].choiceid == 3) {
+              finalSpeech = DataQuestionJson[i].body;
+              break;
+            }
+          }
         }
-        case 3:
-        {
-          finalSpeech = ChoiceOne.innerHTML;
-          break;
-        }
-        case 4:
-        {
-          finalSpeech = ChoiceTwo.innerHTML;
-          break;
-        }
-        case 5:
-        {
-          finalSpeech = ChoiceThree.innerHTML;
-          break;
-        }
-    }
-    msg = new SpeechSynthesisUtterance(finalSpeech);
-    msg.voice = voiceArray[37];
-    //Voix canada 37
-    //Voix RUsse 67
-    window.speechSynthesis.speak(msg);
+        break;
+      }
+  }
+  msg = new SpeechSynthesisUtterance(finalSpeech);
+  msg.voice = voiceArray[37];
+  //Voix canada 37
+  //Voix RUsse 67
+  window.speechSynthesis.speak(msg);
 }
-function StopSpeak()
-{
+function StopSpeak() {
   window.speechSynthesis.cancel()
 }
-let timer = setInterval(function() {
+let timer = setInterval(function () {
   voiceArray = speechSynthesis.getVoices();
   console.log(voiceArray);
   if (voiceArray.length !== 0) {
@@ -199,7 +217,7 @@ function clickButton(int) {
   else {
     switch (int) {
       case 1:
-        {    
+        {
           LastQuestionId = LastChoiceOne;
           break;
         }

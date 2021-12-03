@@ -17,47 +17,73 @@ let game, raining, snowing;
 let voiceArray;
 let msg;
 
-function Speak(what)
-{
+function Speak(what) {
   let finalSpeech;
-    switch(what)
-    {
-      case 0:
+  switch (what) {
+    case 0:
+      {
+        finalSpeech = DataStoryJson[storyId].title;
+        break;
+      }
+    case 1:
+      {
+        if (storyId > 0) 
         {
-          finalSpeech = storyTitle.innerHTML;
-          break;
+          finalSpeech = DataQuestionJson[answer].resultat + DataStoryJson[storyId].body
         }
-        case 1:
+        else
         {
-          finalSpeech = storyTexte.innerHTML;
-          break;
+          finalSpeech = DataStoryJson[storyId].body;
         }
-        case 2:
-        {
-          finalSpeech = question.innerHTML;
-          break;
+        break;
+      }
+    case 2:
+      {
+        finalSpeech = DataStoryJson[storyId].question;
+        break;
+      }
+    case 3:
+      {
+        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+          if (DataQuestionJson[i].storyid == storyId) {
+            if (DataQuestionJson[i].choiceid == 1) {
+              finalSpeech = DataQuestionJson[i].body;
+              break;
+            }
+          }
         }
-        case 3:
-        {
-          finalSpeech = choice1.innerHTML;
-          break;
+        break;
+      }
+    case 4:
+      {
+        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+          if (DataQuestionJson[i].storyid == storyId) {
+            if (DataQuestionJson[i].choiceid == 2) {
+              finalSpeech = DataQuestionJson[i].body;
+              break;
+            }
+          }
         }
-        case 4:
-        {
-          finalSpeech = choice2.innerHTML;
-          break;
+        break;
+      }
+    case 5:
+      {
+        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+          if (DataQuestionJson[i].storyid == storyId) {
+            if (DataQuestionJson[i].choiceid == 3) {
+              finalSpeech = DataQuestionJson[i].body;
+              break;
+            }
+          }
         }
-        case 5:
-        {
-          finalSpeech = choice3.innerHTML;
-          break;
-        }
-    }
-    msg = new SpeechSynthesisUtterance(finalSpeech);
-    msg.voice = voiceArray[37];
-    //Voix canada 37
-    //Voix RUsse 67
-    window.speechSynthesis.speak(msg);
+        break;
+      }
+  }
+  msg = new SpeechSynthesisUtterance(finalSpeech);
+  msg.voice = voiceArray[37];
+  //Voix canada 37
+  //Voix RUsse 67
+  window.speechSynthesis.speak(msg);
 }
 function StopSpeak()
 {
