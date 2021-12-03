@@ -76,12 +76,21 @@ h1
     margin: 0 2% 2% 2%;
 }
 /* ------Button Mute -------- */
-
+.btn-mute{
+    display: flex;
+    flex-direction: row;
+    
+}
+.muteVoice {
+    position: relative;
+    flex-direction: row;
+    font-size: 10px;
+    width: 100px;
+    height: 50px;
+}
 .mute {
-    position: absolute;
-    margin-left: 45%;
-    margin-top: -22%;
-    font-size: 15px;
+    position: relative;
+    font-size: 10px;
     width: 100px;
     height: 50px;
 
