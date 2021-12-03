@@ -31,6 +31,7 @@ h1
 
 }
 
+
 .box{
     width: 100%;
     height: 94vh;
@@ -79,14 +80,17 @@ h1
 .card_ending {
     display: none;
     flex-direction: column;
-    width: 90%;
+    width: 80%;
     align-self: center;
+    align-items: center;
     background-color: rgb(255, 182, 65, 0.8);
     border: 5px ridge #1bff80bf;
     border-radius: 20px;
     text-align: center; 
     font-family: 'Press Start 2P';
     justify-content: space-around;
+    margin: auto;
+    overflow: scroll;
 }
 
 /* -------- Question / Réponses -------- */
