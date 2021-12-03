@@ -7,12 +7,71 @@ const choice1 = document.querySelector(".ChoiceOne");
 const choice2 = document.querySelector(".ChoiceTwo");
 const choice3 = document.querySelector(".ChoiceThree");
 const mainBody = document.querySelector("#Main");
-const box = document.querySelector(".box")
+const box = document.querySelector(".box");
+const ending = document.querySelector(".card_ending");
 const body = document.body;
+
 
 let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
+
+let voiceArray;
+let msg;
+
+let choiceArray = []
+
+function Speak(what) {
+  let finalSpeech;
+  switch (what) {
+    case 0:
+      {
+        finalSpeech = storyTitle.innerHTML;
+        break;
+      }
+    case 1:
+      {
+        finalSpeech = storyTexte.innerHTML;
+        break;
+      }
+    case 2:
+      {
+        finalSpeech = question.innerHTML;
+        break;
+      }
+    case 3:
+      {
+        finalSpeech = choice1.innerHTML;
+        break;
+      }
+    case 4:
+      {
+        finalSpeech = choice2.innerHTML;
+        break;
+      }
+    case 5:
+      {
+        finalSpeech = choice3.innerHTML;
+        break;
+      }
+  }
+  msg = new SpeechSynthesisUtterance(finalSpeech);
+  msg.voice = voiceArray[37];
+  //Voix canada 37
+  //Voix RUsse 67
+  window.speechSynthesis.speak(msg);
+}
+function StopSpeak() {
+  window.speechSynthesis.cancel()
+}
+let timer = setInterval(function () {
+  voiceArray = speechSynthesis.getVoices();
+  console.log(voiceArray);
+  if (voiceArray.length !== 0) {
+    clearInterval(timer);
+  }
+}, 200);
+
 
 fetchInfo();
 buttonstart()
@@ -27,12 +86,12 @@ async function fetchInfo() {
     .catch(error => console.log(error));
 }
 
-function buttonstart(){
+function buttonstart() {
   let buttonStart = document.createElement("button");
   box.hidden = true;
   buttonStart.innerHTML = "START";
   mainBody.append(buttonStart);
-  buttonStart.addEventListener('click',() => {
+  buttonStart.addEventListener('click', () => {
     start();
     box.hidden = false;
     buttonStart.hidden = true;
@@ -43,14 +102,17 @@ function buttonstart(){
 
 function start() {
   let story;
-  if(DataStoryJson[storyId].meteo == "rain"){
-    raining = setInterval(rain, 10);
-  } else if (DataStoryJson[storyId].meteo == "snow"){
-    snowing = setInterval(snow, 10);
-  } else if (DataStoryJson[storyId].meteo == "sun"){
-    stopWeather()
-  }
+  console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
+  console.log(storyId < Object.keys(DataStoryJson).length);
+
   if (storyId < Object.keys(DataStoryJson).length) {
+    if (DataStoryJson[storyId].meteo == "rain") {
+      raining = setInterval(rain, 10);
+    } else if (DataStoryJson[storyId].meteo == "snow") {
+      snowing = setInterval(snow, 10);
+    } else if (DataStoryJson[storyId].meteo == "sun") {
+      stopWeather()
+    }
     if (storyId > 0) {
       story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body
     } else {
@@ -63,7 +125,7 @@ function start() {
       if (DataQuestionJson[i].storyid == storyId) {
         if (DataQuestionJson[i].choiceid == '1') {
           choice1.innerHTML = DataQuestionJson[i].body;
-         c1 = i;
+          c1 = i;
         }
         if (DataQuestionJson[i].choiceid == '2') {
           choice2.innerHTML = DataQuestionJson[i].body;
@@ -76,41 +138,57 @@ function start() {
       }
     }
   } else {
+    console.log("Hello this is the end");
     // Début de ajout de Kevin pour End Box
-      box.innerHTML = " ";
-    restart();
-    }
-
-
-    // Fin de ajout de Kevin pour End Box
+    box.innerHTML = " ";
+    box.hidden = true;
+    console.log("Resume des choix "+choiceArray);
+    endBox();
+    restart(); 
   }
+}
 
-function restart (){
+function endBox() { // ending = varialble js / card_ending = HTML
+  ending.style.display = "flex";
+  let storyRank=0
+choiceArray.forEach(element => {
+    ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
+    storyRank++;
+    });
+}
+   
+//  Fin de  de ajout de Kevin pour End Box
+
+function restart() {
   let buttonRestart = document.createElement("button");
   box.hidden = true;
   buttonRestart.innerHTML = "Restart";
   mainBody.append(buttonRestart);
-  buttonRestart.addEventListener('click',() => {
+  buttonRestart.addEventListener('click', () => {
     reload()
   });
 }
-function reload()
-{
+function reload() {
   window.location.reload()
 }
 function clickButton(choice) {
   if (choice == 1) {
     answer = c1;
+    choiceArray[storyId] = answer;
+    console.log("choice: "+answer);
     storyId++;
-    console.log('choix 1 click btn', answer)
   } else if (choice == 2) {
     answer = c2;
+    choiceArray[storyId] = answer;
+    console.log("choice: "+answer);
     storyId++;
-    console.log('choix 2 click btn', answer)
   } else if (choice == 3) {
     answer = c3;
+    choiceArray[storyId] = answer;
+    console.log("choice: "+answer);
     storyId++;
-    console.log('choix 3 click btn', answer)
   }
   start();
 }
@@ -120,7 +198,7 @@ function rain() {
   const waterDrop = document.createElement('i');
   waterDrop.classList.add('fas');
   waterDrop.classList.add('fa-tint');
-  waterDrop.style.fontSize = Math.random()* 10 + 'px';
+  waterDrop.style.fontSize = Math.random() * 10 + 'px';
   waterDrop.style.animationDuration = Math.random() * 7 + 's';
   waterDrop.opacity = Math.random();
   waterDrop.style.left = Math.random() * window.innerWidth + 'px';
@@ -134,7 +212,7 @@ function snow() {
   const waterDrop = document.createElement('i');
   waterDrop.classList.add('far');
   waterDrop.classList.add('fa-snowflake');
-  waterDrop.style.fontSize = Math.random()* 8 + 'px';
+  waterDrop.style.fontSize = Math.random() * 8 + 'px';
   waterDrop.style.animationDuration = Math.random() * 9 + 's';
   waterDrop.opacity = Math.random() + 0.3;
   waterDrop.style.left = Math.random() * window.innerWidth + 'px';
@@ -144,66 +222,8 @@ function snow() {
   }, 10000)
 }
 
-function stopWeather(){
+function stopWeather() {
   clearInterval(raining);
   clearInterval(snowing);
 }
 
-// function dotheThing(response)
-// {
-//     let newDiv = document.createElement("div");
-//     newDiv.innerHTML=response;
-//     mainBody.append(newDiv);
-// }
-
-// function history(txt) {
-//   let newDiv = document.createElement("div");
-//   newDiv.innerHTML= txt;
-//   mainBody.append(newDiv);
-// }
-
-// function question(length, a, b, c, ra, rb, rc) {
-//   let newbutton1 = document.createElement("button");
-//   let newbutton2 = document.createElement("button");
-//   let newbutton3 = document.createElement("button");
-//   newbutton1.innerHTML = a;
-//   newbutton2.innerHTML = b;
-//   newbutton3.innerHTML = c;
-//   if (length == 2){
-//     mainBody.append(newbutton1);
-//     mainBody.append(newbutton2);
-//   } else if (length == 3) {
-//     mainBody.append(newbutton1);
-//     mainBody.append(newbutton2);
-//     mainBody.append(newbutton3);
-//   }
-//   newbutton1.addEventListener('click', ()=> {
-//     dotheThing(ra);
-//     for(let i = 1; i <= length; i++){
-//       eval('newbutton'+ i ).remove();
-//     }
-//     compteur++;
-//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
-//   })
-//   newbutton2.addEventListener('click', ()=> {
-//     dotheThing(rb);
-//     for(let i = 1; i <= length; i++){
-//       eval('newbutton'+ i ).remove();
-//     } 
-//     compteur++;
-//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
-//   })
-//   newbutton3.addEventListener('click', ()=> {
-//     dotheThing(rc);
-//     for(let i = 1; i <= length; i++){
-//       eval('newbutton'+ i ).remove();
-//     } 
-//     compteur++;
-//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));  
-//   })
-// }
-
-// function start() {
-//     history(templatestory)
-//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));
-// }

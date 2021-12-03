@@ -59,7 +59,6 @@ h1
 }
 .middle_box
 {
-    
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -76,6 +75,20 @@ h1
     margin-left: 5%;
     margin-right: 5%;
 }
+
+.card_ending {
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    align-self: center;
+    background-color: rgb(255, 182, 65, 0.8);
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+    text-align: center; 
+    font-family: 'Press Start 2P';
+    justify-content: space-around;
+}
+
 /* -------- Question / Réponses -------- */
 .card_question
 {
@@ -168,8 +181,8 @@ button {
     border: 5px ridge #1bff80bf;
     border-radius: 20px;
     color: black;
-
 }
+
  button:hover {
  
     border-radius: 20px;
@@ -177,9 +190,6 @@ button {
  }
  /* ----------Goute d'eau----------- */
 
- .card_ending{
-     display: none;
- }
 
  /* Goute d'eau */
 
