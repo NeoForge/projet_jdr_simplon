@@ -21,73 +21,72 @@ let muteVoice = false;
 let msg;
 
 function Speak(what) {
-  let finalSpeech;
-  switch (what) {
-    case 0:
-      {
-        finalSpeech = DataStoryJson[storyId].title;
-        break;
-      }
-    case 1:
-      {
-        if (storyId > 0) 
+
+    let finalSpeech;
+    switch (what) {
+      case 0:
         {
-          finalSpeech = DataQuestionJson[answer].resultat + DataStoryJson[storyId].body
+          finalSpeech = DataStoryJson[storyId].title;
+          break;
         }
-        else
+      case 1:
         {
-          finalSpeech = DataStoryJson[storyId].body;
+          if (storyId > 0) {
+            finalSpeech = DataQuestionJson[answer].resultat + DataStoryJson[storyId].body
+          }
+          else {
+            finalSpeech = DataStoryJson[storyId].body;
+          }
+          break;
         }
-        break;
-      }
-    case 2:
-      {
-        finalSpeech = DataStoryJson[storyId].question;
-        break;
-      }
-    case 3:
-      {
-        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
-          if (DataQuestionJson[i].storyid == storyId) {
-            if (DataQuestionJson[i].choiceid == 1) {
-              finalSpeech = DataQuestionJson[i].body;
-              break;
+      case 2:
+        {
+          finalSpeech = DataStoryJson[storyId].question;
+          break;
+        }
+      case 3:
+        {
+          for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+            if (DataQuestionJson[i].storyid == storyId) {
+              if (DataQuestionJson[i].choiceid == 1) {
+                finalSpeech = DataQuestionJson[i].body;
+                break;
+              }
             }
           }
+          break;
         }
-        break;
-      }
-    case 4:
-      {
-        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
-          if (DataQuestionJson[i].storyid == storyId) {
-            if (DataQuestionJson[i].choiceid == 2) {
-              finalSpeech = DataQuestionJson[i].body;
-              break;
+      case 4:
+        {
+          for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+            if (DataQuestionJson[i].storyid == storyId) {
+              if (DataQuestionJson[i].choiceid == 2) {
+                finalSpeech = DataQuestionJson[i].body;
+                break;
+              }
             }
           }
+          break;
         }
-        break;
-      }
-    case 5:
-      {
-        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
-          if (DataQuestionJson[i].storyid == storyId) {
-            if (DataQuestionJson[i].choiceid == 3) {
-              finalSpeech = DataQuestionJson[i].body;
-              break;
+      case 5:
+        {
+          for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+            if (DataQuestionJson[i].storyid == storyId) {
+              if (DataQuestionJson[i].choiceid == 3) {
+                finalSpeech = DataQuestionJson[i].body;
+                break;
+              }
             }
           }
+          break;
         }
-        break;
-      }
-  }
+    }
+
 }
-function StopSpeak()
-{
+function StopSpeak() {
   window.speechSynthesis.cancel()
 }
-let timer = setInterval(function() {
+let timer = setInterval(function () {
   voiceArray = speechSynthesis.getVoices();
   console.log(voiceArray);
   if (voiceArray.length !== 0) {
@@ -141,6 +140,7 @@ function btnMute() {
 function btnmuteVoice() {
   if (muteVoice === false) {
     muteVoice = true;
+    console.log(muteVoice)
     voice.innerHTML = "Unmute Voice"
   }
   else {
