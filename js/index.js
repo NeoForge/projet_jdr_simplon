@@ -12,7 +12,8 @@ const body = document.body;
 
 let storyId = 0;
 let answer, c1, c2, c3;
-let game;
+let game, raining, snowing;
+
 fetchInfo();
 buttonstart()
 async function fetchInfo() {
@@ -42,9 +43,11 @@ function buttonstart(){
 function start() {
   let story;
   if(DataStoryJson[storyId].meteo == "rain"){
-    setInterval(rain, 10);
+    raining = setInterval(rain, 10);
   } else if (DataStoryJson[storyId].meteo == "snow"){
-    setInterval(snow, 10);
+    snowing = setInterval(snow, 10);
+  } else if (DataStoryJson[storyId].meteo == "sun"){
+    stopWeather()
   }
   if (storyId < Object.keys(DataStoryJson).length) {
     if (storyId > 0) {
@@ -92,9 +95,8 @@ function clickButton(choice) {
   }
   start();
 }
-//setInterval(rain, 10);
-//setInterval(snow, 100);
 
+// =============> Weather  <==============
 function rain() {
   const waterDrop = document.createElement('i');
   waterDrop.classList.add('fas');
@@ -121,6 +123,11 @@ function snow() {
   setTimeout(() => {
     waterDrop.remove();
   }, 10000)
+}
+
+function stopWeather(){
+  clearInterval(raining);
+  clearInterval(snowing);
 }
 
 // function dotheThing(response)

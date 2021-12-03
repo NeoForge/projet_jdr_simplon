@@ -4,12 +4,14 @@
     "title": "Titre 0",
     "body": "Histoire 0",
     "question":"Question 0"
+
   },
   {
     "storyid": 1,
     "title": "Titre 1",
     "body": "Histoire 1",
     "question":"Question 1"
+
   },
   {
     "storyid": 2,
@@ -22,14 +24,14 @@
     "storyid": 3,
     "title": "Titre 3",
     "body": "Histoire 3",
-    "question":"Question 3"
+    "question":"Question 3",
+    "meteo": "sun"
   },
   {
     "storyid": 4,
     "title": "Titre 4",
     "body": "Histoire 4",
-    "question":"Question 4",
-    "meteo": "snow"
+    "question":"Question 4"
   },
   {
     "storyid": 5,
@@ -41,13 +43,15 @@
     "storyid": 6,
     "title": "Titre 6",
     "body": "Histoire 6",
-    "question":"Question 6"
+    "question":"Question 6",
+    "meteo": "snow"
   },
   {
     "storyid": 7,
     "title": "Titre 7",
     "body": "Histoire 7",
-    "question":"Question 7"
+    "question":"Question 7",
+    "meteo": "sun"
   },
   {
     "storyid": 8,
