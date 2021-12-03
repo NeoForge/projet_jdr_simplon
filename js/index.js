@@ -9,12 +9,15 @@ const choice3 = document.querySelector(".ChoiceThree");
 const mainBody = document.querySelector("#Main");
 const box = document.querySelector(".box");
 const audio = document.querySelector("audio");
+const voice = document.querySelector(".muteVoice")
+const muteSong = document.querySelector(".mute")
 const body = document.body;
 let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
 
 let voiceArray;
+let muteVoice = false;
 let msg;
 
 function Speak(what) {
@@ -79,11 +82,6 @@ function Speak(what) {
         break;
       }
   }
-  msg = new SpeechSynthesisUtterance(finalSpeech);
-  msg.voice = voiceArray[37];
-  //Voix canada 37
-  //Voix RUsse 67
-  window.speechSynthesis.speak(msg);
 }
 function StopSpeak()
 {
@@ -124,15 +122,32 @@ function buttonstart() {
   })
 }
 
+// ===============> Mute <============================
 function btnMute() {
   if (audio.muted === false) {
     audio.muted = true;
-    console.log(audio.muted)   
+    muteVoice = true;
+    muteSong.innerHTML = "Unmute song"
+    console.log(audio.muted)
   }
   else {
     audio.muted = false;
-    console.log(audio.muted)   
+    muteVoice = false;
+    muteSong.innerHTML = "Mute song"
+    console.log(audio.muted)
     audio.innerHTML = "mute";
+  }
+}
+function btnmuteVoice() {
+  if (muteVoice === false) {
+    muteVoice = true;
+    voice.innerHTML = "Unmute Voice"
+  }
+  else {
+    muteVoice = false;
+    voice.innerHTML = "Mute Voice"
+    console.log(muteVoice)
+
   }
 }
 
