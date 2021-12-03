@@ -8,50 +8,78 @@ const choice2 = document.querySelector(".ChoiceTwo");
 const choice3 = document.querySelector(".ChoiceThree");
 const mainBody = document.querySelector("#Main");
 const box = document.querySelector(".box");
-const ending = document.querySelector(".card_ending");
+const audio = document.querySelector("audio");
+const voice = document.querySelector(".muteVoice")
+const muteSong = document.querySelector(".mute")
 const body = document.body;
-
-
+const ending = document.querySelector(".card_ending");
 let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
 
 let voiceArray;
+let muteVoice = false;
 let msg;
-
 let choiceArray = []
-
 function Speak(what) {
   let finalSpeech;
   switch (what) {
     case 0:
       {
-        finalSpeech = storyTitle.innerHTML;
+        finalSpeech = DataStoryJson[storyId].title;
         break;
       }
     case 1:
       {
-        finalSpeech = storyTexte.innerHTML;
+        if (storyId > 0) 
+        {
+          finalSpeech = DataQuestionJson[answer].resultat + DataStoryJson[storyId].body
+        }
+        else
+        {
+          finalSpeech = DataStoryJson[storyId].body;
+        }
         break;
       }
     case 2:
       {
-        finalSpeech = question.innerHTML;
+        finalSpeech = DataStoryJson[storyId].question;
         break;
       }
     case 3:
       {
-        finalSpeech = choice1.innerHTML;
+        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+          if (DataQuestionJson[i].storyid == storyId) {
+            if (DataQuestionJson[i].choiceid == 1) {
+              finalSpeech = DataQuestionJson[i].body;
+              break;
+            }
+          }
+        }
         break;
       }
     case 4:
       {
-        finalSpeech = choice2.innerHTML;
+        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+          if (DataQuestionJson[i].storyid == storyId) {
+            if (DataQuestionJson[i].choiceid == 2) {
+              finalSpeech = DataQuestionJson[i].body;
+              break;
+            }
+          }
+        }
         break;
       }
     case 5:
       {
-        finalSpeech = choice3.innerHTML;
+        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+          if (DataQuestionJson[i].storyid == storyId) {
+            if (DataQuestionJson[i].choiceid == 3) {
+              finalSpeech = DataQuestionJson[i].body;
+              break;
+            }
+          }
+        }
         break;
       }
   }
@@ -61,10 +89,11 @@ function Speak(what) {
   //Voix RUsse 67
   window.speechSynthesis.speak(msg);
 }
-function StopSpeak() {
+function StopSpeak()
+{
   window.speechSynthesis.cancel()
 }
-let timer = setInterval(function () {
+let timer = setInterval(function() {
   voiceArray = speechSynthesis.getVoices();
   console.log(voiceArray);
   if (voiceArray.length !== 0) {
@@ -93,11 +122,40 @@ function buttonstart() {
   mainBody.append(buttonStart);
   buttonStart.addEventListener('click', () => {
     start();
+    audio.play();
     box.hidden = false;
     buttonStart.hidden = true;
   })
 }
 
+// ===============> Mute <============================
+function btnMute() {
+  if (audio.muted === false) {
+    audio.muted = true;
+    muteVoice = true;
+    muteSong.innerHTML = "Unmute song"
+    console.log(audio.muted)
+  }
+  else {
+    audio.muted = false;
+    muteVoice = false;
+    muteSong.innerHTML = "Mute song"
+    console.log(audio.muted)
+    audio.innerHTML = "mute";
+  }
+}
+function btnmuteVoice() {
+  if (muteVoice === false) {
+    muteVoice = true;
+    voice.innerHTML = "Unmute Voice"
+  }
+  else {
+    muteVoice = false;
+    voice.innerHTML = "Mute Voice"
+    console.log(muteVoice)
+
+  }
+}
 
 
 function start() {

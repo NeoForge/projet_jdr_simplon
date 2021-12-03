@@ -73,8 +73,7 @@ h1
     display: flex;
     flex-direction: column;
     width:60%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: 0 2% 2% 2%;
 }
 
 .card_ending {
@@ -106,6 +105,18 @@ h1
     align-self: flex-start;
 }
 
+.card_ending {
+    display: none;
+    flex-direction: column;
+    width: 90%;
+    align-self: center;
+    background-color: rgb(255, 182, 65, 0.8);
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+    text-align: center; 
+    font-family: 'Press Start 2P';
+    justify-content: space-around;
+    }
 .card_choice
 {
     width: 70%;
@@ -131,6 +142,7 @@ h1
 
 }
 #hero {
+
     width: 360px;
     height: 250px;
     margin-right: 10px;
@@ -145,21 +157,46 @@ h1
 }
 
 .asset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 5px ridge #1bff80bf;
     border-radius: 20px;
     background-color: rgb(150, 131, 131, 0.7);
 }
+
+/* ---------- Media Screen ---------------- */
+
 @media screen and (max-width: 800px){
+    body {
+        font-size: 10px;
+    }
     #pnj {
+        position: relative;
+        bottom: 50px;
         width: 200px;
         height: 150px;
         margin-left: 10px;
     
     }
     #hero {
+        position: relative;
+        bottom: 50px;
         width: 200px;
         height: 150px;
         margin-left: 10px;
+    }
+    .middle_box{
+        width: 100%;
+        position: relative;
+        bottom: 50px;
+    }
+    .card_question {
+        width: 100%;
+        margin: 0;
+    }
+    .card_choice{
+        width: 90%;
     }
 }
 @media screen and (max-width: 500px){
@@ -170,7 +207,11 @@ h1
     #hero {
         display: none;
     }
+    .card_choice{
+        width: 100%;
+    }
 }
+
  /* ------------ Button start ----------------- */
 button {
     position: absolute;
@@ -223,4 +264,27 @@ button {
     top: -20px;
     left: 50%;
     animation: fall linear forwards;
+}
+
+
+
+/* ------Button Mute -------- */
+.btn-mute{
+    display: flex;
+    flex-direction: row;
+    
+}
+.muteVoice {
+    position: relative;
+    flex-direction: row;
+    font-size: 10px;
+    width: 100px;
+    height: 50px;
+}
+.mute {
+    position: relative;
+    font-size: 10px;
+    width: 100px;
+    height: 50px;
+
 }

@@ -15,9 +15,12 @@
 </head>
 
 <body>
-    
+
     <div class="mainBody" id="Main">
         <h1>Scorpion Buster's adventure</h1>
+        <div class="btn-mute">
+            <button onclick="btnMute()" class="mute">Mute</button>
+            <button onclick="btnmuteVoice()" class="muteVoice">Mute voice</button>
         <div class="card_ending" id="ending">
             <!-- <h5 class="ending_title"></h5> -->
             <!-- <div class="card-body">
@@ -26,41 +29,46 @@
             </div>
         </div>
         <div class="box">
+
             <div class="card_context" id="context">
                 <h5 class="card-header" onmouseenter="Speak(0)" onmouseleave="StopSpeak()">${TitreHistoire}</h5>
                 <div class="card-body">
-                    <p class="card-text StoryContent" onmouseenter="Speak(1)" onmouseleave="StopSpeak()">${TexteHistoire}</p>
+                    <p class="card-text StoryContent" onmouseenter="Speak(1)" onmouseleave="StopSpeak()">
+                        ${TexteHistoire}</p>
                 </div>
             </div>
-            <div class="middle_box" id="corps"> 
-                
+            <div class="middle_box" id="corps">
+
                 <div class="asset" id="pnj">
                     <img src="../assets/phone.png" alt="pnj" class="img-pnj">
                 </div>
 
-                <div class="corps-txt">                
+                <div class="corps-txt">
                     <div class="card_question" id="question">
                         <div class="card-body" onmouseenter="Speak(2)" onmouseleave="StopSpeak()">
                             <p class="card-text questionContent">${TexteHistoire}</p>
                         </div>
                     </div>
                     <div class="card_choice" id="choice1">
-                        <div class="card-body" onclick="clickButton(1)" onmouseenter="Speak(3)" onmouseleave="StopSpeak()">
-                            <p class="card-text ChoiceOne" >${TexteHistoire}</p>
+                        <div class="card-body" onclick="clickButton(1)" onmouseenter="Speak(3)"
+                            onmouseleave="StopSpeak()">
+                            <p class="card-text ChoiceOne">${TexteHistoire}</p>
                         </div>
                     </div>
                     <div class="card_choice" id="choice2">
-                        <div class="card-body" onclick="clickButton(2)" onmouseenter="Speak(4)" onmouseleave="StopSpeak()">
-                            <p class="card-text ChoiceTwo" >${TexteHistoire}</p>
+                        <div class="card-body" onclick="clickButton(2)" onmouseenter="Speak(4)"
+                            onmouseleave="StopSpeak()">
+                            <p class="card-text ChoiceTwo">${TexteHistoire}</p>
                         </div>
                     </div>
                     <div class="card_choice" id="choice3">
-                        <div class="card-body" onclick="clickButton(3)" onmouseenter="Speak(5)" onmouseleave="StopSpeak()">
-                            <p class="card-text ChoiceThree" >${TexteHistoire}</p>
+                        <div class="card-body" onclick="clickButton(3)" onmouseenter="Speak(5)"
+                            onmouseleave="StopSpeak()">
+                            <p class="card-text ChoiceThree">${TexteHistoire}</p>
                         </div>
-                    </div> 
-                </div>    
-                
+                    </div>
+                </div>
+
                 <div class="asset" id="hero">
                     <img src="../assets/bill_murray.png" alt="hero" class="img-hero">
                 </div>
@@ -69,6 +77,9 @@
         
         
     </div>
+    <figure>
+        <audio src="/audio/original-ghostbusters-theme-song.mp3" loop></audio>
+    </figure>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
