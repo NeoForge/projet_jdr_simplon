@@ -18,6 +18,7 @@
     
     <div class="mainBody" id="Main">
         <h1>Scorpion Buster's adventure</h1>
+        <button onclick="btnMute()" class="mute">Mute</button>
         <div class="box">
             <div class="card_context" id="context">
                 <h5 class="card-header" onmouseenter="Speak(0)" onmouseleave="StopSpeak()">${TitreHistoire}</h5>
@@ -68,7 +69,7 @@
         
     </div>
     <figure>
-        <audio controls src="/audio/original-ghostbusters-theme-song.mp3" loop></audio>
+        <audio src="/audio/original-ghostbusters-theme-song.mp3" loop></audio>
     </figure>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

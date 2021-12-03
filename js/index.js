@@ -7,63 +7,59 @@ const choice1 = document.querySelector(".ChoiceOne");
 const choice2 = document.querySelector(".ChoiceTwo");
 const choice3 = document.querySelector(".ChoiceThree");
 const mainBody = document.querySelector("#Main");
-const box = document.querySelector(".box")
+const box = document.querySelector(".box");
+const audio = document.querySelector("audio");
 const body = document.body;
-
 let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
-
 let voiceArray;
 let msg;
 
-function Speak(what)
-{
+function Speak(what) {
   let finalSpeech;
-    switch(what)
-    {
-      case 0:
-        {
-          finalSpeech = storyTitle.innerHTML;
-          break;
-        }
-        case 1:
-        {
-          finalSpeech = storyTexte.innerHTML;
-          break;
-        }
-        case 2:
-        {
-          finalSpeech = question.innerHTML;
-          break;
-        }
-        case 3:
-        {
-          finalSpeech = choice1.innerHTML;
-          break;
-        }
-        case 4:
-        {
-          finalSpeech = choice2.innerHTML;
-          break;
-        }
-        case 5:
-        {
-          finalSpeech = choice3.innerHTML;
-          break;
-        }
-    }
-    msg = new SpeechSynthesisUtterance(finalSpeech);
-    msg.voice = voiceArray[37];
-    //Voix canada 37
-    //Voix RUsse 67
-    window.speechSynthesis.speak(msg);
+  switch (what) {
+    case 0:
+      {
+        finalSpeech = storyTitle.innerHTML;
+        break;
+      }
+    case 1:
+      {
+        finalSpeech = storyTexte.innerHTML;
+        break;
+      }
+    case 2:
+      {
+        finalSpeech = question.innerHTML;
+        break;
+      }
+    case 3:
+      {
+        finalSpeech = choice1.innerHTML;
+        break;
+      }
+    case 4:
+      {
+        finalSpeech = choice2.innerHTML;
+        break;
+      }
+    case 5:
+      {
+        finalSpeech = choice3.innerHTML;
+        break;
+      }
+  }
+  msg = new SpeechSynthesisUtterance(finalSpeech);
+  msg.voice = voiceArray[37];
+  //Voix canada 37
+  //Voix RUsse 67
+  window.speechSynthesis.speak(msg);
 }
-function StopSpeak()
-{
+function StopSpeak() {
   window.speechSynthesis.cancel()
 }
-let timer = setInterval(function() {
+let timer = setInterval(function () {
   voiceArray = speechSynthesis.getVoices();
   console.log(voiceArray);
   if (voiceArray.length !== 0) {
@@ -85,33 +81,45 @@ async function fetchInfo() {
     .catch(error => console.log(error));
 }
 
-function buttonstart(){
+function buttonstart() {
   let buttonStart = document.createElement("button");
   box.hidden = true;
   buttonStart.innerHTML = "START";
   mainBody.append(buttonStart);
-  buttonStart.addEventListener('click',() => {
+  buttonStart.addEventListener('click', () => {
     start();
+    audio.play();
     box.hidden = false;
     buttonStart.hidden = true;
   })
 }
 
+function btnMute() {
+  if (audio.muted === false) {
+    audio.muted = true;
+    console.log(audio.muted)   
+  }
+  else {
+    audio.muted = false;
+    console.log(audio.muted)   
+    audio.innerHTML = "mute";
+  }
+}
 
 
 function start() {
   let story;
-  console.log("Story Id : "+storyId+"/"+Object.keys(DataStoryJson).length);
+  console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
   console.log(storyId < Object.keys(DataStoryJson).length);
-  
+
   if (storyId < Object.keys(DataStoryJson).length) {
-    if(DataStoryJson[storyId].meteo == "rain"){
-    raining = setInterval(rain, 10);
-  } else if (DataStoryJson[storyId].meteo == "snow"){
-    snowing = setInterval(snow, 10);
-  } else if (DataStoryJson[storyId].meteo == "sun"){
-    stopWeather()
-  }
+    if (DataStoryJson[storyId].meteo == "rain") {
+      raining = setInterval(rain, 10);
+    } else if (DataStoryJson[storyId].meteo == "snow") {
+      snowing = setInterval(snow, 10);
+    } else if (DataStoryJson[storyId].meteo == "sun") {
+      stopWeather()
+    }
     if (storyId > 0) {
       story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body
     } else {
@@ -124,7 +132,7 @@ function start() {
       if (DataQuestionJson[i].storyid == storyId) {
         if (DataQuestionJson[i].choiceid == '1') {
           choice1.innerHTML = DataQuestionJson[i].body;
-         c1 = i;
+          c1 = i;
         }
         if (DataQuestionJson[i].choiceid == '2') {
           choice2.innerHTML = DataQuestionJson[i].body;
@@ -139,25 +147,24 @@ function start() {
   } else {
     console.log("Hello this is the end");
     // Début de ajout de Kevin pour End Box
-      box.innerHTML = " ";
-      restart();
-    }
-
-
-    // Fin de ajout de Kevin pour End Box
+    box.innerHTML = " ";
+    restart();
   }
 
-function restart (){
+
+  // Fin de ajout de Kevin pour End Box
+}
+
+function restart() {
   let buttonRestart = document.createElement("button");
   box.hidden = true;
   buttonRestart.innerHTML = "Restart";
   mainBody.append(buttonRestart);
-  buttonRestart.addEventListener('click',() => {
+  buttonRestart.addEventListener('click', () => {
     reload()
   });
 }
-function reload()
-{
+function reload() {
   window.location.reload()
 }
 function clickButton(choice) {
@@ -179,7 +186,7 @@ function rain() {
   const waterDrop = document.createElement('i');
   waterDrop.classList.add('fas');
   waterDrop.classList.add('fa-tint');
-  waterDrop.style.fontSize = Math.random()* 10 + 'px';
+  waterDrop.style.fontSize = Math.random() * 10 + 'px';
   waterDrop.style.animationDuration = Math.random() * 7 + 's';
   waterDrop.opacity = Math.random();
   waterDrop.style.left = Math.random() * window.innerWidth + 'px';
@@ -193,7 +200,7 @@ function snow() {
   const waterDrop = document.createElement('i');
   waterDrop.classList.add('far');
   waterDrop.classList.add('fa-snowflake');
-  waterDrop.style.fontSize = Math.random()* 8 + 'px';
+  waterDrop.style.fontSize = Math.random() * 8 + 'px';
   waterDrop.style.animationDuration = Math.random() * 9 + 's';
   waterDrop.opacity = Math.random() + 0.3;
   waterDrop.style.left = Math.random() * window.innerWidth + 'px';
@@ -203,7 +210,7 @@ function snow() {
   }, 10000)
 }
 
-function stopWeather(){
+function stopWeather() {
   clearInterval(raining);
   clearInterval(snowing);
 }
