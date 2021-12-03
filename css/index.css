@@ -93,13 +93,15 @@ h1
     display: none;
     flex-direction: column;
     width: 90%;
-    align-self: center;
+    height: 80vh;
     background-color: rgb(255, 182, 65, 0.8);
     border: 5px ridge #1bff80bf;
     border-radius: 20px;
     text-align: center; 
     font-family: 'Press Start 2P';
-    justify-content: space-around;
+    margin: auto;
+    overflow:scroll;
+    overflow-x:hidden;
     }
 .card_choice
 {
@@ -197,7 +199,7 @@ h1
 }
 
  /* ------------ Button start ----------------- */
-button {
+.start {
     position: absolute;
     font-family: 'Press Start 2P';
     font-size: 40px;

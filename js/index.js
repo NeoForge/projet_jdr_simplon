@@ -22,6 +22,7 @@ let muteVoice = false;
 let msg;
 let choiceArray = []
 function Speak(what) {
+  if(muteVoice == false) {
   let finalSpeech;
   switch (what) {
     case 0:
@@ -89,6 +90,7 @@ function Speak(what) {
   //Voix RUsse 67
   window.speechSynthesis.speak(msg);
 }
+}
 function StopSpeak()
 {
   window.speechSynthesis.cancel()
@@ -117,6 +119,7 @@ async function fetchInfo() {
 
 function buttonstart() {
   let buttonStart = document.createElement("button");
+  buttonStart.className = "start";
   box.hidden = true;
   buttonStart.innerHTML = "START";
   mainBody.append(buttonStart);
@@ -221,9 +224,10 @@ choiceArray.forEach(element => {
 
 function restart() {
   let buttonRestart = document.createElement("button");
+  buttonRestart.className = "restart";
   box.hidden = true;
   buttonRestart.innerHTML = "Restart";
-  mainBody.append(buttonRestart);
+  ending.append(buttonRestart);
   buttonRestart.addEventListener('click', () => {
     reload()
   });
