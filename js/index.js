@@ -14,6 +14,64 @@ let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
 
+let voiceArray;
+let msg;
+
+function Speak(what)
+{
+  let finalSpeech;
+    switch(what)
+    {
+      case 0:
+        {
+          finalSpeech = storyTitle.innerHTML;
+          break;
+        }
+        case 1:
+        {
+          finalSpeech = storyTexte.innerHTML;
+          break;
+        }
+        case 2:
+        {
+          finalSpeech = question.innerHTML;
+          break;
+        }
+        case 3:
+        {
+          finalSpeech = choice1.innerHTML;
+          break;
+        }
+        case 4:
+        {
+          finalSpeech = choice2.innerHTML;
+          break;
+        }
+        case 5:
+        {
+          finalSpeech = choice3.innerHTML;
+          break;
+        }
+    }
+    msg = new SpeechSynthesisUtterance(finalSpeech);
+    msg.voice = voiceArray[37];
+    //Voix canada 37
+    //Voix RUsse 67
+    window.speechSynthesis.speak(msg);
+}
+function StopSpeak()
+{
+  window.speechSynthesis.cancel()
+}
+let timer = setInterval(function() {
+  voiceArray = speechSynthesis.getVoices();
+  console.log(voiceArray);
+  if (voiceArray.length !== 0) {
+    clearInterval(timer);
+  }
+}, 200);
+
+
 fetchInfo();
 buttonstart()
 async function fetchInfo() {
@@ -43,14 +101,17 @@ function buttonstart(){
 
 function start() {
   let story;
-  if(DataStoryJson[storyId].meteo == "rain"){
+  console.log("Story Id : "+storyId+"/"+Object.keys(DataStoryJson).length);
+  console.log(storyId < Object.keys(DataStoryJson).length);
+  
+  if (storyId < Object.keys(DataStoryJson).length) {
+    if(DataStoryJson[storyId].meteo == "rain"){
     raining = setInterval(rain, 10);
   } else if (DataStoryJson[storyId].meteo == "snow"){
     snowing = setInterval(snow, 10);
   } else if (DataStoryJson[storyId].meteo == "sun"){
     stopWeather()
   }
-  if (storyId < Object.keys(DataStoryJson).length) {
     if (storyId > 0) {
       story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body
     } else {
@@ -76,9 +137,10 @@ function start() {
       }
     }
   } else {
+    console.log("Hello this is the end");
     // Début de ajout de Kevin pour End Box
       box.innerHTML = " ";
-    restart();
+      restart();
     }
 
 
@@ -102,15 +164,12 @@ function clickButton(choice) {
   if (choice == 1) {
     answer = c1;
     storyId++;
-    console.log('choix 1 click btn', answer)
   } else if (choice == 2) {
     answer = c2;
     storyId++;
-    console.log('choix 2 click btn', answer)
   } else if (choice == 3) {
     answer = c3;
     storyId++;
-    console.log('choix 3 click btn', answer)
   }
   start();
 }
@@ -149,61 +208,3 @@ function stopWeather(){
   clearInterval(snowing);
 }
 
-// function dotheThing(response)
-// {
-//     let newDiv = document.createElement("div");
-//     newDiv.innerHTML=response;
-//     mainBody.append(newDiv);
-// }
-
-// function history(txt) {
-//   let newDiv = document.createElement("div");
-//   newDiv.innerHTML= txt;
-//   mainBody.append(newDiv);
-// }
-
-// function question(length, a, b, c, ra, rb, rc) {
-//   let newbutton1 = document.createElement("button");
-//   let newbutton2 = document.createElement("button");
-//   let newbutton3 = document.createElement("button");
-//   newbutton1.innerHTML = a;
-//   newbutton2.innerHTML = b;
-//   newbutton3.innerHTML = c;
-//   if (length == 2){
-//     mainBody.append(newbutton1);
-//     mainBody.append(newbutton2);
-//   } else if (length == 3) {
-//     mainBody.append(newbutton1);
-//     mainBody.append(newbutton2);
-//     mainBody.append(newbutton3);
-//   }
-//   newbutton1.addEventListener('click', ()=> {
-//     dotheThing(ra);
-//     for(let i = 1; i <= length; i++){
-//       eval('newbutton'+ i ).remove();
-//     }
-//     compteur++;
-//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
-//   })
-//   newbutton2.addEventListener('click', ()=> {
-//     dotheThing(rb);
-//     for(let i = 1; i <= length; i++){
-//       eval('newbutton'+ i ).remove();
-//     } 
-//     compteur++;
-//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c')); 
-//   })
-//   newbutton3.addEventListener('click', ()=> {
-//     dotheThing(rc);
-//     for(let i = 1; i <= length; i++){
-//       eval('newbutton'+ i ).remove();
-//     } 
-//     compteur++;
-//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));  
-//   })
-// }
-
-// function start() {
-//     history(templatestory)
-//     question(3, eval('c'+compteur+'a'), eval('c'+compteur+'b'), eval('c'+compteur+'c'), eval('r'+compteur+'a'), eval('r'+compteur+'b'), eval('c'+compteur+'c'));
-// }
