@@ -2,20 +2,20 @@
   {
     "storyid": 0,
     "choiceid": 1,
-    "body": "choix 01",
-    "resultat":"resultat 01"
+    "body": "Vous décrochez.",
+    "resultat":"Un homme dont la voix ressemble vaguement à celle de Nicolas Cage vous interpelle :</br> -'Eh ! maudit calisse vicié, sors de ma baraque !'</br>-'Qui êtes vous ? Ou êtes vous ?'</br>-'Je suis Nicolas Cage, et je suis à la taverne, viens si tu l'ôses !"
   },
   {
     "storyid": 0,
     "choiceid": 2,
-    "body": "choix 02",
-    "resultat":"resultat 02"
+    "body": "Vous jetez le téléphone contre le mur.",
+    "resultat":"La maison s'effondre, vous êtes mort"
   },
   {
     "storyid": 0,
     "choiceid": 3,
-    "body": "choix 03",
-    "resultat":"resultat 03"
+    "body": "Vous ne décrochez pas, mais glissez le téléphone dans votre sac.",
+    "resultat":"Tourmenté par cet appel impromptu. Vous décidez de quitter ce lieu sordide. Vous vous rendez à l'auberge."
   },
   {
     "storyid": 1,
