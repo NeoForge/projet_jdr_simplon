@@ -21,13 +21,13 @@
     "storyid": 1,
     "choiceid": 1,
     "body": "Vous donnez un coup de pied dans le tabouret.",
-    "resultat":"Le tabouret vole en éclat. Nicolas Cage s'écroule au sol et s'empale sur un des débris. Il pousse un cri de stupeur et emmet un râle sibilant, il est mort.</br>Vous vous enfuyez en courant tout en prenant le temps de voler une bouteille."
+    "resultat":"Le tabouret vole en éclat. Nicolas Cage s'écroule au sol et s'empale sur un des débris. Il pousse un cri de stupeur et emet un râle sibilant, il est mort.</br>Vous vous enfuyez en courant tout en prenant le temps de voler une bouteille."
   },
   {
     "storyid": 1,
     "choiceid": 2,
     "body": "Vous lui faites un massage de nuque.",
-    "resultat":"'-Ha merci, j'avais justement des contractures. Voulez vous partager avec moi une thisane nuit tranquille?'</br> Vous acceptez sa proposition et échangez quelques répliques de Kaamelott. Satisfait du moment passé avec vous, il vous offre une bouteille. "
+    "resultat":"'-Ha merci, j'avais justement des contractures. Voulez vous partager avec moi une tisane nuit tranquille?'</br> Vous acceptez sa proposition et échangez quelques répliques de Kaamelott. Satisfait du moment passé avec vous, il vous offre une bouteille. "
   },
   {
     "storyid": 1,
@@ -38,20 +38,20 @@
   {
     "storyid": 2,
     "choiceid": 1,
-    "body": "choix 21",
-    "resultat":"resultat 21"
+    "body": "J'ai pas de monnaie.",
+    "resultat":"L'enfant ouvre son porte monnaie et vous donne dix crédits. Il vous raconte ensuite son histoire. Comme il vous a donné de l'argent, vous l'écoutez avec intérêt. Il vous invite à le suivre dans le désert, comme vous êtes une personne cupide, vous le suivez."
   },
   {
     "storyid": 2,
     "choiceid": 2,
-    "body": "choix 22",
-    "resultat":"resultat 22"
+    "body": "On a que ce qu'on mérite, petit.",
+    "resultat":"Le jeune enfant vous saute dessus et vous mord à la gorge. Vous sentez une douleur intense parcourir votre corps, vos os se mettent à chauffer, votre sang se mets à bouillir, et vous vous liquefiez sur place parce que vous êtes une affreuse personne. Vous êtes mort."
   },
   {
     "storyid": 2,
     "choiceid": 3,
-    "body": "choix 23",
-    "resultat":"resultat 23"
+    "body": "Que s'est il passé ?",
+    "resultat":"'-Fe me baladais dans le defert, quand foudain fe fuis tombé fur un gros caillou, f'aime bien lefer les caillous. Mais en defous y'avait un fcorpion qui PARLE, un fcorpion TRES MEFANT qui foulait DETRUIRE LE MONDE !'"
   },
   {
     "storyid": 3,
