@@ -39,7 +39,7 @@
     "storyid": 2,
     "choiceid": 1,
     "body": "J'ai pas de monnaie.",
-    "resultat":"L'enfant ouvre son porte monnaie et vous donne dix crédits. Il vous raconte ensuite son histoire. Comme il vous a donné de l'argent, vous l'écoutez avec intérêt. Il vous invite à le suivre dans le désert, comme vous êtes une personne cupide, vous le suivez."
+    "resultat":"L'enfant ouvre son porte monnaie et vous donne dix crédits. Il vous raconte ensuite son histoire. Comme il vous a donné de l'argent, vous l'écoutez avec intérêt. Une fois son histoire terminée, comme vous êtes une personne cupide, vous le suivez."
   },
   {
     "storyid": 2,
@@ -51,43 +51,43 @@
     "storyid": 2,
     "choiceid": 3,
     "body": "Que s'est il passé ?",
-    "resultat":"'-Fe me baladais dans le defert, quand foudain fe fuis tombé fur un gros caillou, f'aime bien lefer les caillous. Mais en defous y'avait un fcorpion qui PARLE, un fcorpion TRES MEFANT qui foulait DETRUIRE LE MONDE !'"
+    "resultat":"'-Fe me baladais dans le défert, quand foudain fe fuis tombé fur un gros caillou, f'aime bien lefer les cailloux. Mais en defous y'avait un fcorpion qui PARLE, un fcorpion TRES MEFANT qui foulait DETRUIRE LE MONDE !'"
   },
   {
     "storyid": 3,
     "choiceid": 1,
-    "body": "choix 31",
-    "resultat":"resultat 31"
+    "body": "Léchez le rocher.",
+    "resultat":"Vous n'auriez pas faire ça, c'est dégeulasse. Le bloc de pierre se mets à bouger, et un scorpion fort peu avenant apparait."
   },
   {
     "storyid": 3,
     "choiceid": 2,
-    "body": "choix 32",
-    "resultat":"resultat 32"
+    "body": "Donnez un coup de pied dans le rocher.",
+    "resultat":"Vous vous faites très mal au pied, mais le rocher se retourne, révèlant un scorpion fort peu avenant."
   },
   {
     "storyid": 3,
     "choiceid": 3,
-    "body": "choix 33",
-    "resultat":"resultat 33"
+    "body": "Avec précaution, retournez le caillou avec les doigts.",
+    "resultat":"Vous êtes tellement lent que les fourmis en profitent pour vous mordre la main. Vous lachez un cri de douleur, mais vous n'êtes qu'aux prémices de vos ennuis car un scorpion fort peu avenant apparait."
   },
   {
     "storyid": 4,
     "choiceid": 1,
-    "body": "choix 41",
-    "resultat":"resultat 41"
+    "body": "Vous tentez de l'écraser avec la pierre.",
+    "resultat":"Vous prenez le rocher, mais les fourmies présentes sur le rocher finissent par vous piquer. Ce sont des solenopsis invicta, des fourmies tueuses d'hommes. Avant même d'approcher le scorpion, vous faites un choc anaphylactique. Vous êtes mort."
   },
   {
     "storyid": 4,
     "choiceid": 2,
-    "body": "choix 42",
-    "resultat":"resultat 42"
+    "body": "Vous lui proposez de régler ça au shifoumi.",
+    "resultat":"A la fin du compte à rebours, vous tendez un poing fermé. Le scorpion se contente de vous piquer.</br>'-Humain, tu es vraiment stupide, on ne joue pas au shifoumis avec les scorpions. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TENEBRES ! MUAHAHAHAHA !!!'"
   },
   {
     "storyid": 4,
     "choiceid": 3,
-    "body": "choix 43",
-    "resultat":"resultat 43"
+    "body": "Vous l'écrasez avec votre pied.",
+    "resultat":"Vous levez votre pied, menaçant, et vous le refermez sur le scorpion. Vos semelles sont si usées que le dard du scorpion le transperce et vous pique.</br>'-Humain, on n'écrase pas les scorpions, c'est les scorpions qui vous écraseront. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TENEBRES ! MUAHAHAHAHA !!!'"
   },
   {
     "storyid": 5,
