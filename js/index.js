@@ -283,12 +283,12 @@ function reload() {
 function btnMute() {
   if (audio.muted === false) {
     audio.muted = true;
-    muteVoice = true;
+    muteSong = true;
     muteSong.innerHTML = "&#127925;";
   }
   else {
     audio.muted = false;
-    muteVoice = false;
+    muteSong = false;
     muteSong.innerHTML = "&#128263;"
     audio.innerHTML = "mute";
   }
