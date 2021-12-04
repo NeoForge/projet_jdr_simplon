@@ -3,13 +3,13 @@
     "storyid": 0,
     "choiceid": 1,
     "body": "Vous décrochez.",
-    "resultat":"Un homme dont la voix ressemble vaguement à celle de Nicolas Cage vous interpelle :</br> -'Eh ! maudit calisse vicié, sors de ma baraque !'</br>-'Qui êtes vous ? Ou êtes vous ?'</br>-'Je suis Nicolas Cage, et je suis à la taverne, viens si tu l'ôses !"
+    "resultat":"Un homme dont la voix ressemble vaguement à celle de Nicolas Cage vous interpelle :</br> -'Eh ! Maudit calisse vicié, sors de ma baraque !'</br>-'Qui êtes vous ? Où êtes vous ?'</br>-'Je suis Nicolas Cage, et je suis à la taverne, viens si tu l'ôses !"
   },
   {
     "storyid": 0,
     "choiceid": 2,
     "body": "Vous jetez le téléphone contre le mur.",
-    "resultat":"La maison s'effondre, vous êtes mort"
+    "resultat":"La maison s'effondre, vous êtes mort."
   },
   {
     "storyid": 0,
