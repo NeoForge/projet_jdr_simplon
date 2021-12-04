@@ -14,6 +14,7 @@ const audio = document.querySelector("audio");
 const voice = document.querySelector(".muteVoice")
 const muteSong = document.querySelector(".mute")
 const ending = document.querySelector(".card_ending");
+const backgroundBody = document.querySelector('body');
 const body = document.body;
 
 // VARIABLES
@@ -46,11 +47,10 @@ async function fetchInfo() {
 
 function start() {
   let story;
-  console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
-  console.log(storyId < Object.keys(DataStoryJson).length);
-
+  // console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
+  // console.log(storyId < Object.keys(DataStoryJson).length);
   if (storyId < Object.keys(DataStoryJson).length) {
-    if(choiceArray[0]=="1") {
+    if(choiceArray[0] == "1" || choiceArray[2] == "7") {
       gameOver();
       tryAgain();
     }
@@ -62,7 +62,10 @@ function start() {
       stopWeather()
     }
     if (storyId > 0) {
+      urlImage = "url('../assets/" + DataStoryJson[storyId].background + "')"; 
+      console.log(urlImage)
       story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body
+      body.style.backgroundImage = urlImage;
     } else {
       story = DataStoryJson[storyId].body
     }
