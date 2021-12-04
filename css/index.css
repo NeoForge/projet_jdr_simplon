@@ -77,21 +77,6 @@ h1
     margin: 0 2% 2% 2%;
 }
 
-.card_ending {
-    display: none;
-    flex-direction: column;
-    width: 80%;
-    align-self: center;
-    align-items: center;
-    background-color: rgb(255, 182, 65, 0.8);
-    border: 5px ridge #1bff80bf;
-    border-radius: 20px;
-    text-align: center; 
-    font-family: 'Press Start 2P';
-    justify-content: space-around;
-    margin: 80px;
-    overflow: scroll;
-}
 
 /* -------- QUESTIONS AND ANSWERS -------- */
 
@@ -120,6 +105,8 @@ h1
     margin: auto;
     overflow:scroll;
     overflow-x:hidden;
+    word-wrap: break-word;
+    align-items: center;
     }
 .card_choice
 {
@@ -255,6 +242,28 @@ h1
     border-radius: 20px 0px 0px 20px;
     background-color: rgb(255, 182, 65, 0.8);
     border: 5px ridge #1bff80bf;
+}
+
+/* Buttons start and try again */
+.tryAgain {
+    font-family: 'Press Start 2P';
+    font-size: 25px;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 182, 65, 0.8);
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+    color: black
+}
+.restart {
+    font-family: 'Press Start 2P';
+    font-size: 25px;
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 182, 65, 0.8);
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+    color: black
 }
 
 /* ---------- Media Screen ---------------- */

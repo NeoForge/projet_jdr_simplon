@@ -50,6 +50,10 @@ function start() {
   console.log(storyId < Object.keys(DataStoryJson).length);
 
   if (storyId < Object.keys(DataStoryJson).length) {
+    if(choiceArray[0]=="1") {
+      gameOver();
+      tryAgain();
+    }
     if (DataStoryJson[storyId].meteo == "rain") {
       raining = setInterval(rain, 10);
     } else if (DataStoryJson[storyId].meteo == "snow") {
@@ -82,11 +86,8 @@ function start() {
       }
     }
   } else {
-    console.log("Hello this is the end");
-    // Début de ajout de Kevin pour End Box
     box.innerHTML = " ";
     box.hidden = true;
-    console.log("Resume des choix " + choiceArray);
     endBox();
     restart();
   }
@@ -100,12 +101,25 @@ function endBox() { // ending = varialble js / card_ending = HTML
   choiceArray.forEach(element => {
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[storyRank].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
     storyRank++;
   });
 }
 
+// GAME OVER 
 
+function gameOver() {
+  ending.style.display = "flex";
+  let storyRank = 0
+  choiceArray.forEach(element => {
+    ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[storyId].body}</p>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
+    storyRank++;
+  });
+}
 
 // ======================> VOICE SPEAK <===================
 
@@ -241,6 +255,19 @@ function restart() {
   buttonRestart.innerHTML = "Restart";
   ending.append(buttonRestart);
   buttonRestart.addEventListener('click', () => {
+    reload()
+  });
+}
+
+//BUTTON TRY AGAIN
+
+function tryAgain() {
+  let buttonTryAgain = document.createElement("button");
+  buttonTryAgain.className = "tryAgain";
+  box.hidden = true;
+  buttonTryAgain.innerHTML = "Try again";
+  ending.append(buttonTryAgain);
+  buttonTryAgain.addEventListener('click', () => {
     reload()
   });
 }
