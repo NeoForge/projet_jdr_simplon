@@ -52,7 +52,7 @@ function start() {
   // console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
   // console.log(storyId < Object.keys(DataStoryJson).length);
   if (storyId < Object.keys(DataStoryJson).length) {
-    if(choiceArray[0] == "1" || choiceArray[2] == "7") {
+    if(choiceArray[0] == "1" || choiceArray[2] == "7" || choiceArray[4] == "12") {
       gameOver();
       tryAgain();
     }
