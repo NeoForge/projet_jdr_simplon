@@ -57,6 +57,7 @@ h1
 .card-header{
     color: #0c6e38bf;
 }
+
 .middle_box
 {
     display: flex;
@@ -76,7 +77,8 @@ h1
 }
 
 
-/* -------- Question / Réponses -------- */
+/* -------- QUESTIONS AND ANSWERS -------- */
+
 .card_question
 {
     width: 70%;
@@ -120,7 +122,7 @@ h1
     text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;    
 
 }
-/* -------- Images portraits------- */
+/* -------- IMAGES PORTRAITS------- */
 #pnj {
     width: 360px;
     height: 250px;
@@ -149,6 +151,94 @@ h1
     border: 5px ridge #1bff80bf;
     border-radius: 20px;
     background-color: rgb(150, 131, 131, 0.7);
+}
+
+
+
+ /* ------------ BUTON START ----------------- */
+.start {
+    position: absolute;
+    font-family: 'Press Start 2P';
+    font-size: 40px;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 100px;  
+    background-color: rgb(255, 182, 65, 0.8);
+    border: 5px ridge #1bff80bf;
+    border-radius: 20px;
+    color: black;
+}
+
+ button:hover {
+ 
+    border-radius: 20px;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;    
+ }
+
+
+ /* ---------- WEATHER ---------- */
+
+
+ /* RAIN */
+
+ .fa-tint{
+     color: rgb(71, 0, 0);
+     position: absolute;
+     top: -20px;
+     left: 50%;
+     animation: fall linear forwards;
+ }
+
+
+
+ /* ------- SNOW --------- */
+ .fa-snowflake{
+    color: white;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+      transform: translateY(0vh);
+    }
+    75% {
+      transform: translateY(90vh);
+    }
+    100% {
+      transform: translateY(105vh);
+    }
+  }
+
+/* ------Button Mute Voice / Song -------- */
+
+.btn-mute{
+    display: flex;
+    flex-direction: row;
+}
+.muteVoice {
+    position: relative;
+    flex-direction: row;
+    font-size: 25px;
+    width: 100px;
+    height: 50px;
+    border-radius: 0px 20px 20px 0px;
+    background-color: rgb(255, 182, 65, 0.8);
+    border: 5px ridge #1bff80bf;
+    text-align: center;
+}
+.mute {
+    position: relative;
+    font-size: 25px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: rgb(255, 182, 65, 0.8);
+    border: 5px ridge #1bff80bf;
 }
 
 /* ---------- Media Screen ---------------- */
@@ -196,88 +286,4 @@ h1
     .card_choice{
         width: 100%;
     }
-}
-
- /* ------------ Button start ----------------- */
-.start {
-    position: absolute;
-    font-family: 'Press Start 2P';
-    font-size: 40px;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 100px;  
-    background-color: rgb(255, 182, 65, 0.8);
-    border: 5px ridge #1bff80bf;
-    border-radius: 20px;
-    color: black;
-}
-
- button:hover {
- 
-    border-radius: 20px;
-    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;    
- }
-
-
- /* ----------Goute d'eau----------- */
-
-
- /* Goute d'eau */
-
- .fa-tint{
-     color: rgb(71, 0, 0);
-     position: absolute;
-     top: -20px;
-     left: 50%;
-     animation: fall linear forwards;
- }
-
- @keyframes fall {
-    0% {
-      transform: translateY(0vh);
-    }
-    75% {
-      transform: translateY(90vh);
-    }
-    100% {
-      transform: translateY(105vh);
-    }
-  }
- /* ------- Neige --------- */
- .fa-snowflake{
-    color: white;
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    animation: fall linear forwards;
-}
-
-
-
-/* ------Button Mute Voice / Song -------- */
-.btn-mute{
-    display: flex;
-    flex-direction: row;
-}
-.muteVoice {
-    position: relative;
-    flex-direction: row;
-    font-size: 25px;
-    width: 100px;
-    height: 50px;
-    border-radius: 0px 20px 20px 0px;
-    background-color: rgb(255, 182, 65, 0.8);
-    border: 5px ridge #1bff80bf;
-    text-align: center;
-}
-.mute {
-    position: relative;
-    font-size: 25px;
-    width: 100px;
-    height: 50px;
-    border-radius: 20px 0px 0px 20px;
-    background-color: rgb(255, 182, 65, 0.8);
-    border: 5px ridge #1bff80bf;
 }
