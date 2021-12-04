@@ -1,5 +1,7 @@
 let DataStoryJson;
 let DataQuestionJson;
+
+// Selectors 
 const storyTitle = document.querySelector(".card-header");
 const storyTexte = document.querySelector(".StoryContent");
 const question = document.querySelector(".questionContent");
@@ -11,8 +13,11 @@ const box = document.querySelector(".box");
 const audio = document.querySelector("audio");
 const voice = document.querySelector(".muteVoice")
 const muteSong = document.querySelector(".mute")
-const body = document.body;
 const ending = document.querySelector(".card_ending");
+const body = document.body;
+
+// VARIABLES
+
 let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
@@ -21,88 +26,8 @@ let voiceArray;
 let muteVoice = false;
 let msg;
 let choiceArray = []
-function Speak(what) {
-  if(muteVoice == false) {
-  let finalSpeech;
-  switch (what) {
-    case 0:
-      {
-        finalSpeech = DataStoryJson[storyId].title;
-        break;
-      }
-    case 1:
-      {
-        if (storyId > 0) 
-        {
-          finalSpeech = DataQuestionJson[answer].resultat + DataStoryJson[storyId].body
-        }
-        else
-        {
-          finalSpeech = DataStoryJson[storyId].body;
-        }
-        break;
-      }
-    case 2:
-      {
-        finalSpeech = DataStoryJson[storyId].question;
-        break;
-      }
-    case 3:
-      {
-        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
-          if (DataQuestionJson[i].storyid == storyId) {
-            if (DataQuestionJson[i].choiceid == 1) {
-              finalSpeech = DataQuestionJson[i].body;
-              break;
-            }
-          }
-        }
-        break;
-      }
-    case 4:
-      {
-        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
-          if (DataQuestionJson[i].storyid == storyId) {
-            if (DataQuestionJson[i].choiceid == 2) {
-              finalSpeech = DataQuestionJson[i].body;
-              break;
-            }
-          }
-        }
-        break;
-      }
-    case 5:
-      {
-        for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
-          if (DataQuestionJson[i].storyid == storyId) {
-            if (DataQuestionJson[i].choiceid == 3) {
-              finalSpeech = DataQuestionJson[i].body;
-              break;
-            }
-          }
-        }
-        break;
-      }
-  }
-  msg = new SpeechSynthesisUtterance(finalSpeech);
-  msg.voice = voiceArray[37];
-  //Voix canada 37
-  //Voix RUsse 67
-  window.speechSynthesis.speak(msg);
-}
-}
-function StopSpeak()
-{
-  window.speechSynthesis.cancel()
-}
-let timer = setInterval(function() {
-  voiceArray = speechSynthesis.getVoices();
-  console.log(voiceArray);
-  if (voiceArray.length !== 0) {
-    clearInterval(timer);
-  }
-}, 200);
 
+// FETCH DATA JSON
 
 fetchInfo();
 buttonstart()
@@ -117,49 +42,7 @@ async function fetchInfo() {
     .catch(error => console.log(error));
 }
 
-function buttonstart() {
-  let buttonStart = document.createElement("button");
-  buttonStart.className = "start";
-  box.hidden = true;
-  buttonStart.innerHTML = "START";
-  mainBody.append(buttonStart);
-  buttonStart.addEventListener('click', () => {
-    start();
-    audio.play();
-    box.hidden = false;
-    buttonStart.hidden = true;
-  })
-}
-
-// ===============> Mute <============================
-function btnMute() {
-  if (audio.muted === false) {
-    audio.muted = true;
-    muteVoice = true;
-    muteSong.innerHTML = "Unmute song"
-    console.log(audio.muted)
-  }
-  else {
-    audio.muted = false;
-    muteVoice = false;
-    muteSong.innerHTML = "Mute song"
-    console.log(audio.muted)
-    audio.innerHTML = "mute";
-  }
-}
-function btnmuteVoice() {
-  if (muteVoice === false) {
-    muteVoice = true;
-    voice.innerHTML = "Unmute Voice"
-  }
-  else {
-    muteVoice = false;
-    voice.innerHTML = "Mute Voice"
-    console.log(muteVoice)
-
-  }
-}
-
+// GAME LOOP
 
 function start() {
   let story;
@@ -203,24 +86,153 @@ function start() {
     // Début de ajout de Kevin pour End Box
     box.innerHTML = " ";
     box.hidden = true;
-    console.log("Resume des choix "+choiceArray);
+    console.log("Resume des choix " + choiceArray);
     endBox();
-    restart(); 
+    restart();
   }
 }
 
+// RESUME END GAME
+
 function endBox() { // ending = varialble js / card_ending = HTML
   ending.style.display = "flex";
-  let storyRank=0
-choiceArray.forEach(element => {
+  let storyRank = 0
+  choiceArray.forEach(element => {
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
     storyRank++;
-    });
+  });
 }
-   
-//  Fin de  de ajout de Kevin pour End Box
+
+
+
+// ======================> VOICE SPEAK <===================
+
+function Speak(what) {
+  if (muteVoice == false) {
+    let finalSpeech;
+    switch (what) {
+      case 0:
+        {
+          finalSpeech = DataStoryJson[storyId].title;
+          break;
+        }
+      case 1:
+        {
+          if (storyId > 0) {
+            finalSpeech = DataQuestionJson[answer].resultat + DataStoryJson[storyId].body
+          }
+          else {
+            finalSpeech = DataStoryJson[storyId].body;
+          }
+          break;
+        }
+      case 2:
+        {
+          finalSpeech = DataStoryJson[storyId].question;
+          break;
+        }
+      case 3:
+        {
+          for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+            if (DataQuestionJson[i].storyid == storyId) {
+              if (DataQuestionJson[i].choiceid == 1) {
+                finalSpeech = DataQuestionJson[i].body;
+                break;
+              }
+            }
+          }
+          break;
+        }
+      case 4:
+        {
+          for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+            if (DataQuestionJson[i].storyid == storyId) {
+              if (DataQuestionJson[i].choiceid == 2) {
+                finalSpeech = DataQuestionJson[i].body;
+                break;
+              }
+            }
+          }
+          break;
+        }
+      case 5:
+        {
+          for (let i = 0; i < Object.keys(DataQuestionJson).length; i++) {
+            if (DataQuestionJson[i].storyid == storyId) {
+              if (DataQuestionJson[i].choiceid == 3) {
+                finalSpeech = DataQuestionJson[i].body;
+                break;
+              }
+            }
+          }
+          break;
+        }
+    }
+    msg = new SpeechSynthesisUtterance(finalSpeech);
+    msg.voice = voiceArray[37];
+    //Voix canada 37
+    //Voix RUsse 67
+    window.speechSynthesis.speak(msg);
+  }
+}
+
+// STOP SPEAK
+
+function StopSpeak() {
+  window.speechSynthesis.cancel()
+}
+let timer = setInterval(function () {
+  voiceArray = speechSynthesis.getVoices();
+  console.log(voiceArray);
+  if (voiceArray.length !== 0) {
+    clearInterval(timer);
+  }
+}, 200);
+
+
+// =====================> BUTTONS <===============================
+
+// BUTTON CHOICES
+
+function clickButton(choice) {
+  if (choice == 1) {
+    answer = c1;
+    choiceArray[storyId] = answer;
+    console.log("choice: " + answer);
+    storyId++;
+  } else if (choice == 2) {
+    answer = c2;
+    choiceArray[storyId] = answer;
+    console.log("choice: " + answer);
+    storyId++;
+  } else if (choice == 3) {
+    answer = c3;
+    choiceArray[storyId] = answer;
+    console.log("choice: " + answer);
+    storyId++;
+  }
+  start();
+}
+
+// BUTTON START
+
+function buttonstart() {
+  let buttonStart = document.createElement("button");
+  buttonStart.className = "start";
+  box.hidden = true;
+  buttonStart.innerHTML = "START";
+  mainBody.append(buttonStart);
+  buttonStart.addEventListener('click', () => {
+    start();
+    audio.play();
+    box.hidden = false;
+    buttonStart.hidden = true;
+  })
+}
+
+// BUTTON RESTART
 
 function restart() {
   let buttonRestart = document.createElement("button");
@@ -232,30 +244,45 @@ function restart() {
     reload()
   });
 }
+
+// RELOAD GAME
+
 function reload() {
   window.location.reload()
 }
-function clickButton(choice) {
-  if (choice == 1) {
-    answer = c1;
-    choiceArray[storyId] = answer;
-    console.log("choice: "+answer);
-    storyId++;
-  } else if (choice == 2) {
-    answer = c2;
-    choiceArray[storyId] = answer;
-    console.log("choice: "+answer);
-    storyId++;
-  } else if (choice == 3) {
-    answer = c3;
-    choiceArray[storyId] = answer;
-    console.log("choice: "+answer);
-    storyId++;
+
+//BUTTON MUTE SONG
+
+function btnMute() {
+  if (audio.muted === false) {
+    audio.muted = true;
+    muteVoice = true;
+    muteSong.innerHTML = "&#127925;";
   }
-  start();
+  else {
+    audio.muted = false;
+    muteVoice = false;
+    muteSong.innerHTML = "&#128263;"
+    audio.innerHTML = "mute";
+  }
 }
 
-// =============> Weather  <==============
+// BUTTON MUTE VOICE
+
+function btnmuteVoice() {
+  if (muteVoice === false) {
+    muteVoice = true;
+    voice.innerHTML = "&#128483;"
+  }
+  else {
+    muteVoice = false;
+    voice.innerHTML = "&#128586;"
+  }
+}
+
+
+// =============> WEATHER <==============
+
 function rain() {
   const waterDrop = document.createElement('i');
   waterDrop.classList.add('fas');
