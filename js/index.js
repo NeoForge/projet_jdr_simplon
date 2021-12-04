@@ -14,6 +14,8 @@ const audio = document.querySelector("audio");
 const voice = document.querySelector(".muteVoice");
 const muteSong = document.querySelector(".mute");
 const ending = document.querySelector(".card_ending");
+const imgPnj = document.querySelector(".img-pnj");
+const imgHero = document.querySelector(".img-hero");
 const backgroundBody = document.querySelector('body');
 const body = document.body;
 
@@ -62,9 +64,11 @@ function start() {
       stopWeather();
     }
     if (storyId > 0) {
-      urlImage = "url('../assets/" + DataStoryJson[storyId].background + "')"; 
+      urlImage = "url('../assets/" + DataStoryJson[storyId].background + "')";
       story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body;
       body.style.backgroundImage = urlImage;
+      imgPnj.src = DataStoryJson[storyId].imagePnj;
+      imgHero.src = DataStoryJson[storyId].imageHero;
     } else {
       story = DataStoryJson[storyId].body;
     }

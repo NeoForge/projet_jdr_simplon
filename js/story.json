@@ -3,7 +3,9 @@
     "storyid": 0,
     "title": "Chapitre 1 : Le départ",
     "body": "Vous êtes Scorpion Buster, un survivant dans un monde post-apocalyptique. Vous entrez dans une maison délabrée. Les pièces sont maculées de dessins réalisées avec des excréments. La nausée vous envahit. Au milieu des immondices, vous trouvez un téléphone. Vous le prenez dans la main, il sonne...",
-    "question":"Que faites-vous ?..."
+    "question":"Que faites-vous ?...",
+    "imagePnj": "phone.png",
+    "imageHero": "../assets/bill_murray.png"
 
   },
   {
@@ -11,7 +13,9 @@
     "title": "Chapitre 2 : L'auberge",
     "body": "Vos pas vous guident vers une auberge miteuse, la seule à 0,000000000009 parsecs (dans ce futur, les unitées de mesures sont héritées de Star Wars). Vous ouvrez la porte, une odeur acre envahit vos narines. Nicolas Cage se tient avachi tel un blob sur le zinc. Il est endormi.",
     "question":"Trouvez un moyen de le reveiller.",
-    "background": "background_bar2.png"
+    "background": "background_bar2.png",
+    "imagePnj": "../assets/nicolas_cage.png",
+    "imageHero": "../assets/bill_murray.png"
 
   },
   {
@@ -20,7 +24,9 @@
     "body": "Vos pas vous guident vers une ruelle illuminée de panneaux publicitaires. Il pleut. Entre deux poubelles, vous apercevez une silhouette d'enfant. Vous vous approchez...</br>'- F'est fous le félèbre Fcorpion Bufter ?'</br>Vous vous enhardissez, et lui répondez avec un hochement de tête arrogant.</br>'- Les filains fcorpions m'ont piqué, maintenant fe fuis tout comme fa !'",
     "question":"Vous vous apprêtez à lui répondre...",
     "meteo": "rain",
-    "background": "background_town.png"
+    "background": "background_town.png",
+    "imagePnj": "../assets/mutant_child.png",
+    "imageHero": "../assets/bill_murray.png"
   },
   {
     "storyid": 3, 
@@ -28,21 +34,27 @@
     "body": "Le jeune enfant vous emmène dans le désert, et désigne une pierre.</b>'- F'est fe caillou là !</b>'- Tu m'a trimballé tout ce temps pour me montrer ce morceau de roche ? Y'a rien là petit !</b>Le petit désigne le rocher, effrayé : '- Faut pas le lefer felui là !'",
     "question":"Vous regardez la masse de roche, et vous...",
     "meteo": "sun",
-    "background": "background_desert.png"
+    "background": "background_desert.png",
+    "imagePnj": "../assets/pierre.png",
+    "imageHero": "../assets/bill_murray.png"
   },
   {
     "storyid": 4, 
     "title": "Chapitre 5 : L'affrontement",
-    "body": "Le scorpion se met à vous insulter copieusement. C'est un scorpion qui parle, c'est peu banal. Au fur et à mesure, il devient de plus béliqueux et vous provoque en combat singulier.",
+    "body": "Le scorpion se met à vous insulter copieusement. C'est un scorpion qui parle, c'est peu banal. Au fur et à mesure, il devient de plus en plus béliqueux et vous provoque en combat singulier.",
     "question":"Trouvez un moyen de vaincre le scorpion.",
-    "background": "background_desert.png"
+    "background": "background_desert.png",
+    "imagePnj": "../assets/scorpion1.png",
+    "imageHero": "../assets/bill_murray.png"
   },
   {
     "storyid": 5, 
     "title": "Chapitre 6 : Une aide impromptue",
     "body": "Vous vous sentez malade, le jeune enfant vous aide à vous déplacer. Ensemble, vous finissez par trouver une grotte.",
     "question":"Question 5",
-    "background": "background_cavern.png"
+    "background": "background_cavern.png",
+    "imagePnj": "../assets/maestro.png",
+    "imageHero": "../assets/bill_murray_sick.png"
   },
   {
     "storyid": 6, 
@@ -50,7 +62,9 @@
     "body": "Histoire 6",
     "question":"Question 6",
     "meteo": "snow",
-    "background": "background_amazon.png"
+    "background": "background_amazon.png",
+    "imagePnj": "../assets/maestro.png",
+    "imageHero": "../assets/bill_murray_sick.png"
   },
   {
     "storyid": 7,
@@ -58,20 +72,26 @@
     "body": "Histoire 7",
     "question":"Question 7",
     "meteo": "sun",
-    "background": "background_microsoft.png"
+    "background": "background_microsoft.png",
+    "imagePnj": "../assets/bill_gates.png",
+    "imageHero": "../assets/bill_murray_sick.png"
   },
   {
     "storyid": 8, 
     "title": "Titre 8",
     "body": "Histoire 8",
     "question":"Question 8",
-    "background": "background_pyramid.png"
+    "background": "background_pyramid.png",
+    "imagePnj": "../assets/elon_musk.png",
+    "imageHero": "../assets/bill_murray_sick.png"
   },
   {
     "storyid": 9,  
     "title": "Titre 9",
     "body": "Histoire 9",
     "question":"Question 9",
-    "background": "background_pyramid.png"
+    "background": "background_pyramid.png",
+    "imagePnj": "../assets/golden_scorpion.png",
+    "imageHero": "../assets/bill_murray_sick.png"
   }
 ]

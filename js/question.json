@@ -57,7 +57,7 @@
     "storyid": 3,
     "choiceid": 1,
     "body": "Léchez le rocher.",
-    "resultat":"Vous n'auriez pas faire ça, c'est dégeulasse. Le bloc de pierre se mets à bouger, et un scorpion fort peu avenant apparait."
+    "resultat":"Vous n'auriez pas dû faire ça, c'est dégueulasse. Le bloc de pierre se mets à bouger, et un scorpion fort peu avenant apparait."
   },
   {
     "storyid": 3,
@@ -81,7 +81,7 @@
     "storyid": 4,
     "choiceid": 2,
     "body": "Vous lui proposez de régler ça au shifoumi.",
-    "resultat":"A la fin du compte à rebours, vous tendez un poing fermé. Le scorpion se contente de vous piquer.</br>'-Humain, tu es vraiment stupide, on ne joue pas au shifoumis avec les scorpions. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TENEBRES ! MUAHAHAHAHA !!!'"
+    "resultat":"A la fin du compte à rebours, vous tendez un poing fermé. Le scorpion se contente de vous piquer.</br>'-Humain, tu es vraiment stupide, on ne joue pas au shifoumi avec les scorpions. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TENEBRES ! MUAHAHAHAHA !!!'"
   },
   {
     "storyid": 4,
