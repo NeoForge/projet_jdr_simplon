@@ -27,19 +27,22 @@
     "title": "Chapitre 4 : Le désert",
     "body": "Le jeune enfant vous emmène dans le désert, et désigne une pierre.</b>'- F'est fe caillou là !</b>'- Tu m'a trimballé tout ce temps pour me montrer ce morceau de roche ? Y'a rien là petit !</b>Le petit désigne le rocher, effrayé : '- Faut pas le lefer felui là !'",
     "question":"Vous regardez la masse de roche, et vous...",
-    "meteo": "sun"
+    "meteo": "sun",
+    "background": "background_desert.png"
   },
   {
     "storyid": 4, 
     "title": "Chapitre 5 : L'affrontement",
     "body": "Le scorpion se met à vous insulter copieusement. C'est un scorpion qui parle, c'est peu banal. Au fur et à mesure, il devient de plus béliqueux et vous provoque en combat singulier.",
-    "question":"Trouvez un moyen de vaincre le scorpion."
+    "question":"Trouvez un moyen de vaincre le scorpion.",
+    "background": "background_desert.png"
   },
   {
     "storyid": 5, 
     "title": "Chapitre 6 : Une aide impromptue",
     "body": "Vous vous sentez malade, le jeune enfant vous aide à vous déplacer. Ensemble, vous finissez par trouver une grotte.",
-    "question":"Question 5"
+    "question":"Question 5",
+    "background": "background_cavern.png"
   },
   {
     "storyid": 6, 
