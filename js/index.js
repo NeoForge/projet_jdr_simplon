@@ -11,8 +11,8 @@ const choice3 = document.querySelector(".ChoiceThree");
 const mainBody = document.querySelector("#Main");
 const box = document.querySelector(".box");
 const audio = document.querySelector("audio");
-const voice = document.querySelector(".muteVoice")
-const muteSong = document.querySelector(".mute")
+const voice = document.querySelector(".muteVoice");
+const muteSong = document.querySelector(".mute");
 const ending = document.querySelector(".card_ending");
 const backgroundBody = document.querySelector('body');
 const body = document.body;
@@ -26,7 +26,7 @@ let game, raining, snowing;
 let voiceArray;
 let muteVoice = false;
 let msg;
-let choiceArray = []
+let choiceArray = [];
 
 // FETCH DATA JSON
 
@@ -59,15 +59,14 @@ function start() {
     } else if (DataStoryJson[storyId].meteo == "snow") {
       snowing = setInterval(snow, 10);
     } else if (DataStoryJson[storyId].meteo == "sun") {
-      stopWeather()
+      stopWeather();
     }
     if (storyId > 0) {
       urlImage = "url('../assets/" + DataStoryJson[storyId].background + "')"; 
-      console.log(urlImage)
-      story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body
+      story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body;
       body.style.backgroundImage = urlImage;
     } else {
-      story = DataStoryJson[storyId].body
+      story = DataStoryJson[storyId].body;
     }
     storyTitle.innerHTML = DataStoryJson[storyId].title;
     storyTexte.innerHTML = story;
@@ -100,7 +99,7 @@ function start() {
 
 function endBox() { // ending = varialble js / card_ending = HTML
   ending.style.display = "flex";
-  let storyRank = 0
+  let storyRank = 0;
   choiceArray.forEach(element => {
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
@@ -114,7 +113,7 @@ function endBox() { // ending = varialble js / card_ending = HTML
 
 function gameOver() {
   ending.style.display = "flex";
-  let storyRank = 0
+  let storyRank = 0;
   choiceArray.forEach(element => {
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
@@ -138,7 +137,7 @@ function Speak(what) {
       case 1:
         {
           if (storyId > 0) {
-            finalSpeech = DataQuestionJson[answer].resultat + DataStoryJson[storyId].body
+            finalSpeech = DataQuestionJson[answer].resultat + DataStoryJson[storyId].body;
           }
           else {
             finalSpeech = DataStoryJson[storyId].body;
