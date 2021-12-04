@@ -9,58 +9,58 @@
   {
     "storyid": 1,
     "title": "Chapitre 2 : L'auberge",
-    "body": "Vos pas vous guident vers une auberge miteuse, la seule à 0,000000000009 parsecs (dans ce futur, les unitées de mesures sont héritées de Star Wars). ",
-    "question":"Question 1"
+    "body": "Vos pas vous guident vers une auberge miteuse, la seule à 0,000000000009 parsecs (dans ce futur, les unitées de mesures sont héritées de Star Wars). Vous ouvrez la porte, une odeur acre envahit vos narines. Nicolas Cage se tient avachi tel un blob sur le zinc. Il est endormi.",
+    "question":"Trouvez un moyen de le reveiller."
 
   },
   {
     "storyid": 2,
-    "title": "Titre 2",
+    "title": "Chapitre 3 : La ruelle", //rencontre avec l'enfant mutant parle de ses problemes de scorpions
     "body": "Histoire 2",
     "question":"Question 2",
     "meteo": "rain"
   },
   {
-    "storyid": 3,
+    "storyid": 3, // quitte la ville voyage arrivée dans le désert interaction caillou
     "title": "Titre 3",
     "body": "Histoire 3",
     "question":"Question 3",
     "meteo": "sun"
   },
   {
-    "storyid": 4,
+    "storyid": 4, //scorpion le scorpion le marrave et dévoile un plan de destruction vous vous mettez en quête d'un outil pour détruire le roi scorpion qui veut détruire le monde
     "title": "Titre 4",
     "body": "Histoire 4",
     "question":"Question 4"
   },
   {
-    "storyid": 5,
+    "storyid": 5, //rencontre avec maestro explique qu'il faut le marteau de thor et bill gates pour savoir ou il se cache
     "title": "Titre 5",
     "body": "Histoire 5",
     "question":"Question 5"
   },
   {
-    "storyid": 6,
+    "storyid": 6, // maison sous la neige thor donne un marteau
     "title": "Titre 6",
     "body": "Histoire 6",
     "question":"Question 6",
     "meteo": "snow"
   },
   {
-    "storyid": 7,
+    "storyid": 7,//bill gates sige microsoft donne la position du golden scorpion
     "title": "Titre 7",
     "body": "Histoire 7",
     "question":"Question 7",
     "meteo": "sun"
   },
   {
-    "storyid": 8,
+    "storyid": 8, //confrontation elon musk devant la pyramide
     "title": "Titre 8",
     "body": "Histoire 8",
     "question":"Question 8"
   },
   {
-    "storyid": 9,
+    "storyid": 9,  //confrontation scorpion doré devant la pyramide
     "title": "Titre 9",
     "body": "Histoire 9",
     "question":"Question 9"

@@ -20,20 +20,20 @@
   {
     "storyid": 1,
     "choiceid": 1,
-    "body": "choix 11",
-    "resultat":"resultat 11"
+    "body": "Vous donnez un coup de pied dans le tabouret.",
+    "resultat":"Le tabouret vole en éclat. Nicolas Cage s'écroule au sol et s'empale sur un des débris. Il pousse un cri de stupeur et emmet un râle sibilant, il est mort.</br>Vous vous enfuyez en courant tout en prenant le temps de voler une bouteille."
   },
   {
     "storyid": 1,
     "choiceid": 2,
-    "body": "choix 12",
-    "resultat":"resultat 12"
+    "body": "Vous lui faites un massage de nuque.",
+    "resultat":"'-Ha merci, j'avais justement des contractures. Voulez vous partager avec moi une thisane nuit tranquille?'</br> Vous acceptez sa proposition et échangez quelques répliques de Kaamelott. Satisfait du moment passé avec vous, il vous offre une bouteille. "
   },
   {
     "storyid": 1,
     "choiceid": 3,
-    "body": "choix 13",
-    "resultat":"resultat 13"
+    "body": "Vous l'interpellez mollement.",
+    "resultat":"'-Gnéééééé ?'</br>Le barman, agacé par votre manque de confiance en vous, vous propose de détaller en vous balancant une bouteille. Vous l'attrapez au vol et vous hâtez de décamper."
   },
   {
     "storyid": 2,
