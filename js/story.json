@@ -40,7 +40,8 @@
     "meteo": "sun",
     "background": "background_desert.png",
     "imagePnj": "../assets/pierre.png",
-    "imageHero1": "../assets/bill_murray.png"
+    "imageHero1": "../assets/bill_murray.png",
+    "imageHero2": "../assets/marty_mcfly.png"
   },
   {
     "storyid": 4, 
@@ -49,7 +50,8 @@
     "question":"Trouvez un moyen de vaincre le scorpion.",
     "background": "background_desert.png",
     "imagePnj": "../assets/scorpion1.png",
-    "imageHero1": "../assets/bill_murray.png"
+    "imageHero1": "../assets/bill_murray.png",
+    "imageHero2": "../assets/marty_mcfly.png"
   },
   {
     "storyid": 5, 
@@ -58,7 +60,8 @@
     "question":"Question 5",
     "background": "background_cavern.png",
     "imagePnj": "../assets/maestro.png",
-    "imageHero1": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png",
+    "imageHero2": "../assets/marty_mcfly.png"
   },
   {
     "storyid": 6, 
@@ -68,7 +71,8 @@
     "meteo": "snow",
     "background": "background_amazon.png",
     "imagePnj": "../assets/thor.png",
-    "imageHero1": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png",
+    "imageHero2": "../assets/marty_mcfly.png"
   },
   {
     "storyid": 7,
@@ -78,7 +82,8 @@
     "meteo": "sun",
     "background": "background_microsoft.png",
     "imagePnj": "../assets/bill_gates.png",
-    "imageHero1": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png",
+    "imageHero2": "../assets/marty_mcfly.png"
   },
   {
     "storyid": 8, 
@@ -87,7 +92,8 @@
     "question":"Question 8",
     "background": "background_pyramid.png",
     "imagePnj": "../assets/elon_musk.png",
-    "imageHero1": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png",
+    "imageHero2": "../assets/marty_mcfly.png"
   },
   {
     "storyid": 9,  
@@ -96,6 +102,7 @@
     "question":"Question 9",
     "background": "background_pyramid.png",
     "imagePnj": "../assets/golden_scorpion.png",
-    "imageHero1": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png",
+    "imageHero2": "../assets/marty_mcfly.png"
   }
 ]
