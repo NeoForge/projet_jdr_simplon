@@ -271,7 +271,7 @@ function buttonstart() {
       let makeAChoice = document.createElement("div");
       makeAChoice.classList = "makeAChoice";
       makeAChoice.innerHTML = "Veuillez choisir un Hero";
-      mainBody.append(makeAChoice)
+      startScreen.append(makeAChoice)
     } else if (choiceHero == "Bill"){
     ghostbuster.volume = 0.3;
     ghostbuster.play();
