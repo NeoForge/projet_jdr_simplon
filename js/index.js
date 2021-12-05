@@ -17,6 +17,7 @@ const imgHero = document.querySelector(".img-hero");
 const backgroundBody = document.querySelector('body');
 const powerOfLove = document.querySelector(".power_of_love");
 const ghostbuster = document.querySelector(".ghostbusters");
+const makeAChoice = document.querySelector(".makeAChoice");
 let startScreen = document.querySelector(".btn-start");
 let muteSong = document.querySelector(".mute");
 const body = document.body;
@@ -58,7 +59,7 @@ function start(choiceHero) {
   // console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
   // console.log(storyId < Object.keys(DataStoryJson).length);
   if (storyId < Object.keys(DataStoryJson).length) {
-    if(choiceArray[0] == "1" || choiceArray[2] == "7" || choiceArray[4] == "12") {
+    if (choiceArray[0] == "1" || choiceArray[2] == "7" || choiceArray[4] == "12") {
       gameOver();
       tryAgain();
     }
@@ -112,7 +113,7 @@ function start(choiceHero) {
     box.hidden = true;
     endBox();
     restart();
-  } 
+  }
   return choiceHero;
 }
 
@@ -253,7 +254,8 @@ function clickButton(choice) {
 // BUTTON START
 
 function buttonstart() {
-  let choiceHero= "";
+  let choiceHero = "";
+  let contenu = "";
   let buttonStart = document.createElement("button");
   let btnHero1 = document.createElement("button");
   let btnHero2 = document.createElement("button");
@@ -261,10 +263,14 @@ function buttonstart() {
   btnHero1.className = "Bill";
   btnHero2.className = "Marty";
   btnHero1.addEventListener('click', () => {
-      choiceHero = "Bill";
+    choiceHero = "Bill";
+    makeAChoice.innerHTML = "A moins que vous ne soyez une pizza, la réponse est oui : je peux vivre sans vous.";
+    startScreen.append(makeAChoice)
   });
   btnHero2.addEventListener('click', () => {
-      choiceHero = "Marty";
+    choiceHero = "Marty";
+    makeAChoice.innerHTML = "Nom de Zeus !";
+    startScreen.append(makeAChoice)
   });
   box.hidden = true;
   buttonStart.innerHTML = "START";
@@ -274,32 +280,30 @@ function buttonstart() {
   startScreen.append(btnHero2);
   startScreen.append(buttonStart);
   buttonStart.addEventListener('click', () => {
-    if(choiceHero == ""){
-      let makeAChoice = document.createElement("div");
-      makeAChoice.classList = "makeAChoice";
+    if (choiceHero == "") {
       makeAChoice.innerHTML = "Veuillez choisir un Hero";
       startScreen.append(makeAChoice)
-    } else if (choiceHero == "Bill"){
-    ghostbuster.volume = 0.3;
-    ghostbuster.play();
-    box.hidden = false;
-    startScreen.hidden = true;
-    buttonStart.hidden = true;
-    choiceHero = "Bill";
-    start(choiceHero);
-    globalThis.selectHero = choiceHero;
-    return choiceHero;
-  }
-  else if (choiceHero == "Marty"){
-    powerOfLove.volume = 0.3;
-    powerOfLove.play();
-    box.hidden = false;
-    buttonStart.hidden = true;
-    startScreen.hidden = true;
-    choiceHero = "Marty";
-    globalThis.selectHero = choiceHero;
-    start(choiceHero);
-  }
+    } else if (choiceHero == "Bill") {
+      ghostbuster.volume = 0.3;
+      ghostbuster.play();
+      box.hidden = false;
+      startScreen.hidden = true;
+      buttonStart.hidden = true;
+      choiceHero = "Bill";
+      start(choiceHero);
+      globalThis.selectHero = choiceHero;
+      return choiceHero;
+    }
+    else if (choiceHero == "Marty") {
+      powerOfLove.volume = 0.3;
+      powerOfLove.play();
+      box.hidden = false;
+      buttonStart.hidden = true;
+      startScreen.hidden = true;
+      choiceHero = "Marty";
+      globalThis.selectHero = choiceHero;
+      start(choiceHero);
+    }
   })
 }
 
