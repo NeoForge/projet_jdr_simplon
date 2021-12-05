@@ -5,7 +5,9 @@
     "body": "Vous êtes Scorpion Buster, un survivant dans un monde post-apocalyptique. Vous entrez dans une maison délabrée. Les pièces sont maculées de dessins réalisées avec des excréments. La nausée vous envahit. Au milieu des immondices, vous trouvez un téléphone. Vous le prenez dans la main, il sonne...",
     "question":"Que faites-vous ?...",
     "imagePnj": "phone.png",
-    "imageHero": "../assets/bill_murray.png"
+    "imageHero1": "../assets/bill_murray.png",
+    "imageHero2": "../assets/marty_mcfly.png"
+
 
   },
   {
@@ -15,7 +17,8 @@
     "question":"Trouvez un moyen de le reveiller.",
     "background": "background_bar2.png",
     "imagePnj": "../assets/nicolas_cage.png",
-    "imageHero": "../assets/bill_murray.png"
+    "imageHero1": "../assets/bill_murray.png",
+    "imageHero2": "../assets/marty_mcfly.png"
 
   },
   {
@@ -26,7 +29,8 @@
     "meteo": "rain",
     "background": "background_town.png",
     "imagePnj": "../assets/mutant_child.png",
-    "imageHero": "../assets/bill_murray.png"
+    "imageHero1": "../assets/bill_murray.png",
+    "imageHero2": "../assets/marty_mcfly.png"
   },
   {
     "storyid": 3, 
@@ -36,7 +40,7 @@
     "meteo": "sun",
     "background": "background_desert.png",
     "imagePnj": "../assets/pierre.png",
-    "imageHero": "../assets/bill_murray.png"
+    "imageHero1": "../assets/bill_murray.png"
   },
   {
     "storyid": 4, 
@@ -45,7 +49,7 @@
     "question":"Trouvez un moyen de vaincre le scorpion.",
     "background": "background_desert.png",
     "imagePnj": "../assets/scorpion1.png",
-    "imageHero": "../assets/bill_murray.png"
+    "imageHero1": "../assets/bill_murray.png"
   },
   {
     "storyid": 5, 
@@ -54,7 +58,7 @@
     "question":"Question 5",
     "background": "background_cavern.png",
     "imagePnj": "../assets/maestro.png",
-    "imageHero": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png"
   },
   {
     "storyid": 6, 
@@ -64,7 +68,7 @@
     "meteo": "snow",
     "background": "background_amazon.png",
     "imagePnj": "../assets/thor.png",
-    "imageHero": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png"
   },
   {
     "storyid": 7,
@@ -74,7 +78,7 @@
     "meteo": "sun",
     "background": "background_microsoft.png",
     "imagePnj": "../assets/bill_gates.png",
-    "imageHero": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png"
   },
   {
     "storyid": 8, 
@@ -83,7 +87,7 @@
     "question":"Question 8",
     "background": "background_pyramid.png",
     "imagePnj": "../assets/elon_musk.png",
-    "imageHero": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png"
   },
   {
     "storyid": 9,  
@@ -92,6 +96,6 @@
     "question":"Question 9",
     "background": "background_pyramid.png",
     "imagePnj": "../assets/golden_scorpion.png",
-    "imageHero": "../assets/bill_murray_sick.png"
+    "imageHero1": "../assets/bill_murray_sick.png"
   }
 ]

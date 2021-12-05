@@ -107,6 +107,7 @@ h1
     overflow-x:hidden;
     word-wrap: break-word;
     align-items: center;
+    margin-top: 27px;
     }
 .card_choice
 {
@@ -145,6 +146,7 @@ h1
 .img-hero {
     max-width: 100%;
     max-height: 100%;
+
 }
 
 .asset{
@@ -175,7 +177,7 @@ h1
     background-size: cover;
     font-family: 'Press Start 2P';
     font-size: 30px;
-    color: white;
+    color: #ffc107;
     order: 1;
 }
 .Marty {
@@ -188,7 +190,7 @@ h1
     background-size: cover;
     font-family: 'Press Start 2P';
     font-size: 30px;
-    color: white;
+    color: #ffc107;
     order: 3;
 }
 

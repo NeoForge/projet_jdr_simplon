@@ -49,7 +49,7 @@ async function fetchInfo() {
 
 // GAME LOOP
 
-function start() {
+function start(choiceHero) {
   let story;
   console.log("choix hero :",choiceHero)
   // console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
@@ -71,9 +71,16 @@ function start() {
       story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body;
       body.style.backgroundImage = urlImage;
       imgPnj.src = DataStoryJson[storyId].imagePnj;
-      imgHero.src = DataStoryJson[storyId].imageHero;
+
     } else {
       story = DataStoryJson[storyId].body;
+      if (choiceHero == "Bill") {
+        imgHero.src = DataStoryJson[storyId].imageHero1;
+        choiceHero = "Bill";
+      } else if (choiceHero == "Marty") {
+        imgHero.src = DataStoryJson[storyId].imageHero2;
+        choiceHero = "Marty"
+      }
     }
     storyTitle.innerHTML = DataStoryJson[storyId].title;
     storyTexte.innerHTML = story;
@@ -266,22 +273,23 @@ function buttonstart() {
       makeAChoice.innerHTML = "Veuillez choisir un Hero";
       mainBody.append(makeAChoice)
     } else if (choiceHero == "Bill"){
-    start();
     ghostbuster.volume = 0.3;
     ghostbuster.play();
     box.hidden = false;
     startScreen.hidden = true;
     buttonStart.hidden = true;
     choiceHero = "Bill";
+    start(choiceHero);
+    return choiceHero;
   }
   else if (choiceHero == "Marty"){
-    start();
     powerOfLove.volume = 0.3;
     powerOfLove.play();
     box.hidden = false;
     buttonStart.hidden = true;
     startScreen.hidden = true;
     choiceHero = "Marty";
+    start(choiceHero);
   }
   })
 }
@@ -298,6 +306,8 @@ function restart() {
     reload()
   });
 }
+
+
 
 //BUTTON TRY AGAIN
 
