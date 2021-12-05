@@ -127,7 +127,7 @@ h1
 
 }
 
-/* -------- IMAGES PORTRAITS------- */
+/* -------- IMAGES PORTRAITS ------- */
 #pnj {
     width: 360px;
     height: 250px;
@@ -197,6 +197,7 @@ h1
 
 .makeAChoice {
     position: absolute;
+    width: 70%;
     font-family: 'Press Start 2P';
     font-size: 30px;
     color: #1bff80bf;
@@ -205,7 +206,9 @@ h1
     right: 0; 
     margin-left: auto; 
     margin-right: auto;
-    top: 30%; 
+    top: 30%;
+    background: rgba(0, 0, 0, 0.788);
+     
 }
 
  /* ------------ BUTON START ----------------- */
@@ -359,6 +362,10 @@ h1
     .makeAChoice {
         top: 25%; 
     }
+    .makeAChoice {
+        font-size: 25px;
+        top: 80%;      
+    }
 }
 
 @media screen and (max-width: 800px){
@@ -406,6 +413,10 @@ h1
         margin-right: 20px;
 
     }
+    .makeAChoice {
+        font-size: 20px;
+        top: 80%;      
+    }
 }
 @media screen and (max-width: 500px){
     #pnj {
@@ -443,7 +454,7 @@ h1
 
     }
     .makeAChoice {
-        font-size: 15px;
-        top: 47%;
+        font-size: 14px;
+        top: 57%;
     }
 }
