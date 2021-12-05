@@ -10,13 +10,15 @@ const choice2 = document.querySelector(".ChoiceTwo");
 const choice3 = document.querySelector(".ChoiceThree");
 const mainBody = document.querySelector("#Main");
 const box = document.querySelector(".box");
-const audio = document.querySelector("audio");
 const voice = document.querySelector(".muteVoice");
-const muteSong = document.querySelector(".mute");
 const ending = document.querySelector(".card_ending");
 const imgPnj = document.querySelector(".img-pnj");
 const imgHero = document.querySelector(".img-hero");
 const backgroundBody = document.querySelector('body');
+const powerOfLove = document.querySelector(".power_of_love");
+const ghostbuster = document.querySelector(".ghostbusters");
+let startScreen = document.querySelector(".btn-start");
+let muteSong = document.querySelector(".mute");
 const body = document.body;
 
 // VARIABLES
@@ -24,7 +26,7 @@ const body = document.body;
 let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
-
+let choiceHero;
 let voiceArray;
 let muteVoice = false;
 let msg;
@@ -49,6 +51,7 @@ async function fetchInfo() {
 
 function start() {
   let story;
+  console.log("choix hero :",choiceHero)
   // console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
   // console.log(storyId < Object.keys(DataStoryJson).length);
   if (storyId < Object.keys(DataStoryJson).length) {
@@ -220,17 +223,14 @@ function clickButton(choice) {
   if (choice == 1) {
     answer = c1;
     choiceArray[storyId] = answer;
-    console.log("choice: " + answer);
     storyId++;
   } else if (choice == 2) {
     answer = c2;
     choiceArray[storyId] = answer;
-    console.log("choice: " + answer);
     storyId++;
   } else if (choice == 3) {
     answer = c3;
     choiceArray[storyId] = answer;
-    console.log("choice: " + answer);
     storyId++;
   }
   start();
@@ -239,16 +239,50 @@ function clickButton(choice) {
 // BUTTON START
 
 function buttonstart() {
+  let choiceHero= "";
   let buttonStart = document.createElement("button");
+  let btnHero1 = document.createElement("button");
+  let btnHero2 = document.createElement("button");
   buttonStart.className = "start";
+  btnHero1.className = "Bill";
+  btnHero2.className = "Marty";
+  btnHero1.addEventListener('click', () => {
+      choiceHero = "Bill";
+  });
+  btnHero2.addEventListener('click', () => {
+      choiceHero = "Marty";
+  });
   box.hidden = true;
   buttonStart.innerHTML = "START";
-  mainBody.append(buttonStart);
+  btnHero1.innerHTML = "Bill";
+  btnHero2.innerHTML = "Marty";
+  startScreen.append(btnHero1);
+  startScreen.append(btnHero2);
+  startScreen.append(buttonStart);
   buttonStart.addEventListener('click', () => {
+    if(choiceHero == ""){
+      let makeAChoice = document.createElement("div");
+      makeAChoice.classList = "makeAChoice";
+      makeAChoice.innerHTML = "Veuillez choisir un Hero";
+      mainBody.append(makeAChoice)
+    } else if (choiceHero == "Bill"){
     start();
-    audio.play();
+    ghostbuster.volume = 0.3;
+    ghostbuster.play();
+    box.hidden = false;
+    startScreen.hidden = true;
+    buttonStart.hidden = true;
+    choiceHero = "Bill";
+  }
+  else if (choiceHero == "Marty"){
+    start();
+    powerOfLove.volume = 0.3;
+    powerOfLove.play();
     box.hidden = false;
     buttonStart.hidden = true;
+    startScreen.hidden = true;
+    choiceHero = "Marty";
+  }
   })
 }
 
@@ -287,16 +321,17 @@ function reload() {
 //BUTTON MUTE SONG
 
 function btnMute() {
-  if (audio.muted === false) {
-    audio.muted = true;
+  if (powerOfLove.muted === false || ghostbuster.muted === false) {
+    powerOfLove.muted = true;
+    ghostbuster.muted = true;
     muteSong = true;
     muteSong.innerHTML = "&#127925;";
   }
   else {
-    audio.muted = false;
+    powerOfLove.muted = false;
+    ghostbuster.muted = false;
     muteSong = false;
-    muteSong.innerHTML = "&#128263;"
-    audio.innerHTML = "mute";
+    muteSong.innerHTML = "&#128263;";
   }
 }
 
