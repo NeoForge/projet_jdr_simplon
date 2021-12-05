@@ -265,7 +265,7 @@ function buttonstart() {
   btnHero1.addEventListener('click', () => {
     choiceHero = "Bill";
     makeAChoice.innerHTML = "A moins que vous ne soyez une pizza, la réponse est oui : je peux vivre sans vous.";
-    startScreen.append(makeAChoice)
+    startScreen.append(makeAChoice);
   });
   btnHero2.addEventListener('click', () => {
     choiceHero = "Marty";
