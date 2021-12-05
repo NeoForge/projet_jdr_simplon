@@ -24,7 +24,7 @@
   {
     "storyid": 2,
     "title": "Chapitre 3 : La ruelle", 
-    "body": "Vos pas vous guident vers une ruelle illuminée de panneaux publicitaires. Il pleut. Entre deux poubelles, vous apercevez une silhouette d'enfant. Vous vous approchez...</br>'- F'est fous le félèbre Fcorpion Bufter ?'</br>Vous vous enhardissez, et lui répondez avec un hochement de tête arrogant.</br>'- Les filains fcorpions m'ont piqué, maintenant fe fuis tout comme fa !'",
+    "body": "Vos pas vous guident vers une ruelle illuminée de panneaux publicitaires. Il pleut. Entre deux poubelles, vous apercevez une silhouette d'enfant. Vous vous approchez...</br>'- F'est fous le félèbre Fcorpion Bufter ?</br>'Vous vous enhardissez, et lui répondez avec un hochement de tête arrogant.'</br>'- Les filains fcorpions m'ont piqué, maintenant fe fuis tout comme fa !'",
     "question":"Vous vous apprêtez à lui répondre...",
     "meteo": "rain",
     "background": "background_town.png",
@@ -35,7 +35,7 @@
   {
     "storyid": 3, 
     "title": "Chapitre 4 : Le désert",
-    "body": "Le jeune enfant vous emmène dans le désert, et désigne une pierre.</b>'- F'est fe caillou là !</b>'- Tu m'a trimballé tout ce temps pour me montrer ce morceau de roche ? Y'a rien là petit !</b>Le petit désigne le rocher, effrayé : '- Faut pas le lefer felui là !'",
+    "body": "Le jeune enfant vous emmène dans le désert, et désigne une pierre.</br>'- F'est fe caillou là !</br>'- Tu m'a trimballé tout ce temps pour me montrer ce morceau de roche ? Y'a rien là petit !</br>Le petit désigne le rocher, effrayé :</br> '- Faut pas le lefer felui là !'",
     "question":"Vous regardez la masse de roche, et vous...",
     "meteo": "sun",
     "background": "background_desert.png",

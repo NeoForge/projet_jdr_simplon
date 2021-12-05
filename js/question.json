@@ -3,91 +3,91 @@
     "storyid": 0,
     "choiceid": 1,
     "body": "Vous décrochez.",
-    "resultat":"Un homme dont la voix ressemble vaguement à celle de Nicolas Cage vous interpelle :</br> -'Eh ! Maudit calisse vicié, sors de ma baraque !'</br>-'Qui êtes vous ? Où êtes vous ?'</br>-'Je suis Nicolas Cage, et je suis à la taverne, viens si tu l'ôses !"
+    "resultat":"Un homme dont la voix ressemble vaguement à celle de Nicolas Cage vous interpelle : </br> '- Eh ! Maudit calisse vicié, sors de ma baraque !'</br>'-Qui êtes vous ? Où êtes vous ?' </br> '-Je suis Nicolas Cage, et je suis à la taverne, viens si tu l'ôses !' "
   },
   {
     "storyid": 0,
     "choiceid": 2,
-    "body": "Vous jetez le téléphone contre le mur.",
-    "resultat":"La maison s'effondre, vous êtes mort."
+    "body": "Vous jetez le téléphone contre le mur. ",
+    "resultat":"La maison s'effondre, vous êtes mort. "
   },
   {
     "storyid": 0,
     "choiceid": 3,
     "body": "Vous ne décrochez pas, mais glissez le téléphone dans votre sac.",
-    "resultat":"Tourmenté par cet appel impromptu. Vous décidez de quitter ce lieu sordide. Vous vous rendez à l'auberge."
+    "resultat":"Tourmenté par cet appel impromptu. Vous décidez de quitter ce lieu sordide. Vous vous rendez à l'auberge. "
   },
   {
     "storyid": 1,
     "choiceid": 1,
     "body": "Vous donnez un coup de pied dans le tabouret.",
-    "resultat":"Le tabouret vole en éclat. Nicolas Cage s'écroule au sol et s'empale sur un des débris. Il pousse un cri de stupeur et emet un râle sibilant, il est mort.</br>Vous vous enfuyez en courant tout en prenant le temps de voler une bouteille."
+    "resultat":"Le tabouret vole en éclat. Nicolas Cage s'écroule au sol et s'empale sur un des débris. Il pousse un cri de stupeur et emet un râle sibilant, il est mort. </br> Vous vous enfuyez en courant tout en prenant le temps de voler une bouteille. "
   },
   {
     "storyid": 1,
     "choiceid": 2,
     "body": "Vous lui faites un massage de nuque.",
-    "resultat":"'-Ha merci, j'avais justement des contractures. Voulez vous partager avec moi une tisane nuit tranquille?'</br> Vous acceptez sa proposition et échangez quelques répliques de Kaamelott. Satisfait du moment passé avec vous, il vous offre une bouteille. "
+    "resultat":"'-Ha merci, j'avais justement des contractures. Voulez vous partager avec moi une tisane nuit tranquille?'</br>Vous acceptez sa proposition et échangez quelques répliques de Kaamelott. Satisfait du moment passé avec vous, il vous offre une bouteille. "
   },
   {
     "storyid": 1,
     "choiceid": 3,
     "body": "Vous l'interpellez mollement.",
-    "resultat":"'-Gnéééééé ?'</br>Le barman, agacé par votre manque de confiance en vous, vous propose de détaller en vous balancant une bouteille. Vous l'attrapez au vol et vous hâtez de décamper."
+    "resultat":"'-Gnéééééé ?'</br>Le barman, agacé par votre manque de confiance en vous, vous propose de détaller en vous balancant une bouteille. Vous l'attrapez au vol et vous hâtez de décamper. "
   },
   {
     "storyid": 2,
     "choiceid": 1,
-    "body": "J'ai pas de monnaie.",
-    "resultat":"L'enfant ouvre son porte monnaie et vous donne dix crédits. Il vous raconte ensuite son histoire. Comme il vous a donné de l'argent, vous l'écoutez avec intérêt. Une fois son histoire terminée, comme vous êtes une personne cupide, vous le suivez."
+    "body": "J'ai pas de monnaie, lâche-moi !",
+    "resultat":"L'enfant ouvre son porte monnaie et vous donne dix crédits. Il vous raconte ensuite son histoire. Comme il vous a donné de l'argent, vous l'écoutez avec intérêt. Une fois son histoire terminée, comme vous êtes une personne cupide, vous le suivez. "
   },
   {
     "storyid": 2,
     "choiceid": 2,
     "body": "On a que ce qu'on mérite, petit.",
-    "resultat":"Le jeune enfant vous saute dessus et vous mord à la gorge. Vous sentez une douleur intense parcourir votre corps, vos os se mettent à chauffer, votre sang se mets à bouillir, et vous vous liquefiez sur place parce que vous êtes une affreuse personne. Vous êtes mort."
+    "resultat":"Le jeune enfant vous saute dessus et vous mord à la gorge. Vous sentez une douleur intense parcourir votre corps, vos os se mettent à chauffer, votre sang se mets à bouillir, et vous vous liquefiez sur place parce que vous êtes une affreuse personne. Vous êtes mort. "
   },
   {
     "storyid": 2,
     "choiceid": 3,
-    "body": "Que s'est il passé ?",
-    "resultat":"'-Fe me baladais dans le défert, quand foudain fe fuis tombé fur un gros caillou, f'aime bien lefer les cailloux. Mais en defous y'avait un fcorpion qui PARLE, un fcorpion TRES MEFANT qui foulait DETRUIRE LE MONDE !'"
+    "body": "Que s'est-il passé ?",
+    "resultat":"'-Fe me baladais dans le défert, quand foudain fe fuis tombé fur un gros caillou, f'aime bien lefer les cailloux. Mais en defous y'avait un fcorpion qui PARLE, un fcorpion TRES MEFANT qui foulait DETRUIRE LE MONDE !' "
   },
   {
     "storyid": 3,
     "choiceid": 1,
     "body": "Léchez le rocher.",
-    "resultat":"Vous n'auriez pas dû faire ça, c'est dégueulasse. Le bloc de pierre se mets à bouger, et un scorpion fort peu avenant apparait."
+    "resultat":"Vous n'auriez pas dû faire ça, c'est dégueulasse. Le bloc de pierre se mets à bouger, et un scorpion fort peu avenant apparait. "
   },
   {
     "storyid": 3,
     "choiceid": 2,
     "body": "Donnez un coup de pied dans le rocher.",
-    "resultat":"Vous vous faites très mal au pied, mais le rocher se retourne, révèlant un scorpion fort peu avenant."
+    "resultat":"Vous vous faites très mal au pied, mais le rocher se retourne, révèlant un scorpion fort peu avenant. "
   },
   {
     "storyid": 3,
     "choiceid": 3,
     "body": "Avec précaution, retournez le caillou avec les doigts.",
-    "resultat":"Vous êtes tellement lent que les fourmis en profitent pour vous mordre la main. Vous lachez un cri de douleur, mais vous n'êtes qu'aux prémices de vos ennuis car un scorpion fort peu avenant apparait."
+    "resultat":"Vous êtes tellement lent que les fourmis en profitent pour vous mordre la main. Vous lachez un cri de douleur, mais vous n'êtes qu'aux prémices de vos ennuis car un scorpion fort peu avenant apparait. "
   },
   {
     "storyid": 4,
     "choiceid": 1,
     "body": "Vous tentez de l'écraser avec la pierre.",
-    "resultat":"Vous prenez le rocher, mais les fourmies présentes sur le rocher finissent par vous piquer. Ce sont des solenopsis invicta, des fourmies tueuses d'hommes. Avant même d'approcher le scorpion, vous faites un choc anaphylactique. Vous êtes mort."
+    "resultat":"Vous prenez le rocher, mais les fourmies présentes sur le rocher finissent par vous piquer. Ce sont des solenopsis invicta, des fourmies tueuses d'hommes. Avant même d'approcher le scorpion, vous faites un choc anaphylactique. Vous êtes mort. "
   },
   {
     "storyid": 4,
     "choiceid": 2,
     "body": "Vous lui proposez de régler ça au shifoumi.",
-    "resultat":"A la fin du compte à rebours, vous tendez un poing fermé. Le scorpion se contente de vous piquer.</br>'-Humain, tu es vraiment stupide, on ne joue pas au shifoumi avec les scorpions. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TENEBRES ! MUAHAHAHAHA !!!'"
+    "resultat":"A la fin du compte à rebours, vous tendez un poing fermé. Le scorpion se contente de vous piquer.</br>'-Humain, tu es vraiment stupide, on ne joue pas au shifoumi avec les scorpions. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TÉNEBRES ! MUAHAHAHAHA !!!' "
   },
   {
     "storyid": 4,
     "choiceid": 3,
     "body": "Vous l'écrasez avec votre pied.",
-    "resultat":"Vous levez votre pied, menaçant, et vous le refermez sur le scorpion. Vos semelles sont si usées que le dard du scorpion le transperce et vous pique.</br>'-Humain, on n'écrase pas les scorpions, c'est les scorpions qui vous écraseront. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TENEBRES ! MUAHAHAHAHA !!!'"
+    "resultat":"Vous levez votre pied, menaçant, et vous le refermez sur le scorpion. Vos semelles sont si usées que le dard du scorpion le transperce et vous pique.</br>'-Humain, on n'écrase pas les scorpions, c'est les scorpions qui vous écraseront. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TENEBRES ! MUAHAHAHAHA !!!' "
   },
   {
     "storyid": 5,

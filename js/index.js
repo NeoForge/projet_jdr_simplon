@@ -64,9 +64,9 @@ function start(choiceHero) {
       tryAgain();
     }
     if (DataStoryJson[storyId].meteo == "rain") {
-      raining = setInterval(rain, 10);
+      raining = setInterval(rain, 1);
     } else if (DataStoryJson[storyId].meteo == "snow") {
-      snowing = setInterval(snow, 10);
+      snowing = setInterval(snow, 100);
     } else if (DataStoryJson[storyId].meteo == "sun") {
       stopWeather();
     }
@@ -380,7 +380,7 @@ function rain() {
   waterDrop.classList.add('fa-tint');
   waterDrop.style.fontSize = Math.random() * 10 + 'px';
   waterDrop.style.animationDuration = Math.random() * 7 + 's';
-  waterDrop.opacity = Math.random();
+  waterDrop.opacity = Math.random()+ 0.3;
   waterDrop.style.left = Math.random() * window.innerWidth + 'px';
   body.appendChild(waterDrop);
   setTimeout(() => {
