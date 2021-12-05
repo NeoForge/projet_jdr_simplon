@@ -268,8 +268,8 @@ function buttonstart() {
   });
   box.hidden = true;
   buttonStart.innerHTML = "START";
-  btnHero1.innerHTML = "Bill";
-  btnHero2.innerHTML = "Marty";
+  btnHero1.innerHTML = "Bill Murray";
+  btnHero2.innerHTML = "Marty Mcfly";
   startScreen.append(btnHero1);
   startScreen.append(btnHero2);
   startScreen.append(buttonStart);
