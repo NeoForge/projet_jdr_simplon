@@ -23,6 +23,8 @@ const body = document.body;
 
 // VARIABLES
 
+var selectHero;
+
 let storyId = 0;
 let answer, c1, c2, c3;
 let game, raining, snowing;
@@ -32,10 +34,11 @@ let muteVoice = false;
 let msg;
 let choiceArray = [];
 
+
 // FETCH DATA JSON
 
 fetchInfo();
-buttonstart()
+buttonstart();
 async function fetchInfo() {
   fetch('../js/story.json')
     .then(response => response.json())
@@ -51,7 +54,7 @@ async function fetchInfo() {
 
 function start(choiceHero) {
   let story;
-  console.log("choix hero :",choiceHero)
+  console.log("choix hero variable globale:", selectHero)
   // console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
   // console.log(storyId < Object.keys(DataStoryJson).length);
   if (storyId < Object.keys(DataStoryJson).length) {
@@ -71,15 +74,18 @@ function start(choiceHero) {
       story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body;
       body.style.backgroundImage = urlImage;
       imgPnj.src = DataStoryJson[storyId].imagePnj;
+      if (selectHero == "Bill") {
+        imgHero.src = DataStoryJson[storyId].imageHero1;
+      } else if (selectHero == "Marty") {
+        imgHero.src = DataStoryJson[storyId].imageHero2;
+      }
 
     } else {
       story = DataStoryJson[storyId].body;
-      if (choiceHero == "Bill") {
+      if (selectHero == "Bill") {
         imgHero.src = DataStoryJson[storyId].imageHero1;
-        choiceHero = "Bill";
-      } else if (choiceHero == "Marty") {
+      } else if (selectHero == "Marty") {
         imgHero.src = DataStoryJson[storyId].imageHero2;
-        choiceHero = "Marty"
       }
     }
     storyTitle.innerHTML = DataStoryJson[storyId].title;
@@ -106,7 +112,8 @@ function start(choiceHero) {
     box.hidden = true;
     endBox();
     restart();
-  }
+  } 
+  return choiceHero;
 }
 
 // RESUME END GAME
@@ -280,6 +287,7 @@ function buttonstart() {
     buttonStart.hidden = true;
     choiceHero = "Bill";
     start(choiceHero);
+    globalThis.selectHero = choiceHero;
     return choiceHero;
   }
   else if (choiceHero == "Marty"){
@@ -289,6 +297,7 @@ function buttonstart() {
     buttonStart.hidden = true;
     startScreen.hidden = true;
     choiceHero = "Marty";
+    globalThis.selectHero = choiceHero;
     start(choiceHero);
   }
   })
@@ -393,4 +402,3 @@ function stopWeather() {
   clearInterval(raining);
   clearInterval(snowing);
 }
-
