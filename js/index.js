@@ -144,24 +144,30 @@ function endBox() { // ending = varialble js / card_ending = HTML
   StoryToSay = "Félicitation ! vous avez vaincu le Roi des Scorpions !! ";
   let storyRank = 0;
   choiceArray.forEach(element => {
-    StoryToSay = " " + DataStoryJson[storyRank].title + " " + DataStoryJson[storyRank].body + " " + DataQuestionJson[storyId].body + " " + DataQuestionJson[element].resultat;
+    StoryToSay = " " + DataStoryJson[storyRank].title + " ";
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     if(storyRank == 7 && selectHero == "Bill") {
       ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body1}</p>`;
+      StoryToSay+= " " + DataStoryJson[storyRank].body1;
     } else if (storyRank == 7 && selectHero == "Marty") {
       ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body2}</p>`;
+      StoryToSay+= " " + DataStoryJson[storyRank].body2;
     } else {
       ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
+      StoryToSay+= " " + DataStoryJson[storyRank].body;
     } 
     if (storyRank == 9 && hasBottle  && element == 29) {
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body2}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat2}</p>`;
+    StoryToSay += " " + DataQuestionJson[element].body2 + " " + DataQuestionJson[element].resultat2;
     } else if (storyRank == 9 && !hasBottle  && element == 29) {
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body1}</p>`;
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat1}</p>`;
+      StoryToSay += " " + DataQuestionJson[element].body1 + " " + DataQuestionJson[element].resultat1;
     } else {
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body}</p>`;
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
+      StoryToSay += " " + DataQuestionJson[element].body + " " + DataQuestionJson[element].resultat;
     }
     storyRank++;
   });
