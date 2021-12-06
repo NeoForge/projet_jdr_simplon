@@ -144,7 +144,7 @@ function endBox() { // ending = varialble js / card_ending = HTML
   StoryToSay = "Félicitation ! vous avez vaincu le Roi des Scorpions !! ";
   let storyRank = 0;
   choiceArray.forEach(element => {
-    StoryToSay = " " + DataStoryJson[storyRank].title + " ";
+    StoryToSay += " " + DataStoryJson[storyRank].title + " ";
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     if(storyRank == 7 && selectHero == "Bill") {
       ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body1}</p>`;
@@ -172,6 +172,7 @@ function endBox() { // ending = varialble js / card_ending = HTML
     storyRank++;
   });
   ending.scrollTop = ending.scrollHeight;
+  console.log(StoryToSay);
   Speak(6);
 }
 
