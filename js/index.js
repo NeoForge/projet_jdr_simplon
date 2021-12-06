@@ -146,9 +146,24 @@ function endBox() { // ending = varialble js / card_ending = HTML
   choiceArray.forEach(element => {
     StoryToSay = " " + DataStoryJson[storyRank].title + " " + DataStoryJson[storyRank].body + " " + DataQuestionJson[storyId].body + " " + DataQuestionJson[element].resultat;
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
-    ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
-    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body}</p>`;
-    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
+    if(storyRank == 7 && choiceHero == "Bill") {
+      ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body1}</p>`;
+    } else if (storyRank == 7 && choiceHero == "Marty") {
+      ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body2}</p>`;
+    } else {
+      ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
+    } 
+    if (storyRank == 9 && hasBottle) {
+      ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body2}</p>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat2}</p>`;
+    } else if (storyRank == 9 && !hasBottle) {
+      ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body1}</p>`;
+      ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat1}</p>`;
+    } else {
+      ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body}</p>`;
+      ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
+    }
+
     storyRank++;
   });
   Speak(6);
