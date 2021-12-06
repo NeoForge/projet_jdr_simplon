@@ -92,38 +92,38 @@
   {
     "storyid": 5,
     "choiceid": 1,
-    "body": "choix 51",
-    "resultat":"resultat 51"
+    "body": "Donner l'enfant.",
+    "resultat":"'-Ha, cela me fera de la compagnie. Alors, il faut que t'aille voir Thor, il bosse chez Amazon maintenant, il saura comment l'arrêter.'</br>Vous quittez les lieux et commencez votre périple. Au bout de 0,000000000003 parsecs, vous tombez dans un puit. Vous vous noyez, vous êtes mort."
   },
   {
     "storyid": 5,
     "choiceid": 2,
-    "body": "choix 52 ",
-    "resultat":"resultat 52 "
+    "body": "Donner la bouteille.",
+    "resultat":"Le viel homme vide la bouteille d'un trait sec, essuie sa barbe dégoulinante d'alcool, et esquisse un borborygme bruyant. 'Hé, f'aut qu'aille -hic- chez Thor à Amazon-hic-, maint'nant casses-toi -hic-.'</br>Vous quittez les lieux avec l'enfant. Ensemble vous commencez un périple vers le nord. "
   },
   {
     "storyid": 5,
     "choiceid": 3,
-    "body": "choix 53 ",
-    "resultat":"resultat 53 "
+    "body": "Donner le téléphone.",
+    "resultat":"Le vieil homme sourit, et commence à pianoter sur les touches.'- Ah, c'est bien ça, amazon Norvège a un marteau qui permet de vaincre le Golden Scorpion, il n'en reste plus qu'un exemplaire, la livraison n'est pas disponible dans ma grotte, vous devriez vous dépêcher d'aller le chercher !'</br>Vous quittez les lieux avec l'enfant. Ensemble vous commencez un périple vers le nord."
   },
   {
     "storyid": 6,
     "choiceid": 1,
-    "body": "choix 61",
-    "resultat":"resultat 61"
+    "body": "Vous haussez le ton.",
+    "resultat":"Avec un air goguenard et méprisant vous lui dites:</br>'- Haha, t'es vraiment une quiche, t'étais le dieu du tonnerre, maintenant t'emballe des cartons. Thor, t'est qu'un raté DONNE MOI TON MARTEAU !'</br>Son visage commence à se décomposer, et il s'affaisse, se met en boule et commence à pleurer. Vous prenez le marteau et partez. Vous êtes vraiment odieux."
   },
   {
     "storyid": 6,
     "choiceid": 2,
-    "body": "choix 62",
-    "resultat":"resultat 62"
+    "body": "Vous imitez un bruit d'eau qui coule.",
+    "resultat":"Thor commence à trépigner, et fini par se précipiter vers les toilettes. Vous en profitez pour lui subtilisez son marteau et vous éloignez perfidement."
   },
   {
     "storyid": 6,
     "choiceid": 3,
-    "body": "choix 63",
-    "resultat":"resultat 63"
+    "body": "Vous appelez son manager.",
+    "resultat":"Effrayé, il vous donne le marteau et vous demande de le laisser tranquille."
   },
   {
     "storyid": 7,
