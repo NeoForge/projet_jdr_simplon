@@ -218,9 +218,9 @@ function Speak(what) {
 
 // STOP SPEAK
 
-// function StopSpeak() {
-//   window.speechSynthesis.cancel()
-// }
+function StopSpeak() {
+  window.speechSynthesis.cancel()
+}
 let timer = setInterval(function () {
   voiceArray = speechSynthesis.getVoices();
   console.log(voiceArray);
