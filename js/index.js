@@ -163,9 +163,9 @@ function endBox() { // ending = varialble js / card_ending = HTML
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body}</p>`;
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
     }
-
     storyRank++;
   });
+  ending.scrollTop = ending.scrollHeight;
   Speak(6);
 }
 
@@ -199,7 +199,7 @@ function gameOver() {
     }
     storyRank++;
   });
-  console.log(StoryToSay);
+  ending.scrollTop = ending.scrollHeight;
   Speak(6);
 }
 
