@@ -276,7 +276,6 @@ function clickButton(choice) {
 function buttonstart() {
   StopSpeak();
   let choiceHero = "";
-  let contenu = "";
   let buttonStart = document.createElement("button");
   let btnHero1 = document.createElement("button");
   let btnHero2 = document.createElement("button");
@@ -313,7 +312,6 @@ function buttonstart() {
       choiceHero = "Bill";
       start(choiceHero);
       globalThis.selectHero = choiceHero;
-      return choiceHero;
     }
     else if (choiceHero == "Marty") {
       powerOfLove.volume = 0.3;
