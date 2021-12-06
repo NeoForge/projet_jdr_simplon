@@ -82,7 +82,7 @@ function start(choiceHero) {
       } else if (selectHero == "Marty") {
         imgHero.src = DataStoryJson[storyId].imageHero2;
       }
-
+      
     } else {
       story = DataStoryJson[storyId].body;
       if (selectHero == "Bill") {
@@ -124,8 +124,7 @@ let StoryToSay = "";
 function endBox() { // ending = varialble js / card_ending = HTML
   StopSpeak();
   ending.style.display = "flex";
-  ending.innerHTML += `<h4 class="win">Félicitation, vous avez vaincu le Roi des Scorpions</h4>`;
-  StoryToSay= "Félicitation, vous avez vaincu le Roi des Scorpions ! ";
+  ending.innerHTML += `<h4 class="win">Félicitation ! vous avez vaincu le Roi des Scorpions !!</h4>`;
   let storyRank = 0;
   choiceArray.forEach(element => {
     StoryToSay =" " + DataStoryJson[storyRank].title+" "+DataStoryJson[storyRank].body+" "+DataQuestionJson[storyId].body+" "+DataQuestionJson[element].resultat;
