@@ -58,7 +58,7 @@
     "title": "Chapitre 6 : Une aide impromptue",
     "body": "Vous vous sentez malade, le jeune enfant vous aide à vous déplacer. Ensemble, vous finissez par trouver une grotte. Soudain, une ombre s'approche freudonnant une chanson. Il s'agit d'un vieux sage plein de poils.</br>'- Houla les garçons, vous semblez bien mal en point!</br>'-  F'est le fcorpion qui nous a piqué ! Ils feulent détruire le monde' vous exclamez vous.'- Ha c'est encore un coup du Golden Scorpion, il en loupe pas une celui là. Donne-moi quelque chose et je t'aiderai.",
     "question":"De quoi vous séparez-vous ?",
-    "background": "background_cavern.png",
+    "background": "background_cave.gif",
     "imagePnj": "../assets/maestro.png",
     "imageHero1": "../assets/bill_murray_sick.png",
     "imageHero2": "../assets/marty_mcfly_sick.png"
