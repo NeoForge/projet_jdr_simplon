@@ -54,6 +54,7 @@ async function fetchInfo() {
 // GAME LOOP
 
 function start(choiceHero) {
+  StopSpeak();
   let story;
   console.log("choix hero variable globale:", selectHero)
   // console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
@@ -213,6 +214,10 @@ function Speak(what) {
     //Voix canada 37
     //Voix RUsse 67
     window.speechSynthesis.speak(msg);
+  }
+  else
+  {
+    StopSpeak();
   }
 }
 
