@@ -100,7 +100,7 @@
     "title": "Titre 9",
     "body": "Histoire 9",
     "question":"Question 9",
-    "background": "background_pyramid.png",
+    "background": "background_pyramid_ethereum.png",
     "imagePnj": "../assets/golden_scorpion.png",
     "imageHero1": "../assets/bill_murray_sick.png",
     "imageHero2": "../assets/marty_mcfly_sick.png"
