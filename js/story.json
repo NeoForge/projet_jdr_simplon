@@ -101,7 +101,7 @@
     "title": "Chapitre 9 : Le bloc des chaines",
     "body": "Elon Musk se transforme en scorpion doré, le ciel s'obscucit. La pyramide s'ouvre alors, dévoilant un immense cristal d'ethereum. Vous êtes dans de beaux draps.",
     "question":"Que faites-vous ?",
-    "background": "background_pyramid.png",
+    "background": "background_pyramid_ethereum.png",
     "imagePnj": "../assets/golden_scorpion.png",
     "imageHero1": "../assets/bill_murray_sick.png",
     "imageHero2": "../assets/marty_mcfly_sick.png"
