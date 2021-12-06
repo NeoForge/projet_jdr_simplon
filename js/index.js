@@ -1,7 +1,7 @@
 let DataStoryJson;
 let DataQuestionJson;
 
-// Selectors 
+// Selectors
 const storyTitle = document.querySelector(".card-header");
 const storyTexte = document.querySelector(".StoryContent");
 const question = document.querySelector(".questionContent");
@@ -57,12 +57,10 @@ let hasBottle = true;
 function start(choiceHero) {
   StopSpeak();
   let story;
-  console.log(choiceArray);
-  console.log("choix hero variable globale:", selectHero)
   // console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
   // console.log(storyId < Object.keys(DataStoryJson).length);
   if (storyId < Object.keys(DataStoryJson).length) {
-    if (choiceArray[0] == "1" || choiceArray[2] == "7" || choiceArray[4] == "12") {
+    if (choiceArray[0] == "1" || choiceArray[2] == "7" || choiceArray[4] == "12" || choiceArray[5] == "15" || choiceArray[8] == "24") {
       gameOver();
       tryAgain();
     }
@@ -75,7 +73,13 @@ function start(choiceHero) {
     }
     if (storyId > 0) {
       urlImage = "url('../assets/" + DataStoryJson[storyId].background + "')";
-      story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body;
+      if (storyId == 7 && selectHero == "Bill") {
+        story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body1;
+      } else if (storyId == 7 && selectHero == "Marty") {
+        story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body2;
+      } else {
+        story = DataQuestionJson[answer].resultat + " <br /><br />" + DataStoryJson[storyId].body;
+      }
       body.style.backgroundImage = urlImage;
       imgPnj.src = DataStoryJson[storyId].imagePnj;
       if (selectHero == "Bill") {
@@ -136,11 +140,10 @@ let StoryToSay = "";
 function endBox() { // ending = varialble js / card_ending = HTML
   StopSpeak();
   ending.style.display = "flex";
-  ending.innerHTML += `<h4 class="win">Félicitation, vous avez vaincu le Roi des Scorpions</h4>`;
-  StoryToSay= "Félicitation, vous avez vaincu le Roi des Scorpions ! ";
+  ending.innerHTML += `<h4 class="win">Félicitation ! vous avez vaincu le Roi des Scorpions !!</h4>`;
   let storyRank = 0;
   choiceArray.forEach(element => {
-    StoryToSay =" " + DataStoryJson[storyRank].title+" "+DataStoryJson[storyRank].body+" "+DataQuestionJson[storyId].body+" "+DataQuestionJson[element].resultat;
+    StoryToSay = " " + DataStoryJson[storyRank].title + " " + DataStoryJson[storyRank].body + " " + DataQuestionJson[storyId].body + " " + DataQuestionJson[element].resultat;
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[storyRank].body}</p>`;
@@ -159,7 +162,7 @@ function gameOver() {
   let storyRank = 0;
   StoryToSay = "Game Over ";
   choiceArray.forEach(element => {
-    StoryToSay += DataStoryJson[storyRank].title+" "+DataStoryJson[storyRank].body+" "+DataQuestionJson[storyId].body+" "+DataQuestionJson[element].resultat;
+    StoryToSay += DataStoryJson[storyRank].title + " " + DataStoryJson[storyRank].body + " " + DataQuestionJson[storyId].body + " " + DataQuestionJson[element].resultat;
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[storyId].body}</p>`;
@@ -233,11 +236,11 @@ function Speak(what) {
           }
           break;
         }
-        case 6:
-          {
-            finalSpeech = StoryToSay;
-            break;
-          }
+      case 6:
+        {
+          finalSpeech = StoryToSay;
+          break;
+        }
     }
     msg = new SpeechSynthesisUtterance(finalSpeech);
     msg.voice = voiceArray[37];
@@ -245,8 +248,7 @@ function Speak(what) {
     //Voix RUsse 67
     window.speechSynthesis.speak(msg);
   }
-  else
-  {
+  else {
     StopSpeak();
   }
 }
@@ -295,7 +297,6 @@ function clickButton(choice) {
 function buttonstart() {
   StopSpeak();
   let choiceHero = "";
-  let contenu = "";
   let buttonStart = document.createElement("button");
   let btnHero1 = document.createElement("button");
   let btnHero2 = document.createElement("button");
@@ -332,7 +333,6 @@ function buttonstart() {
       choiceHero = "Bill";
       start(choiceHero);
       globalThis.selectHero = choiceHero;
-      return choiceHero;
     }
     else if (choiceHero == "Marty") {
       powerOfLove.volume = 0.3;
@@ -378,9 +378,9 @@ function tryAgain() {
 // RELOAD GAME
 
 function reload() {
-  
-    window.location.reload()
-  
+
+  window.location.reload()
+
 }
 
 //BUTTON MUTE SONG
@@ -423,7 +423,7 @@ function rain() {
   waterDrop.classList.add('fa-tint');
   waterDrop.style.fontSize = Math.random() * 10 + 'px';
   waterDrop.style.animationDuration = Math.random() * 7 + 's';
-  waterDrop.opacity = Math.random()+ 0.3;
+  waterDrop.opacity = Math.random() + 0.3;
   waterDrop.style.left = Math.random() * window.innerWidth + 'px';
   body.appendChild(waterDrop);
   setTimeout(() => {
