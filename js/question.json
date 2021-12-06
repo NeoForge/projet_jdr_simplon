@@ -81,13 +81,13 @@
     "storyid": 4,
     "choiceid": 2,
     "body": "Vous lui proposez de régler ça au shifoumi.",
-    "resultat":"A la fin du compte à rebours, vous tendez un poing fermé. Le scorpion se contente de vous piquer.</br>'-Humain, tu es vraiment stupide, on ne joue pas au shifoumi avec les scorpions. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TÉNEBRES ! MUAHAHAHAHA !!!' "
+    "resultat":"A la fin du compte à rebours, vous tendez un poing fermé. Le scorpion se contente de vous piquer.</br>'-Humain, tu es vraiment stupide, on ne joue pas au shifoumi avec les scorpions. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'enchainer les humains avec des blocs, et vous serez tous ENCHAINÉS A DES BLOCS ! MUAHAHAHAHA !!!' "
   },
   {
     "storyid": 4,
     "choiceid": 3,
     "body": "Vous l'écrasez avec votre pied.",
-    "resultat":"Vous levez votre pied, menaçant, et vous le refermez sur le scorpion. Vos semelles sont si usées que le dard du scorpion le transperce et vous pique.</br>'-Humain, on n'écrase pas les scorpions, c'est les scorpions qui vous écraseront. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'éteindre la lumière, et vous serez tous DANS LES TENEBRES ! MUAHAHAHAHA !!!' "
+    "resultat":"Vous levez votre pied, menaçant, et vous le refermez sur le scorpion. Vos semelles sont si usées que le dard du scorpion le transperce et vous pique.</br>'-Humain, on n'écrase pas les scorpions, c'est les scorpions qui vous écraseront. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'enchainer les humains avec des blocs, et vous serez tous ENCHAINÉS A DES BLOCS ! MUAHAHAHAHA !!!' "
   },
   {
     "storyid": 5,
@@ -147,36 +147,39 @@
     "storyid": 8,
     "choiceid": 1,
     "body": "Yo, crypto bro ! Tu connais le Golden Scorpion ?",
-    "resultat":"  "
+    "resultat":"'- C'est Moi ! MUHAHAHAHAHAHA !!!'</br> Des éclairs surgissent de ses chaussures et vous réduisent en cendres sur le champs. Vous êtes mort."
   },
   {
     "storyid": 8,
     "choiceid": 2,
-    "body": "Je suis venu chasser le Golden Scorpion.",
-    "resultat":"resultat 82"
+    "body": "Fe fuis venu faffer le Golden Fcorpion.",
+    "resultat":"'- Le Golden Scorpion est invicible. Car c'est moi, MUHAHAHAHAHAHA !'</br>"
   },
   {
     "storyid": 8,
     "choiceid": 3,
-    "body": "choix 83",
-    "resultat":"resultat 83"
+    "body": "Fympa les fauffures !",
+    "resultat":"Ouais, je peux même envoyer des éclairs avec ! C'est cool non?'</br>'- F'est fuper cool.'</br>'- Regarde je peux même me transformer en scorpion.'</br>'- Ah mais f'est toi le méfant fcorpion !?!'"
   },
   {
     "storyid": 9,
     "choiceid": 1,
-    "body": "choix 91",
-    "resultat":"resultat 91"
+    "body": "Vous brisez le bloc avec le marteau.",
+    "resultat":"Vous assènez un coup puissant sur le bloc d'ethereum. Ce dernier se fissure, et les chaines se brisent. Le monde est sauvé, une foule en liesse scandant votre nom vous entraine. C'est un triomphe, vous êtes exceptionnel, j'en ai les larmes aux yeux en écrivant ce texte. "
   },
   {
     "storyid": 9,
     "choiceid": 2,
-    "body": "choix 92",
-    "resultat":"resultat 92"
+    "body": "Vous utilisez l'enfant comme bouclier mutant.",
+    "resultat":"Alors que le dard du scorpion dorée s'abat sur vous, vous vous saisissez de l'enfant pour l'opposer à une mort certaine. La vôtre, car l'enfant se fait transpercer. Prenant votre chance vous en profitez pour mordre le scorpion doré. Grace aux toxines contenues dans votre corps de mutant, il se liquefie. Le pauvre enfant pleure en rendant son dernier souffle, il a mal, c'est à cause de vous. Vous avez peut-être vaincu le Golden Scorpion, mais vous êtes un abject joueur."
   },
   {
     "storyid": 9,
     "choiceid": 3,
-    "body": "choix 93",
-    "resultat":"resultat 93"
+    "body1": "Avec le téléphone que vous avez conservé, vous appelez El Jeffe Bezos à l'aide.",
+    "body2": "Vous tentez d'assommer le Scorpion Doré avec la bouteille que vous avez conservé. Elle rebondit sur la carapace dorée et vous revient dans la tête. Lorsque vous-vous reveillez enfin. Vous êtes désormais enchainé à un bloc. Vous faites maintenant partie de la chaine de bloc. A jamais...",
+    "resultat1":"El Jeffe Bezos vous a bloqué. Le Scorpion Doré vous enchaine. Vous faites maintenant partie de la chaine de bloc. A jamais...",
+    "resultat2":"resultat 93"
   }
+  
 ]
