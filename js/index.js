@@ -32,6 +32,7 @@ let game, raining, snowing;
 let choiceHero;
 let voiceArray;
 let muteVoice = false;
+let muteTheSong = false;
 let msg;
 let choiceArray = [];
 
@@ -352,14 +353,14 @@ function btnMute() {
   if (powerOfLove.muted === false || ghostbuster.muted === false) {
     powerOfLove.muted = true;
     ghostbuster.muted = true;
-    muteSong = true;
-    muteSong.innerHTML = "&#127925;";
+    muteTheSong = true;
+    muteSong.innerHTML = "&#128263;";
   }
   else {
     powerOfLove.muted = false;
     ghostbuster.muted = false;
-    muteSong = false;
-    muteSong.innerHTML = "&#128263;";
+    muteTheSong = false;
+    muteSong.innerHTML = "&#127925;";
   }
 }
 
@@ -368,11 +369,12 @@ function btnMute() {
 function btnmuteVoice() {
   if (muteVoice === false) {
     muteVoice = true;
-    voice.innerHTML = "&#128483;"
+    voice.innerHTML = "&#128586;"
+    StopSpeak();
   }
   else {
     muteVoice = false;
-    voice.innerHTML = "&#128586;"
+    voice.innerHTML = "&#128483;"
   }
 }
 
