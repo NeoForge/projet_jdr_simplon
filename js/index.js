@@ -125,6 +125,7 @@ function endBox() { // ending = varialble js / card_ending = HTML
   StopSpeak();
   ending.style.display = "flex";
   ending.innerHTML += `<h4 class="win">Félicitation, vous avez vaincu le Roi des Scorpions</h4>`;
+  StoryToSay= "Félicitation, vous avez vaincu le Roi des Scorpions ! ";
   let storyRank = 0;
   choiceArray.forEach(element => {
     StoryToSay =" " + DataStoryJson[storyRank].title+" "+DataStoryJson[storyRank].body+" "+DataQuestionJson[storyId].body+" "+DataQuestionJson[element].resultat;
@@ -144,6 +145,7 @@ function gameOver() {
   ending.style.display = "flex";
   ending.innerHTML += `<h4 class="nowin">GAME OVER</h4>`;
   let storyRank = 0;
+  StoryToSay = "Game Over ";
   choiceArray.forEach(element => {
     StoryToSay += DataStoryJson[storyRank].title+" "+DataStoryJson[storyRank].body+" "+DataQuestionJson[storyId].body+" "+DataQuestionJson[element].resultat;
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
