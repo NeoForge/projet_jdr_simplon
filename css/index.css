@@ -257,6 +257,7 @@ h1
      top: -20px;
      left: 50%;
      animation: fall linear forwards;
+     z-index: -1;
  }
 
 
@@ -268,6 +269,7 @@ h1
     top: -20px;
     left: 50%;
     animation: fall linear forwards;
+    z-index: -1;
 }
 
 @keyframes fall {
