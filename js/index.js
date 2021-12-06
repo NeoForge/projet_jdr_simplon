@@ -53,10 +53,11 @@ async function fetchInfo() {
 }
 
 // GAME LOOP
-
+let hasBottle = true;
 function start(choiceHero) {
   StopSpeak();
   let story;
+  console.log(choiceArray);
   console.log("choix hero variable globale:", selectHero)
   // console.log("Story Id : " + storyId + "/" + Object.keys(DataStoryJson).length);
   // console.log(storyId < Object.keys(DataStoryJson).length);
@@ -105,7 +106,18 @@ function start(choiceHero) {
           c2 = i;
         }
         if (DataQuestionJson[i].choiceid == '3') {
-          choice3.innerHTML = DataQuestionJson[i].body;
+          if(storyId == 9 && hasBottle)
+          {
+            choice3.innerHTML = DataQuestionJson[i].body2;
+          }
+          else if(storyId == 9 && !hasBottle)
+          {
+            choice3.innerHTML = DataQuestionJson[i].body1;
+          }
+          else
+          {
+            choice3.innerHTML = DataQuestionJson[i].body;
+          }
           c3 = i;
         }
       }
@@ -264,6 +276,10 @@ function clickButton(choice) {
     storyId++;
   } else if (choice == 2) {
     answer = c2;
+    if(storyId == 5 )
+    {
+      hasBottle = false;
+    }
     choiceArray[storyId] = answer;
     storyId++;
   } else if (choice == 3) {
