@@ -111,48 +111,48 @@
     "storyid": 6,
     "choiceid": 1,
     "body": "Vous haussez le ton.",
-    "resultat":"Avec un air goguenard et méprisant vous lui dites:</br>'- Haha, t'es vraiment une quiche, t'étais le dieu du tonnerre, maintenant t'emballe des cartons. Thor, t'est qu'un raté DONNE MOI TON MARTEAU !'</br>Son visage commence à se décomposer, et il s'affaisse, se met en boule et commence à pleurer. Vous prenez le marteau et partez. Vous êtes vraiment odieux."
+    "resultat":"Avec un air goguenard et méprisant vous lui dites:</br>'- Haha, t'es vraiment une quiche, t'étais le dieu du tonnerre, maintenant t'emballe des cartons. Thor, t'est qu'un raté DONNE MOI TON MARTEAU !'</br>Son visage commence à se décomposer, et il s'affaisse, se met en boule et commence à pleurer. Vous prenez le marteau et partez. Vous êtes vraiment odieux. Sur le marteau, vous remarquez une inscription étrange 'Property of Microsoft Corporation', intrigué vous vous rendez au siège de la société."
   },
   {
     "storyid": 6,
     "choiceid": 2,
     "body": "Vous imitez un bruit d'eau qui coule.",
-    "resultat":"Thor commence à trépigner, et fini par se précipiter vers les toilettes. Vous en profitez pour lui subtilisez son marteau et vous éloignez perfidement."
+    "resultat":"Thor commence à trépigner, et fini par se précipiter vers les toilettes. Vous en profitez pour lui subtilisez son marteau et vous éloignez perfidement. Sur le marteau, vous remarquez une inscription étrange 'Property of Microsoft Corporation', intrigué vous vous rendez au siège de la société."
   },
   {
     "storyid": 6,
     "choiceid": 3,
     "body": "Vous appelez son manager.",
-    "resultat":"Effrayé, il vous donne le marteau et vous demande de le laisser tranquille."
+    "resultat":"Effrayé, il vous donne le marteau et vous demande de le laisser tranquille. Sur le marteau, vous remarquez une inscription étrange 'Property of Microsoft Corporation', intrigué vous vous rendez au siège de la société."
   },
   {
     "storyid": 7,
     "choiceid": 1,
-    "body": "choix 71",
-    "resultat":"resultat 71"
+    "body": "Fe penfais l'éfanver contre un doge coin.",
+    "resultat":"'-Malheureux, le doge coin est un piège du Golden Scorpion. J'ai fait mes recherches, toutes les pistes convergent sur une pyramide secrête cachée à côté du Caire en Egypte. Tu peux pas la louper, il y a plein de touristes.'"
   },
   {
     "storyid": 7,
     "choiceid": 2,
-    "body": "choix 72",
-    "resultat":"resultat 72"
+    "body": "Fe veux m'en fervir pour détruire le Golden Fcorpion.",
+    "resultat":"J'ai fait mes recherches, le Golden Scorpion se cache dans une pyramide secrête cachée à côté du Caire en Egypte. Tu peux pas la louper, il y a plein de touristes.'"
   },
   {
     "storyid": 7,
     "choiceid": 3,
-    "body": "choix 73",
-    "resultat":"resultat 73"
+    "body": "T'as pas une clé Microsoft Office Professional Plus ?",
+    "resultat":"Ah désolé j'utilise Lotus Note. Tu peux aller au souk à côté de la pyramide du Caire. Ils vendent des clés pas cher.'"
   },
   {
     "storyid": 8,
     "choiceid": 1,
-    "body": "choix 81",
-    "resultat":"resultat 81"
+    "body": "Yo, crypto bro ! Tu connais le Golden Scorpion ?",
+    "resultat":"  "
   },
   {
     "storyid": 8,
     "choiceid": 2,
-    "body": "choix 82",
+    "body": "Je suis venu chasser le Golden Scorpion.",
     "resultat":"resultat 82"
   },
   {
