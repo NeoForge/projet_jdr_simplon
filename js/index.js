@@ -145,7 +145,7 @@ function gameOver() {
   ending.innerHTML += `<h4 class="nowin">GAME OVER</h4>`;
   let storyRank = 0;
   choiceArray.forEach(element => {
-    StoryToSay =" " + DataStoryJson[storyRank].title+" "+DataStoryJson[storyRank].body+" "+DataQuestionJson[storyId].body+" "+DataQuestionJson[element].resultat;
+    StoryToSay +=" " + DataStoryJson[storyRank].title+" "+DataStoryJson[storyRank].body+" "+DataQuestionJson[storyId].body+" "+DataQuestionJson[element].resultat;
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[storyId].body}</p>`;
