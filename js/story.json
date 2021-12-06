@@ -61,7 +61,7 @@
     "background": "background_cavern.png",
     "imagePnj": "../assets/maestro.png",
     "imageHero1": "../assets/bill_murray_sick.png",
-    "imageHero2": "../assets/marty_mcfly.png"
+    "imageHero2": "../assets/marty_mcfly_sick.png"
   },
   {
     "storyid": 6, 
@@ -72,7 +72,7 @@
     "background": "background_amazon.png",
     "imagePnj": "../assets/thor.png",
     "imageHero1": "../assets/bill_murray_sick.png",
-    "imageHero2": "../assets/marty_mcfly.png"
+    "imageHero2": "../assets/marty_mcfly_sick.png"
   },
   {
     "storyid": 7,
@@ -83,7 +83,7 @@
     "background": "background_microsoft.png",
     "imagePnj": "../assets/bill_gates.png",
     "imageHero1": "../assets/bill_murray_sick.png",
-    "imageHero2": "../assets/marty_mcfly.png"
+    "imageHero2": "../assets/marty_mcfly_sick.png"
   },
   {
     "storyid": 8, 
@@ -93,7 +93,7 @@
     "background": "background_pyramid.png",
     "imagePnj": "../assets/elon_musk.png",
     "imageHero1": "../assets/bill_murray_sick.png",
-    "imageHero2": "../assets/marty_mcfly.png"
+    "imageHero2": "../assets/marty_mcfly_sick.png"
   },
   {
     "storyid": 9,  
@@ -103,6 +103,6 @@
     "background": "background_pyramid.png",
     "imagePnj": "../assets/golden_scorpion.png",
     "imageHero1": "../assets/bill_murray_sick.png",
-    "imageHero2": "../assets/marty_mcfly.png"
+    "imageHero2": "../assets/marty_mcfly_sick.png"
   }
 ]
