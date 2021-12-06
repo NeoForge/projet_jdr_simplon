@@ -150,6 +150,7 @@ function gameOver() {
 // ======================> VOICE SPEAK <===================
 
 function Speak(what) {
+  StopSpeak();
   if (muteVoice == false) {
     let finalSpeech;
     switch (what) {
@@ -260,6 +261,7 @@ function clickButton(choice) {
 // BUTTON START
 
 function buttonstart() {
+  StopSpeak();
   let choiceHero = "";
   let contenu = "";
   let buttonStart = document.createElement("button");
