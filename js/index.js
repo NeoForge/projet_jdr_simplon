@@ -122,6 +122,7 @@ function start(choiceHero) {
 
 function endBox() { // ending = varialble js / card_ending = HTML
   ending.style.display = "flex";
+  ending.innerHTML += `<h4 class="win">Félicitation, vous avez vaincu le Roi des Scorpions</h4>`;
   let storyRank = 0;
   choiceArray.forEach(element => {
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
@@ -136,6 +137,7 @@ function endBox() { // ending = varialble js / card_ending = HTML
 
 function gameOver() {
   ending.style.display = "flex";
+  ending.innerHTML += `<h4 class="nowin">GAME OVER</h4>`;
   let storyRank = 0;
   choiceArray.forEach(element => {
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;

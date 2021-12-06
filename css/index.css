@@ -31,6 +31,15 @@ h1
 
 }
 
+.nowin{
+    color: crimson;
+    font-family: 'Press Start 2P';
+    }
+
+.win{
+    color: #1bff80bf;
+    font-family: 'Press Start 2P';
+    }
 
 .box{
     width: 100%;
@@ -109,6 +118,14 @@ h1
     align-items: center;
     margin-top: 27px;
     }
+*::-webkit-scrollbar {
+    width: 7.5px;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgba(12, 110, 56, 0.5);
+    border-radius: 20px;
+
+}
 .card_choice
 {
     width: 70%;
@@ -173,6 +190,7 @@ h1
     height: 360px;
     margin-left: 100px;
     border: 5px ridge #1bff80bf;
+    border-radius: 20px;
     background-image: url('../assets/bill_murray.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,6 +204,7 @@ h1
     height: 360px;
     margin-right: 100px;
     border: 5px ridge #1bff80bf;
+    border-radius: 20px;
     background-image: url('../assets/marty_mcfly.png');
     background-repeat: no-repeat;
     background-size: cover;
