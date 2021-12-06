@@ -147,7 +147,7 @@ function endBox() { // ending = varialble js / card_ending = HTML
     StoryToSay = " " + DataStoryJson[storyRank].title + " " + DataStoryJson[storyRank].body + " " + DataQuestionJson[storyId].body + " " + DataQuestionJson[element].resultat;
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
-    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[storyRank].body}</p>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
     storyRank++;
   });
@@ -166,7 +166,7 @@ function gameOver() {
     StoryToSay += DataStoryJson[storyRank].title + " " + DataStoryJson[storyRank].body + " " + DataQuestionJson[storyId].body + " " + DataQuestionJson[element].resultat;
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
-    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[storyId].body}</p>`;
+    ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
     storyRank++;
   });
