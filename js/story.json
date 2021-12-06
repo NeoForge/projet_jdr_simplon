@@ -56,7 +56,7 @@
   {
     "storyid": 5, 
     "title": "Chapitre 6 : Une aide impromptue",
-    "body": "Vous vous sentez malade, le jeune enfant vous aide à vous déplacer. Ensemble, vous finissez par trouver une grotte. Soudain, une ombre s'approche freudonnant une chanson. Il s'agit d'un vieux sage plein de poils.</br>'- Houla les garçons, vous semblez bien mal en point!</br>'-  F'est le fcorpion qui nous a piqué ! Ils feulent détruire le monde' vous exclamez vous.'- Ha c'est encore un coup du Golden Scorpion, il en loupe pas une celui là. Donne-moi quelque chose et je t'aiderai.",
+    "body": "Vous vous sentez malade, le jeune enfant vous aide à vous déplacer. Ensemble, vous finissez par trouver une grotte. Soudain, une ombre s'approche freudonnant une chanson. Il s'agit d'un vieux sage plein de poils.</br>'- Houla les garçons, vous semblez bien mal en point!</br>'-  F'est le fcorpion qui nous a piqué ! Ils feulent détruire le monde' vous exclamez vous.</br>'- Ha c'est encore un coup du Golden Scorpion, il en loupe pas une celui là. Donne-moi quelque chose et je t'aiderai.",
     "question":"De quoi vous séparez-vous ?",
     "background": "background_cave.gif",
     "imagePnj": "../assets/maestro.png",
@@ -99,7 +99,7 @@
   {
     "storyid": 9,  
     "title": "Chapitre 10 : Le bloc des chaines",
-    "body": "Elon Musk se transforme en scorpion doré, le ciel s'obscucit. La pyramide s'ouvre alors, dévoilant un immense cristal d'ethereum. Vous êtes dans de beaux draps.",
+    "body": "Elon Musk se transforme en scorpion doré, le ciel s'obscurcit. La pyramide s'ouvre alors, dévoilant un immense cristal d'ethereum. Vous êtes dans de beaux draps.",
     "question":"Que faites-vous ?",
     "background": "background_pyramid_ethereum.png",
     "imagePnj": "../assets/golden_scorpion.png",
