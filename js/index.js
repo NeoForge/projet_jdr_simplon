@@ -153,10 +153,10 @@ function endBox() { // ending = varialble js / card_ending = HTML
     } else {
       ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
     } 
-    if (storyRank == 9 && hasBottle) {
+    if (storyRank == 9 && hasBottle  && element == 29) {
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body2}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat2}</p>`;
-    } else if (storyRank == 9 && !hasBottle) {
+    } else if (storyRank == 9 && !hasBottle  && element == 29) {
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].body1}</p>`;
       ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat1}</p>`;
     } else {
