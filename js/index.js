@@ -120,33 +120,39 @@ function start(choiceHero) {
 }
 
 // RESUME END GAME
-
+let StoryToSay;
 function endBox() { // ending = varialble js / card_ending = HTML
+  StopSpeak();
   ending.style.display = "flex";
   ending.innerHTML += `<h4 class="win">Félicitation, vous avez vaincu le Roi des Scorpions</h4>`;
   let storyRank = 0;
   choiceArray.forEach(element => {
+    StoryToSay =" " + DataStoryJson[storyRank].title+" "+DataStoryJson[storyRank].body+" "+DataQuestionJson[storyId].body+" "+DataQuestionJson[element].resultat;
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[storyRank].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
     storyRank++;
   });
+  Speak(6);
 }
 
 // GAME OVER 
 
 function gameOver() {
+  StopSpeak();
   ending.style.display = "flex";
   ending.innerHTML += `<h4 class="nowin">GAME OVER</h4>`;
   let storyRank = 0;
   choiceArray.forEach(element => {
+    StoryToSay =" " + DataStoryJson[storyRank].title+" "+DataStoryJson[storyRank].body+" "+DataQuestionJson[storyId].body+" "+DataQuestionJson[element].resultat;
     ending.innerHTML += `<h5 class="card-header">${DataStoryJson[storyRank].title}</h5>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataStoryJson[storyRank].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[storyId].body}</p>`;
     ending.innerHTML += `<p class="card-text StoryContent">${DataQuestionJson[element].resultat}</p>`;
     storyRank++;
   });
+  Speak(6);
 }
 
 // ======================> VOICE SPEAK <===================
@@ -212,6 +218,11 @@ function Speak(what) {
           }
           break;
         }
+        case 6:
+          {
+            finalSpeech = StoryToSay;
+            break;
+          }
     }
     msg = new SpeechSynthesisUtterance(finalSpeech);
     msg.voice = voiceArray[37];
@@ -348,7 +359,9 @@ function tryAgain() {
 // RELOAD GAME
 
 function reload() {
-  window.location.reload()
+  
+    window.location.reload()
+  
 }
 
 //BUTTON MUTE SONG
