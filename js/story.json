@@ -13,7 +13,7 @@
   {
     "storyid": 1,
     "title": "Chapitre 2 : L'auberge",
-    "body": "Vos pas vous guident vers une auberge miteuse, la seule à 0,000000000009 parsecs (dans ce futur, les unitées de mesures sont héritées de Star Wars). Vous ouvrez la porte, une odeur acre envahit vos narines. Nicolas Cage se tient avachi tel un blob sur le zinc. Il est endormi.",
+    "body": "Vos pas vous guident vers une taverne miteuse, la seule à 0,000000000009 parsecs (dans ce futur, les unitées de mesures sont héritées de Star Wars). Vous ouvrez la porte, une odeur acre envahit vos narines. Nicolas Cage se tient avachi tel un blob sur le zinc. Il est endormi.",
     "question":"Trouvez un moyen de le réveiller.",
     "background": "background_bar.gif",
     "imagePnj": "../assets/nicolas_cage.png",
