@@ -2,7 +2,7 @@
   {
     "storyid": 0,
     "title": "Chapitre 1 : Le départ",
-    "body": "Vous êtes Scorpion Buster, un survivant dans un monde post-apocalyptique. Vous entrez dans une maison délabrée. Les déchets sont accumulés, grouillants de cafards. La nausée vous envahit. Au milieu des immondices, vous trouvez un téléphone. Vous le prenez dans la main, il sonne...",
+    "body": "Nous sommes en 50 après JS, vous êtes Scorpion Buster, un survivant dans un monde post-apocalyptique. Vous entrez dans une maison délabrée. Les déchets sont accumulés, grouillants de cafards. La nausée vous envahit. Au milieu des immondices, vous trouvez un téléphone. Vous le prenez dans la main, il sonne...",
     "question":"Que faites-vous ?...",
     "imagePnj": "phone.png",
     "imageHero1": "../assets/bill_murray.png",
