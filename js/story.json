@@ -14,7 +14,7 @@
     "storyid": 1,
     "title": "Chapitre 2 : L'auberge",
     "body": "Vos pas vous guident vers une auberge miteuse, la seule à 0,000000000009 parsecs (dans ce futur, les unitées de mesures sont héritées de Star Wars). Vous ouvrez la porte, une odeur acre envahit vos narines. Nicolas Cage se tient avachi tel un blob sur le zinc. Il est endormi.",
-    "question":"Trouvez un moyen de le reveiller.",
+    "question":"Trouvez un moyen de le réveiller.",
     "background": "background_bar.gif",
     "imagePnj": "../assets/nicolas_cage.png",
     "imageHero1": "../assets/bill_murray.png",
@@ -35,7 +35,7 @@
   {
     "storyid": 3, 
     "title": "Chapitre 4 : Le désert",
-    "body": "Le jeune enfant vous emmène dans le désert, et désigne une pierre.</br>'- F'est fe caillou là !</br>'- Tu m'a trimballé tout ce temps pour me montrer ce morceau de roche ? Y'a rien là petit !</br>Le petit désigne le rocher, effrayé :</br> '- Faut pas le lefer felui là !'",
+    "body": "Le jeune enfant vous emmène dans le désert, et désigne une pierre.</br>'- F'est fe caillou là !</br>'- Tu m'a trimballé tout ce temps pour me montrer ce morceau de roche ? Y'a rien là petit !'</br>Le petit désigne le rocher, effrayé :</br> '- Faut pas le lefer felui là !'",
     "question":"Vous regardez la masse de roche, et vous...",
     "meteo": "sun",
     "background": "background_desert.png",
