@@ -172,7 +172,7 @@ function endBox() { // ending = varialble js / card_ending = HTML
     storyRank++;
   });
   ending.scrollTop = ending.scrollHeight;
-  console.log(StoryToSay);
+  // console.log(StoryToSay);
   Speak(6);
 }
 
@@ -206,6 +206,8 @@ function gameOver() {
     }
     storyRank++;
   });
+ mainBody.style.background = "url('../assets/background_game_over.png')";
+ mainBody.style.backgroundSize = "cover";
   ending.scrollTop = ending.scrollHeight;
   Speak(6);
 }
