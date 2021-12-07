@@ -3,183 +3,182 @@
     "storyid": 0,
     "choiceid": 1,
     "body": "Vous décrochez.",
-    "resultat":"Un homme dont la voix ressemble vaguement à celle de Nicolas Cage vous interpelle : </br> '- Eh ! Maudit calisse vicié, sors de ma baraque !'</br>'-Qui êtes vous ? Où êtes vous ?' </br> '-Je suis Nicolas Cage, et je suis à la taverne, viens si tu l'ôses !' "
+    "resultat": "Un homme dont la voix ressemble vaguement à celle de Nicolas Cage vous interpelle : </br> '- Eh ! Maudit calisse vicié, sors de ma baraque !'</br>'-Qui êtes vous ? Où êtes vous ?' </br> '-Je suis Nicolas Cage, et je suis à la taverne, viens si tu l'ôses !' "
   },
   {
     "storyid": 0,
     "choiceid": 2,
     "body": "Vous jetez le téléphone contre le mur. ",
-    "resultat":"La maison s'effondre, vous êtes mort. "
+    "resultat": "La maison s'effondre, <strong>vous êtes mort</strong>. "
   },
   {
     "storyid": 0,
     "choiceid": 3,
     "body": "Vous ne décrochez pas, mais glissez le téléphone dans votre sac.",
-    "resultat":"Tourmenté par cet appel impromptu. Vous décidez de quitter ce lieu sordide. Vous vous rendez à l'auberge. "
+    "resultat": "Tourmenté par cet appel impromptu. Vous décidez de quitter ce lieu sordide. Vous vous rendez à l'auberge. "
   },
   {
     "storyid": 1,
     "choiceid": 1,
     "body": "Vous donnez un coup de pied dans le tabouret.",
-    "resultat":"Le tabouret vole en éclat. Nicolas Cage s'écroule au sol et s'empale sur un des débris. Il pousse un cri de stupeur et emet un râle sibilant, il est mort. </br> Vous vous enfuyez en courant tout en prenant le temps de voler une bouteille. "
+    "resultat": "Le tabouret vole en éclat. Nicolas Cage s'écroule au sol et s'empale sur un des débris. Il pousse un cri de stupeur et emet un râle sibilant, il est mort. </br> Vous vous enfuyez en courant tout en prenant le temps de voler une bouteille. "
   },
   {
     "storyid": 1,
     "choiceid": 2,
     "body": "Vous lui faites un massage de nuque.",
-    "resultat":"'-Ha merci, j'avais justement des contractures. Voulez vous partager avec moi une tisane nuit tranquille?'</br>Vous acceptez sa proposition et échangez quelques répliques de Kaamelott. Satisfait du moment passé avec vous, il vous offre une bouteille. "
+    "resultat": "'-Ha merci, j'avais justement des contractures. Voulez vous partager avec moi une tisane nuit tranquille?'</br>Vous acceptez sa proposition et échangez quelques répliques de Kaamelott. Satisfait du moment passé avec vous, il vous offre une bouteille. "
   },
   {
     "storyid": 1,
     "choiceid": 3,
     "body": "Vous l'interpellez mollement.",
-    "resultat":"'-Gnéééééé ?'</br>Le barman, agacé par votre manque de confiance en vous, vous propose de détaller en vous balancant une bouteille. Vous l'attrapez au vol et vous hâtez de décamper. "
+    "resultat": "'-Gnéééééé ?'</br>Le barman, agacé par votre manque de confiance en vous, vous propose de détaller en vous balancant une bouteille. Vous l'attrapez au vol et vous hâtez de décamper. "
   },
   {
     "storyid": 2,
     "choiceid": 1,
     "body": "J'ai pas de monnaie, lâche-moi !",
-    "resultat":"L'enfant ouvre son porte monnaie et vous donne dix crédits. Il vous raconte ensuite son histoire. Comme il vous a donné de l'argent, vous l'écoutez avec intérêt. Une fois son histoire terminée, comme vous êtes une personne cupide, vous le suivez. "
+    "resultat": "L'enfant ouvre son porte monnaie et vous donne dix crédits. Il vous raconte ensuite son histoire. Comme il vous a donné de l'argent, vous l'écoutez avec intérêt. Une fois son histoire terminée, comme vous êtes une personne cupide, vous le suivez. "
   },
   {
     "storyid": 2,
     "choiceid": 2,
     "body": "On a que ce qu'on mérite, petit.",
-    "resultat":"Le jeune enfant vous saute dessus et vous mord à la gorge. Vous sentez une douleur intense parcourir votre corps, vos os se mettent à chauffer, votre sang se mets à bouillir, et vous vous liquefiez sur place parce que vous êtes une affreuse personne. Vous êtes mort. "
+    "resultat": "Le jeune enfant vous saute dessus et vous mord à la gorge. Vous sentez une douleur intense parcourir votre corps, vos os se mettent à chauffer, votre sang se mets à bouillir, et vous vous liquefiez sur place parce que vous êtes une affreuse personne. Vous êtes mort. "
   },
   {
     "storyid": 2,
     "choiceid": 3,
     "body": "Que s'est-il passé ?",
-    "resultat":"'-Fe me baladais dans le défert, quand foudain fe fuis tombé fur un gros caillou, f'aime bien lefer les cailloux. Mais en defous y'avait un fcorpion qui PARLE, un fcorpion TRES MEFANT qui foulait DETRUIRE LE MONDE !' "
+    "resultat": "'-Fe me baladais dans le défert, quand foudain fe fuis tombé fur un gros caillou, f'aime bien lefer les cailloux. Mais en defous y'avait un fcorpion qui PARLE, un fcorpion TRES MEFANT qui foulait DETRUIRE LE MONDE !' "
   },
   {
     "storyid": 3,
     "choiceid": 1,
     "body": "Léchez le rocher.",
-    "resultat":"Vous n'auriez pas dû faire ça, c'est dégueulasse. Le bloc de pierre se mets à bouger, et un scorpion fort peu avenant apparait. "
+    "resultat": "Vous n'auriez pas dû faire ça, c'est dégueulasse. Le bloc de pierre se mets à bouger, et un scorpion fort peu avenant apparait. "
   },
   {
     "storyid": 3,
     "choiceid": 2,
     "body": "Donnez un coup de pied dans le rocher.",
-    "resultat":"Vous vous faites très mal au pied, mais le rocher se retourne, révèlant un scorpion fort peu avenant. "
+    "resultat": "Vous vous faites très mal au pied, mais le rocher se retourne, révèlant un scorpion fort peu avenant. "
   },
   {
     "storyid": 3,
     "choiceid": 3,
     "body": "Avec précaution, retournez le caillou avec les doigts.",
-    "resultat":"Vous êtes tellement lent que les fourmis en profitent pour vous mordre la main. Vous lachez un cri de douleur, mais vous n'êtes qu'aux prémices de vos ennuis car un scorpion fort peu avenant apparait. "
+    "resultat": "Vous êtes tellement lent que les fourmis en profitent pour vous mordre la main. Vous lachez un cri de douleur, mais vous n'êtes qu'aux prémices de vos ennuis car un scorpion fort peu avenant apparait. "
   },
   {
     "storyid": 4,
     "choiceid": 1,
     "body": "Vous tentez de l'écraser avec la pierre.",
-    "resultat":"Vous prenez le rocher, mais les fourmies présentes sur le rocher finissent par vous piquer. Ce sont des solenopsis invicta, des fourmies tueuses d'hommes. Avant même d'approcher le scorpion, vous faites un choc anaphylactique. Vous êtes mort. "
+    "resultat": "Vous prenez le rocher, mais les fourmies présentes sur le rocher finissent par vous piquer. Ce sont des solenopsis invicta, des fourmies tueuses d'hommes. Avant même d'approcher le scorpion, vous faites un choc anaphylactique. <strong>Vous êtes mort</strong>. "
   },
   {
     "storyid": 4,
     "choiceid": 2,
     "body": "Vous lui proposez de régler ça au shifoumi.",
-    "resultat":"A la fin du compte à rebours, vous tendez un poing fermé. Le scorpion se contente de vous piquer.</br>'-Humain, tu es vraiment stupide, on ne joue pas au shifoumi avec les scorpions. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'enchainer les humains avec des blocs, et vous serez tous ENCHAINÉS A DES BLOCS ! MUAHAHAHAHA !!!' "
+    "resultat": "A la fin du compte à rebours, vous tendez un poing fermé. Le scorpion se contente de vous piquer.</br>'-Humain, tu es vraiment stupide, on ne joue pas au shifoumi avec les scorpions. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'enchainer les humains avec des blocs, et vous serez tous ENCHAINÉS A DES BLOCS ! MUAHAHAHAHA !!!' "
   },
   {
     "storyid": 4,
     "choiceid": 3,
     "body": "Vous l'écrasez avec votre pied.",
-    "resultat":"Vous levez votre pied, menaçant, et vous le refermez sur le scorpion. Vos semelles sont si usées que le dard du scorpion le transperce et vous pique.</br>'-Humain, on n'écrase pas les scorpions, c'est les scorpions qui vous écraseront. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'enchainer les humains avec des blocs, et vous serez tous ENCHAINÉS A DES BLOCS ! MUAHAHAHAHA !!!' "
+    "resultat": "Vous levez votre pied, menaçant, et vous le refermez sur le scorpion. Vos semelles sont si usées que le dard du scorpion le transperce et vous pique.</br>'-Humain, on n'écrase pas les scorpions, c'est les scorpions qui vous écraseront. Mon maitre le GOLDEN SCORPION vous détruira tous ! Nous avons un plan secret, il s'agit d'enchainer les humains avec des blocs, et vous serez tous ENCHAINÉS A DES BLOCS ! MUAHAHAHAHA !!!' "
   },
   {
     "storyid": 5,
     "choiceid": 1,
     "body": "Donner l'enfant.",
-    "resultat":"'-Ha, cela me fera de la compagnie. Alors, il faut que t'aille voir Thor, il bosse chez Amazon maintenant, il saura comment l'arrêter.'</br>Vous quittez les lieux et commencez votre périple. Au bout de 0,000000000003 parsecs, vous tombez dans un puit. Vous vous noyez, vous êtes mort."
+    "resultat": "'-Ha, cela me fera de la compagnie. Alors, il faut que t'aille voir Thor, il bosse chez Amazon maintenant, il saura comment l'arrêter.'</br>Vous quittez les lieux et commencez votre périple. Au bout de 0,000000000003 parsecs, vous tombez dans un puit. Vous vous noyez, <strong>vous êtes mort</strong>."
   },
   {
     "storyid": 5,
     "choiceid": 2,
     "body": "Donner la bouteille.",
-    "resultat":"Le vieil homme vide la bouteille d'un trait sec, essuie sa barbe dégoulinante d'alcool, et esquisse un borborygme bruyant. 'Hé, f'aut qu'aille -hic- chez Thor à Amazon-hic-, maint'nant casses-toi -hic-.'</br>Vous quittez les lieux avec l'enfant. Ensemble vous commencez un périple vers le nord. "
+    "resultat": "Le vieil homme vide la bouteille d'un trait sec, essuie sa barbe dégoulinante d'alcool, et esquisse un borborygme bruyant. 'Hé, f'aut qu'aille -hic- chez Thor à Amazon-hic-, maint'nant casses-toi -hic-.'</br>Vous quittez les lieux avec l'enfant. Ensemble vous commencez un périple vers le nord. "
   },
   {
     "storyid": 5,
     "choiceid": 3,
     "body": "Donner le téléphone.",
-    "resultat":"Le vieil homme sourit, et commence à pianoter sur les touches.</br>'- Ah, c'est bien ça, amazon Norvège a un marteau qui permet de vaincre le Golden Scorpion, il n'en reste plus qu'un exemplaire, la livraison n'est pas disponible dans ma grotte, vous devriez vous dépêcher d'aller le chercher !'</br>Vous quittez les lieux avec l'enfant. Ensemble vous commencez un périple vers le nord."
+    "resultat": "Le vieil homme sourit, et commence à pianoter sur les touches.</br>'- Ah, c'est bien ça, amazon Norvège a un marteau qui permet de vaincre le Golden Scorpion, il n'en reste plus qu'un exemplaire, la livraison n'est pas disponible dans ma grotte, vous devriez vous dépêcher d'aller le chercher !'</br>Vous quittez les lieux avec l'enfant. Ensemble vous commencez un périple vers le nord."
   },
   {
     "storyid": 6,
     "choiceid": 1,
     "body": "Vous haussez le ton.",
-    "resultat":"Avec un air goguenard et méprisant vous lui dites:</br>'- Haha, t'es vraiment une quiche, t'étais le dieu du tonnerre, maintenant t'emballes des cartons. Thor, t'est qu'un raté DONNE MOI TON MARTEAU !'</br>Son visage commence à se décomposer, et il s'affaisse, se met en boule et commence à pleurer. Vous prenez le marteau et partez. Vous êtes vraiment odieux. Sur le marteau, vous remarquez une inscription étrange 'Property of Microsoft Corporation', intrigué vous vous rendez au siège de la société."
+    "resultat": "Avec un air goguenard et méprisant vous lui dites:</br>'- Haha, t'es vraiment une quiche, t'étais le dieu du tonnerre, maintenant t'emballes des cartons. Thor, t'est qu'un raté DONNE MOI TON MARTEAU !'</br>Son visage commence à se décomposer, et il s'affaisse, se met en boule et commence à pleurer. Vous prenez le marteau et partez. Vous êtes vraiment odieux. Sur le marteau, vous remarquez une inscription étrange 'Property of Microsoft Corporation', intrigué vous vous rendez au siège de la société."
   },
   {
     "storyid": 6,
     "choiceid": 2,
     "body": "Vous imitez un bruit d'eau qui coule.",
-    "resultat":"Thor commence à trépigner, et fini par se précipiter vers les toilettes. Vous en profitez pour lui subtiliser son marteau et vous éloignez perfidement. Sur le marteau, vous remarquez une inscription étrange 'Property of Microsoft Corporation', intrigué vous vous rendez au siège de la société."
+    "resultat": "Thor commence à trépigner, et fini par se précipiter vers les toilettes. Vous en profitez pour lui subtiliser son marteau et vous éloignez perfidement. Sur le marteau, vous remarquez une inscription étrange 'Property of Microsoft Corporation', intrigué vous vous rendez au siège de la société."
   },
   {
     "storyid": 6,
     "choiceid": 3,
     "body": "Vous appelez son manager.",
-    "resultat":"Effrayé, il vous donne le marteau et vous demande de le laisser tranquille. Sur le marteau, vous remarquez une inscription étrange 'Property of Microsoft Corporation', intrigué vous vous rendez au siège de la société."
+    "resultat": "Effrayé, il vous donne le marteau et vous demande de le laisser tranquille. Sur le marteau, vous remarquez une inscription étrange 'Property of Microsoft Corporation', intrigué vous vous rendez au siège de la société."
   },
   {
     "storyid": 7,
     "choiceid": 1,
     "body": "Fe penfais l'éfanver contre un doge coin.",
-    "resultat":"'-Malheureux, le doge coin est un piège du Golden Scorpion. J'ai fait mes recherches, toutes les pistes convergent sur une pyramide secrête cachée à côté du Caire en Egypte. Tu peux pas la louper, il y a plein de touristes.'"
+    "resultat": "'-Malheureux, le doge coin est un piège du Golden Scorpion. J'ai fait mes recherches, toutes les pistes convergent sur une pyramide secrête cachée à côté du Caire en Egypte. Tu peux pas la louper, il y a plein de touristes.'"
   },
   {
     "storyid": 7,
     "choiceid": 2,
     "body": "Fe veux m'en fervir pour détruire le Golden Fcorpion.",
-    "resultat":"J'ai fait mes recherches, le Golden Scorpion se cache dans une pyramide secrête cachée à côté du Caire en Egypte. Tu peux pas la louper, il y a plein de touristes.'"
+    "resultat": "J'ai fait mes recherches, le Golden Scorpion se cache dans une pyramide secrête cachée à côté du Caire en Egypte. Tu peux pas la louper, il y a plein de touristes.'"
   },
   {
     "storyid": 7,
     "choiceid": 3,
     "body": "T'as pas une clé Microsoft Office Professional Plus ?",
-    "resultat":"Ah désolé j'utilise Lotus Note. Tu peux aller au souk à côté de la pyramide du Caire. Ils vendent des clés pas cher.'"
+    "resultat": "Ah désolé j'utilise Lotus Note. Tu peux aller au souk à côté de la pyramide du Caire. Ils vendent des clés pas cher.'"
   },
   {
     "storyid": 8,
     "choiceid": 1,
     "body": "Yo, cryphto bro ! Fu connais le Golden Fcorpion ?",
-    "resultat":"'- C'est Moi ! MUHAHAHAHAHAHA !!!'</br> Des éclairs surgissent de ses chaussures et vous réduisent en cendres sur le champs. Vous êtes mort."
+    "resultat": "'- C'est Moi ! MUHAHAHAHAHAHA !!!'</br> Des éclairs surgissent de ses chaussures et vous réduisent en cendres sur le champs. <strong>Vous êtes mort</strong>."
   },
   {
     "storyid": 8,
     "choiceid": 2,
     "body": "Fe fuis venu faffer le Golden Fcorpion.",
-    "resultat":"'- Le Golden Scorpion est invicible. Car c'est moi, MUHAHAHAHAHAHA !'</br>"
+    "resultat": "'- Le Golden Scorpion est invicible. Car c'est moi, MUHAHAHAHAHAHA !'</br>"
   },
   {
     "storyid": 8,
     "choiceid": 3,
     "body": "Fympa les fauffures !",
-    "resultat":"Ouais, je peux même envoyer des éclairs avec ! C'est cool non?'</br>'- F'est fuper cool.'</br>'- Regarde je peux même me transformer en scorpion.'</br>'- Ah mais f'est toi le méfant fcorpion !?!'"
+    "resultat": "Ouais, je peux même envoyer des éclairs avec ! C'est cool non?'</br>'- F'est fuper cool.'</br>'- Regarde je peux même me transformer en scorpion.'</br>'- Ah mais f'est toi le méfant fcorpion !?!'"
   },
   {
     "storyid": 9,
     "choiceid": 1,
     "body": "Vous brisez le bloc avec le marteau.",
-    "resultat":"Vous assènez un coup puissant sur le bloc d'ethereum. Ce dernier se fissure, et les chaines se brisent. Le monde est sauvé, une foule en liesse scandant votre nom vous entraine. C'est un triomphe, vous êtes exceptionnel, j'en ai les larmes aux yeux en écrivant ce texte. "
+    "resultat": "Vous assènez un coup puissant sur le bloc d'ethereum. Ce dernier se fissure, et les chaines se brisent. Le monde est sauvé, une foule en liesse scandant votre nom vous entraine. C'est un triomphe, vous êtes exceptionnel, j'en ai les larmes aux yeux en écrivant ce texte. "
   },
   {
     "storyid": 9,
     "choiceid": 2,
     "body": "Vous utilisez l'enfant comme bouclier mutant.",
-    "resultat":"Alors que le dard du scorpion dorée s'abat sur vous, vous vous saisissez de l'enfant pour l'opposer à une mort certaine. La vôtre, car l'enfant se fait transpercer. Prenant votre chance vous en profitez pour mordre le scorpion doré. Grace aux toxines contenues dans votre corps de mutant, il se liquefie. Le pauvre enfant pleure en rendant son dernier souffle, il a mal, c'est à cause de vous. Vous avez peut-être vaincu le Golden Scorpion, mais vous êtes un abject joueur."
+    "resultat": "Alors que le dard du scorpion dorée s'abat sur vous, vous vous saisissez de l'enfant pour l'opposer à une mort certaine. La vôtre, car l'enfant se fait transpercer. Prenant votre chance vous en profitez pour mordre le scorpion doré. Grace aux toxines contenues dans votre corps de mutant, il se liquefie. Le pauvre enfant pleure en rendant son dernier souffle, il a mal, c'est à cause de vous. Vous avez peut-être vaincu le Golden Scorpion, mais vous êtes un abject joueur."
   },
   {
     "storyid": 9,
     "choiceid": 3,
     "body1": "Avec le téléphone que vous avez conservé, vous appelez El Jeffe Bezos à l'aide.",
     "body2": "Vous tentez d'assommer le Scorpion Doré avec la bouteille que vous avez conservé.",
-    "resultat1":"El Jeffe Bezos vous a bloqué. Le Scorpion Doré vous enchaine. Vous faites maintenant partie de la chaine de bloc. A jamais...",
-    "resultat2":"Elle rebondit sur la carapace dorée et vous revient dans la tête. Lorsque vous-vous reveillez enfin. Vous êtes désormais enchainé à un bloc. Vous faites maintenant partie de la chaine de bloc. A jamais..."
+    "resultat1": "El Jeffe Bezos vous a bloqué. Le Scorpion Doré vous enchaine. Vous faites maintenant partie de la chaine de bloc. A jamais...",
+    "resultat2": "Elle rebondit sur la carapace dorée et vous revient dans la tête. Lorsque vous-vous reveillez enfin. Vous êtes désormais enchainé à un bloc. Vous faites maintenant partie de la chaine de bloc. A jamais..."
   }
-  
 ]

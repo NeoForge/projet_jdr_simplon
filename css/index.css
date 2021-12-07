@@ -58,7 +58,10 @@ h1
     height: 40px;
     width: 70%;
     }
-
+strong{
+    color: crimson;
+    font-size: 25px;
+    }
     /* ------------Box ----------- */
 .box{
     width: 100%;
