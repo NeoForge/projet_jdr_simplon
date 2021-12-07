@@ -208,6 +208,7 @@ function gameOver() {
   });
  mainBody.style.background = "url('../assets/background_game_over.png')";
  mainBody.style.backgroundSize = "cover";
+
   ending.scrollTop = ending.scrollHeight;
   Speak(6);
 }

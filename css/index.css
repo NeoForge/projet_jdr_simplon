@@ -30,6 +30,9 @@ h1
     text-align: center;
 
 }
+.mainBody {
+    height: 100vh;
+}
 
  /* ---------- Screen Game Over and victory ------------ */
 .nowin{
