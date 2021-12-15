@@ -127,10 +127,18 @@ function start(choiceHero) {
       }
     }
   } else {
-    box.innerHTML = " ";
-    box.hidden = true;
-    endBox();
-    restart();
+    if (choiceArray[0] == "1" || choiceArray[2] == "7" || choiceArray[4] == "12" || choiceArray[5] == "15" || choiceArray[8] == "24" || choiceArray[9] == "29") {
+      gameOver();
+      tryAgain();
+    }
+    else
+    {
+      box.innerHTML = " ";
+      box.hidden = true;
+      endBox();
+      restart();
+    }
+    
   }
   return choiceHero;
 }
@@ -180,6 +188,7 @@ function endBox() { // ending = varialble js / card_ending = HTML
 
 function gameOver() {
   StopSpeak();
+  console.log("J'ai perdu");
   ending.style.display = "flex";
   ending.innerHTML += `<h4 class="nowin">GAME OVER</h4>`;
   let storyRank = 0;
